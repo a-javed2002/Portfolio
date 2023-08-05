@@ -1,0 +1,732 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<!-- Mirrored from preview.hasthemes.com/panshi/info.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 May 2023 05:46:27 GMT -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Panshi - Catering Service HTML Template</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+
+    <!-- All css here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/shortcode/shortcodes.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        /* background-color: #abd9e9; */
+        font-family: Arial;
+    }
+
+    #container {
+        width: 750px;
+        height: 800px;
+        background: #eff3f7;
+        margin: 0 auto;
+        font-size: 0;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    aside {
+        width: 260px;
+        height: 800px;
+        background-color: #3b3e49;
+        display: inline-block;
+        font-size: 15px;
+        vertical-align: top;
+    }
+
+    main {
+        width: 490px;
+        height: 800px;
+        display: inline-block;
+        font-size: 15px;
+        vertical-align: top;
+    }
+
+    aside header {
+        padding: 30px 20px;
+    }
+
+    aside input {
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        padding: 0 50px 0 20px;
+        background-color: #5e616a;
+        border: none;
+        border-radius: 3px;
+        color: #fff;
+        background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_search.png);
+        background-repeat: no-repeat;
+        background-position: 170px;
+        background-size: 40px;
+    }
+
+    aside input::placeholder {
+        color: #fff;
+    }
+
+    aside ul {
+        padding-left: 0;
+        margin: 0;
+        list-style-type: none;
+        overflow-y: scroll;
+        height: 690px;
+    }
+
+    aside li {
+        padding: 10px 0;
+    }
+
+    aside li:hover {
+        background-color: #5e616a;
+    }
+
+    h2,
+    h3 {
+        margin: 0;
+    }
+
+    aside li img {
+        border-radius: 50%;
+        margin-left: 20px;
+        margin-right: 8px;
+    }
+
+    aside li div {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 12px;
+    }
+
+    aside li h2 {
+        font-size: 14px;
+        color: #fff;
+        font-weight: normal;
+        margin-bottom: 5px;
+    }
+
+    aside li h3 {
+        font-size: 12px;
+        color: #7e818a;
+        font-weight: normal;
+    }
+
+    .status {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 7px;
+    }
+
+    .green {
+        background-color: #58b666;
+    }
+
+    .orange {
+        background-color: #ff725d;
+    }
+
+    .blue {
+        background-color: #6fbced;
+        margin-right: 0;
+        margin-left: 7px;
+    }
+
+    main header {
+        height: 110px;
+        padding: 30px 20px 30px 40px;
+    }
+
+    main header>* {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    main header img:first-child {
+        border-radius: 50%;
+    }
+
+    main header img:last-child {
+        width: 24px;
+        margin-top: 8px;
+    }
+
+    main header div {
+        margin-left: 10px;
+        margin-right: 145px;
+    }
+
+    main header h2 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    main header h3 {
+        font-size: 14px;
+        font-weight: normal;
+        color: #7e818a;
+    }
+
+    #chat {
+        padding-left: 0;
+        margin: 0;
+        list-style-type: none;
+        overflow-y: scroll;
+        height: 535px;
+        border-top: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+    }
+
+    #chat li {
+        padding: 10px 30px;
+    }
+
+    #chat h2,
+    #chat h3 {
+        display: inline-block;
+        font-size: 13px;
+        font-weight: normal;
+    }
+
+    #chat h3 {
+        color: #bbb;
+    }
+
+    #chat .entete {
+        margin-bottom: 5px;
+    }
+
+    #chat .message {
+        padding: 20px;
+        color: #fff;
+        line-height: 25px;
+        max-width: 90%;
+        display: inline-block;
+        text-align: left;
+        border-radius: 5px;
+    }
+
+    #chat .me {
+        text-align: right;
+    }
+
+    #chat .you .message {
+        background-color: #58b666;
+    }
+
+    #chat .me .message {
+        background-color: #6fbced;
+    }
+
+    #chat .triangle {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 10px 10px 10px;
+    }
+
+    #chat .you .triangle {
+        border-color: transparent transparent #58b666 transparent;
+        margin-left: 15px;
+    }
+
+    #chat .me .triangle {
+        border-color: transparent transparent #6fbced transparent;
+        margin-left: 375px;
+    }
+
+    main footer {
+        height: 155px;
+        padding: 20px 30px 10px 20px;
+    }
+
+    main footer textarea {
+        resize: none;
+        border: none;
+        display: block;
+        width: 100%;
+        height: 80px;
+        border-radius: 3px;
+        padding: 20px;
+        font-size: 13px;
+        margin-bottom: 13px;
+    }
+
+    main footer textarea::placeholder {
+        color: #ddd;
+    }
+
+    main footer img {
+        height: 30px;
+        cursor: pointer;
+    }
+
+    main footer a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #6fbced;
+        vertical-align: top;
+        margin-left: 333px;
+        margin-top: 5px;
+        display: inline-block;
+    }
+
+
+
+
+
+
+
+    /* //fadiuaasjkdlsmdam */
+    body {
+        font-family: sans-serif;
+        background-color: #eeeeee;
+    }
+
+    .file-upload {
+        background-color: #ffffff;
+        /* width: 600px; */
+        margin: 0 auto;
+        padding: 0px;
+    }
+
+    .file-upload-btn:active {
+        border: 0;
+        transition: all .2s ease;
+    }
+
+    .file-upload-content {
+        display: none;
+        text-align: center;
+    }
+
+    .file-upload-input {
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        outline: none;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+
+
+
+    .file-upload-image {
+        max-height: 200px;
+        max-width: 200px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .remove-image {
+        width: 200px;
+        margin: 0;
+        color: #fff;
+        background: #cd4535;
+        border: none;
+        padding: 10px;
+        border-radius: 4px;
+        border-bottom: 4px solid #b02818;
+        transition: all .2s ease;
+        outline: none;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    .remove-image:hover {
+        background: #c13b2a;
+        color: #ffffff;
+        transition: all .2s ease;
+        cursor: pointer;
+    }
+
+    .remove-image:active {
+        border: 0;
+        transition: all .2s ease;
+    }
+</style>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+    <!-- Header Area Start -->
+    <header class="fixed">
+        <div class="header-area pt-50 pb-20 header-sticky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3 col-xs-12">
+                        <div class="logo">
+                            <a href="index.html"><img src="img/logo/logo.png" alt="Panshi" /></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-9 col-xs-12">
+                        <div class="content-wrapper">
+                            <!-- Main Menu Start -->
+                            <div class="main-menu text-right">
+                                <nav>
+                                    <ul>
+                                        <li><a href="index.html">Home</a>
+                                            <ul>
+                                                <li><a href="index.html">Home One</a></li>
+                                                <li><a href="index-2.html">Home Two</a></li>
+                                                <li><a href="index-3.html">Home Three</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="service.html">Services</a></li>
+                                        <li><a href="about.html">About</a></li>
+                                        <li><a href="menu.html">Menu</a></li>
+                                        <li><a href="info.html">Usefulinfo</a></li>
+                                        <li><a href="blog.html">blog</a>
+                                            <ul>
+                                                <li><a href="blog.html">blog</a></li>
+                                                <li><a href="blog-details.html">blog details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="mobile-menu hidden-lg hidden-md"></div>
+                            <!-- Main Menu End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Area End -->
+    <!-- Banner Area Start -->
+    <section class="banner-area text-left">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="banner-content-wrapper">
+                        <div class="banner-content">
+                            <h2>info</h2>
+                            <div class="banner-breadcrumb">
+                                <ul>
+                                    <li><a href="index.html">home </a> <i class="zmdi zmdi-chevron-right"></i></li>
+                                    <li>info</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner Area End -->
+
+
+    <div id="container" style="margin-top: 100px;">
+        <aside>
+            <header>
+                <input type="text" placeholder="search">
+            </header>
+            <ul>
+                <li data-id="1" style="cursor: pointer;">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_10.jpg" alt="">
+                    <div>
+                        <h2>Prénom Nom</h2>
+                        <h3>
+                            <span class="status orange"></span>
+                            offline
+                        </h3>
+                    </div>
+                </li>
+            </ul>
+        </aside>
+        <main>
+            <header>
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_01.jpg" alt="">
+                <div>
+                    <h2>Chat with Vincent Porter</h2>
+                    <h3>already 1902 messages</h3>
+                </div>
+                <!-- <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_star.png" alt=""> -->
+            </header>
+            <ul id="chat">
+                <li class="you">
+                    <div class="entete">
+                        <span class="status green"></span>
+                        <h2>Vincent</h2>
+                        <h3>10:12AM, Today</h3>
+                    </div>
+                    <div class="triangle"></div>
+                    <div class="message">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                    </div>
+                </li>
+                <li class="me">
+                    <div class="entete">
+                        <h3>10:12AM, Today</h3>
+                        <h2>Vincent</h2>
+                        <span class="status blue"></span>
+                    </div>
+                    <div class="triangle"></div>
+                    <div class="message">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                    </div>
+                </li>
+
+            </ul>
+            <footer>
+                <textarea placeholder="Type your message" id="user-msg"></textarea>
+                <div class="form-group">
+                    <div class="file-upload">
+                        <button class="btn btn-danger" type="button" style="display: none;" id="r_all"
+                            onclick="remove_all()">Remove All</button>
+
+                        <div class="image-upload-wrap">
+
+                            <label for="upload_file">
+                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_picture.png" alt="">
+                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_file.png" alt="">
+                            </label>
+                            <input name="imageFiles" type='file' id="upload_file"
+                                accept="image/png,image/jpg,image/jpeg" multiple style="display: none;">
+                            <div class="drag-text">
+                                <!-- <h3>Drag and drop a file or select add Image</h3> -->
+                            </div>
+                        </div>
+
+                        <div class="file-upload-content" id="image_preview"
+                            style="display: flex;justify-content: space-around;flex-wrap: wrap;">
+                            <!-- <img class="file-upload-image" src="#" alt="your image" />
+                            <div class="image-title-wrap">
+                                <button type="button" onclick="removeUpload()" class="remove-image">Remove <span
+                                        class="image-title">Uploaded Image</span></button>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <a style="cursor: pointer;position: relative;top: -47px;">Send</a>
+            </footer>
+        </main>
+    </div>
+
+
+
+    <!-- Footer Area Strat -->
+    <section class="footer-area">
+        <div class="subscribe-area pt-130 pb-130">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+                        <div class="subscribe-content text-center">
+                            <h2>Subscribe our Newsletter for Latest Offer</h2>
+                            <p>To Get Latest Update tempor dolor sit amet, conse ctetur adipiscing elit </p>
+                        </div>
+                        <div class="subscribe-form">
+                            <div id="mc_embed_signup">
+                                <form
+                                    action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef"
+                                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+                                    class="validate" target="_blank" novalidate>
+                                    <div id="mc_embed_signup_scroll" class="mc-form">
+                                        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL"
+                                            placeholder="Email" required>
+                                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                        <div class="mc-news" aria-hidden="true"><input type="text"
+                                                name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef" tabindex="-1" value="">
+                                        </div>
+                                        <button type="submit" name="subscribe" id="mc-embedded-subscribe"
+                                            class="default-btn"><span>subscribe</span></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 hidden-sm hidden-xs">
+                        <p>Address : 256 AVE, Manchester, 125, North England</p>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <p class="text-right">Copyright <i class="fa fa-copyright"></i> 2017 <a
+                                href="https://devitems.com/" target="_blank">Devitems LLC</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Area End -->
+
+    <!-- All js here -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.meanmenu.js"></script>
+    <script src="js/ajax-mail.js"></script>
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/jquery.nav.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#container aside ul li").click(function () {
+                var dataId = $(this).attr("data-id");
+                console.log("Clicked on item with data-id: " + dataId);
+
+                // Make AJAX request using the data-id
+                $.ajax({
+                    url: "Home/Conversation",
+                    method: "GET",
+                    data: { id: dataId },
+                    success: function (response) {
+                        console.log("AJAX response:", response);
+                        // Process the response here
+                    },
+                    error: function (xhr, status, error) {
+                        console.error("AJAX error:", error);
+                    }
+                });
+            });
+        });
+    </script>
+
+    <link href="~/admin/assets/css/image.css" rel="stylesheet" type="text/css" />
+
+    <script>
+        /** Variables */
+        let files = [],
+            dragArea = document.querySelector(".image-upload-wrap"),
+            input = document.querySelector(".image-upload-wrap input"),
+            select = document.querySelector(".image-upload-wrap .drag-text"),
+            container = document.querySelector(".file-upload-content");
+        var total = 0;
+        var img_arr = [];
+
+        /** CLICK LISTENER */
+        select.addEventListener("click", () => input.click());
+
+        /* INPUT CHANGE EVENT */
+        input.addEventListener("change", () => {
+            let file = input.files;
+            console.log(file)
+            console.log(file.length)
+            total = file.length;
+            // if user select no image
+            if (file.length == 0) {
+                return;
+            }
+
+            for (let i = 0; i < file.length; i++) {
+                if (file[i].type.split("/")[0] != "image") continue;
+                if (!files.some((e) => e.name == file[i].name)) files.push(file[i]);
+            }
+
+            showImages();
+        });
+
+        /** SHOW IMAGES */
+
+        function showImages() {
+            container.innerHTML = files.reduce((prev, current, index) => {
+                return `${prev}
+                        <div><img src="${URL.createObjectURL(current)}" width="200px" height="200px">
+                                </div>`;
+            }, "");
+            if (total == 0) {
+                $('.file-upload-content').hide();
+                $('.image-upload-wrap').show();
+                $('#add-image').show();
+                $('#r_all').hide();
+                $('#user-msg').show();
+                return;
+            } else {
+                $('.file-upload-content').show();
+                $('.image-upload-wrap').hide();
+                $('#add-image').hide();
+                $('#r_all').show();
+                $('#user-msg').hide();
+            }
+        }
+
+        function remove_all() {
+            $('.file-upload-content').hide();
+            $('.image-upload-wrap').show();
+            $('#add-image').show();
+            $('#r_all').hide();
+            $('#user-msg').show();
+            files = [];
+            document.getElementById("image_preview").innerHTML = "";
+            total = 0;
+        }
+
+        /* DELETE IMAGE */
+        function delImage(index) {
+            total--;
+            console.log(input.files)
+            console.log((input.files).length)
+            files.splice(index, 1);
+            img_arr.push(index);
+            showImages();
+        }
+
+        /* DRAG & DROP */
+        dragArea.addEventListener("dragover", (e) => {
+            e.preventDefault();
+            dragArea.classList.add("dragover");
+        });
+
+        /* DRAG LEAVE */
+        dragArea.addEventListener("dragleave", (e) => {
+            e.preventDefault();
+            dragArea.classList.remove("dragover");
+        });
+
+        /* DROP EVENT */
+        dragArea.addEventListener("drop", (e) => {
+            e.preventDefault();
+            dragArea.classList.remove("dragover");
+
+            let file = e.dataTransfer.files;
+            for (let i = 0; i < file.length; i++) {
+                /** Check selected file is image */
+                if (file[i].type.split("/")[0] != "image") continue;
+
+                if (!files.some((e) => e.name == file[i].name)) files.push(file[i]);
+            }
+            showImages();
+        });
+    </script>
+</body>
+
+<!-- Mirrored from preview.hasthemes.com/panshi/info.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 May 2023 05:46:27 GMT -->
+
+</html>

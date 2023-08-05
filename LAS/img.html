@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: sans-serif;
+        background-color: #eeeeee;
+    }
+
+    .file-upload {
+        background-color: #ffffff;
+        width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .file-upload-btn {
+        width: 100%;
+        margin: 0;
+        color: #fff;
+        background: #6418c3;
+        border: none;
+        padding: 10px;
+        border-radius: 4px;
+        border-bottom: 4px solid #6e2bc2;
+        transition: all .2s ease;
+        outline: none;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    .file-upload-btn:hover {
+        background: #9067c2;
+        color: #ffffff;
+        transition: all .2s ease;
+        cursor: pointer;
+    }
+
+    .file-upload-btn:active {
+        border: 0;
+        transition: all .2s ease;
+    }
+
+    .file-upload-content {
+        display: none;
+        text-align: center;
+    }
+
+    .file-upload-input {
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        outline: none;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .image-upload-wrap {
+        margin-top: 20px;
+        border: 4px dashed #6418c3;
+        position: relative;
+    }
+
+    .image-dropping,
+    .image-upload-wrap:hover {
+        background-color: #6418c3;
+        border: 4px dashed #ffffff;
+    }
+
+    .image-title-wrap {
+        padding: 0 15px 15px 15px;
+        color: #222;
+    }
+
+    .drag-text {
+        text-align: center;
+    }
+
+    .drag-text h3 {
+        font-weight: 100;
+        text-transform: uppercase;
+        color: #ac9ac3;
+        padding: 60px 0;
+    }
+
+    .file-upload-image {
+        max-height: 200px;
+        max-width: 200px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .remove-image {
+        width: 200px;
+        margin: 0;
+        color: #fff;
+        background: #cd4535;
+        border: none;
+        padding: 10px;
+        border-radius: 4px;
+        border-bottom: 4px solid #b02818;
+        transition: all .2s ease;
+        outline: none;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    .remove-image:hover {
+        background: #c13b2a;
+        color: #ffffff;
+        transition: all .2s ease;
+        cursor: pointer;
+    }
+
+    .remove-image:active {
+        border: 0;
+        transition: all .2s ease;
+    }
+</style>
+
+<body>
+    <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <div class="file-upload">
+        <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add
+            Image</button>
+
+        <div class="image-upload-wrap">
+            <input class="file-upload-input" type='file' onchange="readURL(this)" id="upload_file" accept="image/png,image/jpg,image/jpeg"
+                multiple />
+            <div class="drag-text">
+                <h3>Drag and drop a file or select add Image</h3>
+            </div>
+        </div>
+        <div class="file-upload-content" id="image_preview" style="display: flex;justify-content: space-around;">
+            <!-- <img class="file-upload-image" src="#" alt="your image" />
+            <div class="image-title-wrap">
+                <button type="button" onclick="removeUpload()" class="remove-image">Remove <span
+                        class="image-title">Uploaded Image</span></button>
+            </div> -->
+        </div>
+    </div>
+    <!-- <script>
+        /**
+ * Show Drag & Drop multiple image preview
+ *
+ * @author Anuj Kumar
+ * @link https://instagram.com/webtricks.ak
+ * @link https://github.com/wtricks
+ * */
+
+        /** Variables */
+        let files = [],
+            dragArea = document.querySelector(".image-upload-wrap"),
+            input = document.querySelector(".image-upload-wrap input"),
+            select = document.querySelector(".image-upload-wrap .drag-text"),
+            container = document.querySelector(".file-upload-content");
+
+        /** CLICK LISTENER */
+        select.addEventListener("click", () => input.click());
+
+        /* INPUT CHANGE EVENT */
+        input.addEventListener("change", () => {
+            let file = input.files;
+            console.log(file)
+            console.log(file.length)
+            // if user select no image
+            if (file.length == 0) {
+                $('.file-upload-content').hide();
+                $('.image-upload-wrap').show();
+                return;
+            }
+            else {
+                $('.file-upload-content').show();
+                $('.image-upload-wrap').hide();
+            }
+
+            for (let i = 0; i < file.length; i++) {
+                if (file[i].type.split("/")[0] != "image") continue;
+                if (!files.some((e) => e.name == file[i].name)) files.push(file[i]);
+            }
+
+            showImages();
+        });
+
+        /** SHOW IMAGES */
+
+        function showImages() {
+            container.innerHTML = files.reduce((prev, current, index) => {
+                return `${prev}
+				<div><img src="${URL.createObjectURL(current)}" width="200px" height="200px">
+                        <div class="image-title-wrap">
+                            <button type="button" onclick="delImage(${index})" class="remove-image">Remove <span
+                                class="image-title">${current.name}</span></button>
+                        </div></div>`;
+            }, "");
+        }
+
+        /* DELETE IMAGE */
+        function delImage(index) {
+            console.log(input.files)
+            console.log((input.files).length)
+            files.splice(index, 1);
+            showImages();
+        }
+
+        /* DRAG & DROP */
+        dragArea.addEventListener("dragover", (e) => {
+            e.preventDefault();
+            dragArea.classList.add("dragover");
+        });
+
+        /* DRAG LEAVE */
+        dragArea.addEventListener("dragleave", (e) => {
+            e.preventDefault();
+            dragArea.classList.remove("dragover");
+        });
+
+        /* DROP EVENT */
+        dragArea.addEventListener("drop", (e) => {
+            e.preventDefault();
+            dragArea.classList.remove("dragover");
+
+            let file = e.dataTransfer.files;
+            for (let i = 0; i < file.length; i++) {
+                /** Check selected file is image */
+                if (file[i].type.split("/")[0] != "image") continue;
+
+                if (!files.some((e) => e.name == file[i].name)) files.push(file[i]);
+            }
+            showImages();
+        });
+
+    </script> -->
+    <script>
+        var total_file = (document.getElementById("upload_file").files).length;
+        console.log(total_file);
+        function readURL(input) {
+            var total_file = (document.getElementById("upload_file").files).length;
+            console.log(total_file);
+            for (let i = 0; i < total_file; i++) {
+                if (input.files && input.files[i]) {
+
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('.image-upload-wrap').hide();
+                        $('.file-upload-content').show();
+                        $('#image_preview').append(`<div><img src="${e.target.result}" width="200px" height="200px">
+                        <div class="image-title-wrap">
+                            <button type="button" onclick="removeUpload(${i})" class="remove-image">Remove <span
+                                class="image-title">${input.files[i].name}</span></button>
+                        </div></div>`);
+
+                        // $('.file-upload-image').attr('src', e.target.result);
+
+                        // $('.image-title').html(input.files[i].name);
+                    };
+
+                    reader.readAsDataURL(input.files[i]);
+                    var arr = (document.getElementById("upload_file").files);
+                    console.log(arr);
+
+                } else {
+                    removeUpload();
+                }
+            }
+        }
+
+        function removeUpload(value) {
+            // $('.file-upload-content').hide();
+            // $('.image-upload-wrap').show();
+            // $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+            const list = document.getElementById("image_preview");
+            if (list.hasChildNodes()) {
+                list.removeChild(list.children[value]);
+            }
+            // $('.file-upload-input').attr('type', 'text');
+            // $('.file-upload-input').attr('type', 'file');
+            var arr = (document.getElementById("upload_file").files);
+            // var arr = $('input:file#upload_file')[0];
+            console.log(arr);
+            console.log(arr.length);
+            console.log(arr[0]);
+            console.log(arr[1]);
+            total_file -= 1;
+            // document.getElementById("upload_file").files = total_file;
+            if (arr.length == 0) {
+                $('.file-upload-content').hide();
+                $('.image-upload-wrap').show();
+            }
+        }
+
+        $('.image-upload-wrap').bind('dragover', function () {
+            $('.image-upload-wrap').addClass('image-dropping');
+        });
+        $('.image-upload-wrap').bind('dragleave', function () {
+            $('.image-upload-wrap').removeClass('image-dropping');
+        });
+    </script>
+</body>
+
+</html>

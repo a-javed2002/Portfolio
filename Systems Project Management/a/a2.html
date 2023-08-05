@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Drag and Drop Task Manager</title>
+	<style>
+		.container {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+			height: 100%;
+			background-color: #f2f2f2;
+			padding: 20px;
+		}
+
+		.column {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 10px;
+			width: 30%;
+			min-height: 400px;
+			background-color: white;
+			border-radius: 5px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+		}
+
+		.card {
+			margin: 10px 0;
+			padding: 10px;
+			width: 90%;
+			background-color: #cce5ff;
+			border-radius: 5px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+			cursor: grab;
+			user-select: none;
+			transition: transform 0.2s ease;
+		}
+
+		.card:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+		}
+
+		.card:active {
+			cursor: grabbing;
+			transform: translateY(-10px);
+			box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.2);
+			z-index: 1;
+		}
+
+		.column-header {
+			font-size: 24px;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+
+		.column-hovered {
+			background-color: #d9d9d9;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="column" id="todo">
+			<div class="column-header">To Do</div>
+			<div class="card" draggable="true">Task 1</div>
+			<div class="card" draggable="true">Task 2</div>
+			<div class="card" draggable="true">Task 3</div>
+		</div>
+		<div class="column" id="doing">
+			<div class="column-header">Doing</div>
+		</div>
+		<div class="column" id="done">
+			<div class="column-header">Done</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			let draggedCard = null;
+
+			// Add event listeners to cards
+			$(".card").on("dragstart", function () {
+				draggedCard = this;
+				setTimeout(() => (this.style.display = "none"), 0);
+			});
+
+			$(".card").on("dragend", function () {
+				draggedCard.style.display = "block";
+				draggedCard = null;
+			});
+
+			// Add event listeners to columns
+			$(".column").on("dragover", function (event) {
+				event.preventDefault();
+			});
+
+			$(".column").on("dragenter", function (event) {
+				event.preventDefault();
+				$(this).addClass("column-hovered");
+			});
+
+			$(".column").on("dragleave", function () {
+				$(this).removeClass("column-hovered");
+			});
+
+			$(".column").on("drop", function () {
+				$(this).removeClass("column-hovered");
+				$(this).append(draggedCard);
+			});
+		});
+	</script>
+
+</body>
+
+</html>

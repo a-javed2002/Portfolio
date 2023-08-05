@@ -1,0 +1,143 @@
+1)The text/html content type is an Internet Media Type as well as a Multipurpose Internet Mail Extensions
+(MIME)
+content type. Using HTML in MIME messages allows the full richness of Web pages to be available in
+e-mail.
+The
+text/plain content type is the generic subtype for plain text
+
+----------------------------------------------------------------------------------------
+
+
+
+2)XAMPP stands for X-operating system, Apache, Mysql, Php, Perl. It is an open resource platform that is
+readily available absolutely free downloading. It includes attributes like supporting Perl, mercury
+mail, and also Filezilla, and so on.
+
+----------------------------------------------------------------------------------------
+
+
+
+
+3)The krsort() function sorts an associative array in descending order, according to the key.
+
+----------------------------------------------------------------------------------------
+
+
+
+
+4)String
+
+----------------------------------------------------------------------------------------
+
+
+
+
+5)The include and require statements are identical, except upon failure: require will produce a fatal
+error (E_COMPILE_ERROR) and stop the script. include will only produce a warning (E_WARNING) and the
+script will continue.
+
+----------------------------------------------------------------------------------------
+
+
+
+
+6)They are both used to output data to the screen. The differences are small: echo has no return value
+while print has a return value of 1 so it can be used in expressions. echo can take multiple parameters
+(although such usage is rare) while print can take one argument. echo is marginally faster than print .
+
+----------------------------------------------------------------------------------------
+
+
+
+
+7)The header in PHP is a PHP built-in function for sending a raw HTTP header. The HTTP functions are those
+that manipulate information sent by the webserver to the client or browser before it sends any further
+output. The header() function in PHP sends a raw HTTP header to a client or browser.
+
+----------------------------------------------------------------------------------------
+
+
+
+
+8)Client-side scripts are executed by the browser when a page loads, while server-side scripting is
+performed by a web server before sending the page back to the client. Both client-side and server-side
+scripts are used to add functionality to websites.
+
+----------------------------------------------------------------------------------------
+
+
+
+
+9)The static keyword is used to declare properties and methods of a class as static. Static properties and
+methods can be used without creating an instance of the class. The static keyword is also used to
+declare variables in a function which keep their value after the function has ended.
+
+----------------------------------------------------------------------------------------
+
+
+
+
+10)The spaceship operator is used for comparing two expressions. It returns -1, 0 or 1 when $a is
+respectively less than, equal to, or greater than $b.
+
+
+----------------------------------------------------------------------------------------
+
+
+
+
+11)Simple examples of a recursive function include the factorial, where an integer is multiplied by itself
+while being incrementally lowered. Many other self-referencing functions in a loop could be called
+recursive functions, for example, where n = n + 1 given an operating range.
+
+
+----------------------------------------------------------------------------------------
+
+12)PHP environment variables allow your scripts to glean certain types of data dynamically from the server.
+This supports script flexibility in a potentially changing server environment.
+
+----------------------------------------------------------------------------------------
+
+
+
+
+14)The primary or most-commonly-used HTTP verbs (or methods, as they are properly called) are POST, GET,
+PUT, PATCH, and DELETE.
+The PUT method replaces all current representations of the target resource with the request payload. The
+DELETE method deletes the specified resource. The CONNECT method establishes a tunnel to the server
+identified by the target resource. The OPTIONS method describes the communication options for the target
+resource
+
+----------------------------------------------------------------------------------------
+
+
+
+
+15)
+<?php
+class Employee
+{
+	Public $name;
+	Public $batch;
+
+	function __construct($name,$batch)
+	{
+		$this->name=$name;
+		$this->batch=$batch;
+	}
+
+	function show_details()
+	{
+		echo $this->name." : ";
+		echo "Your batch is ".$this->batch."<br>";
+	}
+}
+	
+$emp1= new Employee("hira","2109c1");
+$emp1->show_details();
+	
+$emp2= new Employee("sara","2011a2");
+$emp2->show_details();
+?>
+
+----------------------------------------------------------------------------------------

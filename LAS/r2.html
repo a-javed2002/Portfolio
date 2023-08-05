@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Scroll Automatically</title>
+	
+	<style>
+		h1 {
+			color: Red;
+		}
+	</style>
+</head>
+
+<body>
+	<center>
+		<div id="abc">
+			<button>Click here to go on bottom of the page</button>
+			<h1> JQuery scroll to bottom </h1>
+			<h1> JQuery scroll to bottom </h1>
+			<h1> JQuery scroll to bottom </h1>
+			<h1> JQuery scroll to bottom </h1>
+			<h1> JQuery scroll to bottom </h1>
+			<h1> JQuery scroll to bottom </h1>
+			<h1> JQuery scroll to bottom </h1>
+			<h1> JQuery scroll to bottom </h1>
+			<h1> JQuery scroll to bottom </h1>
+			<h1> JQuery scroll to bottom </h1>
+			<h1> JQuery scroll to bottom </h1>
+			<h1> JQuery scroll to bottom </h1>
+			<h1> JQuery scroll to bottom </h1>
+			<h1> JQuery scroll to bottom </h1>
+			<h1> JQuery scroll to bottom </h1>
+			<h1> JQuery scroll to bottom </h1>
+			<h1> JQuery scroll to bottom </h1>
+			<h1> JQuery scroll to bottom </h1>
+			<h1> JQuery scroll to bottom </h1>
+			<h1> JQuery scroll to bottom </h1>
+			<h1> JQuery scroll to bottom </h1>
+			<h1> JQuery scroll to bottom </h1>
+			<h1> JQuery scroll to bottom </h1>
+			<h1> JQuery scroll to bottom </h1>
+		</div>
+	</center>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function () {
+			$("button").click(function () {
+				$("#abc").animate({
+					scrollTop: $(
+						'<h1>').get(0).scrollHeight
+				}, 1000);
+			});
+		});
+	</script>
+</body>
+
+</html>
