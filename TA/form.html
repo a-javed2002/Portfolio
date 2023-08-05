@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>FORM</title>
+</head>
+<style>
+	body {
+		margin: 0;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh;
+		font-family: 'Jost', sans-serif;
+	}
+
+	.main {
+		width: 350px;
+		height: 500px;
+		background: red;
+		overflow: hidden;
+		background: url("images/parallex\ cod.jpg") no-repeat center/ cover;
+		border-radius: 10px;
+		box-shadow: 5px 20px 50px #000;
+		background: #3cb9fc;
+	}
+
+	#chk {
+		display: none;
+	}
+
+	.signup {
+		position: relative;
+		width: 100%;
+		height: 100%;
+	}
+
+	label {
+		color: #fff;
+		font-size: 2.3em;
+		justify-content: center;
+		display: flex;
+		margin: 60px;
+		font-weight: bold;
+		cursor: pointer;
+		transition: .5s ease-in-out;
+	}
+
+	input {
+		width: 60%;
+		height: 20px;
+		background: #e0dede;
+		justify-content: center;
+		display: flex;
+		margin: 20px auto;
+		padding: 10px;
+		border: none;
+		outline: none;
+		border-radius: 5px;
+		box-shadow: 1px 4px 12px #000;
+	}
+
+	.form-button {
+		width: 35%;
+		height: 33px;
+		margin: 10px auto;
+		justify-content: center;
+		display: block;
+		color: #fff;
+		background: rgb(0,0,0);
+background: linear-gradient(180deg, rgba(0,0,0,0.969625350140056) 10%, rgba(60,185,252,1) 69%);
+		font-size: 1em;
+		font-weight: bold;
+		margin-top: 20px;
+		outline: none;
+		border: none;
+		border-radius: 5px;
+		transition: .2s ease-in;
+		cursor: pointer;
+		padding-top: 3%;
+		display: inline-block;
+
+	}
+
+	.login {
+		height: 460px;
+		background: #eee;
+		border-radius: 60% / 10%;
+		transform: translateY(-180px);
+		transition: .8s ease-in-out;
+	}
+
+	.login label {
+		color: #3cb9fc;
+		transform: scale(.6);
+		filter: drop-shadow(1px 3px 2px #000);
+	}
+
+	#chk:checked~.login {
+		transform: translateY(-500px);
+	}
+
+	#chk:checked~.login label {
+		transform: scale(1);
+	}
+
+	#chk:checked~.signup label {
+		transform: scale(.6);
+	}
+
+	.container#blur.active {
+		filter: blur(20px);
+		pointer-events: none;
+		user-select: none;
+	}
+
+	.container .content {
+		position: relative;
+		max-width: 800px;
+	}
+
+	/* .container .content img {
+        max-width: 100%;
+        display: block;
+    } */
+
+	#popup {
+		position: fixed;
+		top: 40%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 600px;
+		padding: 50px;
+		box-shadow: 0 5px 30px #0000004d;
+		background-color: #3cb9fc;
+		visibility: hidden;
+		opacity: 0;
+		transition: 0.5s;
+		z-index: 25;
+	}
+
+	#popup.active {
+		top: 50%;
+		visibility: visible;
+		opacity: 1;
+		transform: 0.5s;
+	}
+
+	#blurpop {
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		width: 100vw;
+		height: 110vh;
+		display: none;
+		z-index: 18;
+		background-color: #77d0ff;
+		/* filter: blur(200px); */
+		opacity: 0.75;
+	}
+
+	h1 {
+		/* margin-top: 5em; */
+		text-align: center;
+	}
+
+	h1 span {
+		font-family: "Luckiest Guy", cursive;
+		/* position: relative;
+        top: 20px; */
+		font-size: 80px;
+		color: #fff;
+		text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+			0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+			0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+		animation: bounce 0.3s infinite alternate;
+	}
+
+	@keyframes bounce {
+		100% {
+			top: -20px;
+			text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+				0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
+				0 50px 25px rgba(0, 0, 0, 0.2);
+		}
+	}
+
+	h1 span:nth-child(2) {
+		animation-delay: 0.1s;
+	}
+
+	h1 span:nth-child(3) {
+		animation-delay: 0.2s;
+	}
+
+	h1 span:nth-child(4) {
+		animation-delay: 0.3s;
+	}
+
+	h1 span:nth-child(5) {
+		animation-delay: 0.4s;
+	}
+
+	h1 span:nth-child(6) {
+		animation-delay: 0.5s;
+	}
+
+	h1 span:nth-child(7) {
+		animation-delay: 0.6s;
+	}
+
+	h1 span:nth-child(8) {
+		animation-delay: 0.7s;
+	}
+
+	h1 span:nth-child(9) {
+		animation-delay: 0.8s;
+	}
+
+	h1 span:nth-child(10) {
+		animation-delay: 0.9s;
+	}
+
+	h1 span:nth-child(11) {
+		animation-delay: 1.0s;
+	}
+
+	h1 span:nth-child(12) {
+		animation-delay: 1.1s;
+	}
+	.heading{
+		color: #000;
+	}
+	#sign{
+		text-align: center;
+
+	}
+	#login{
+		text-align: center;
+	}
+	#skip{
+		right: 0%;
+		color: white;
+		transform: translate(0%, -50%);
+		z-index: 25;
+		cursor: pointer;
+		text-decoration: none;
+		text-align: center;
+	}
+
+	body{
+		background-image: url("images/banner/banner3.jpg");
+		background-repeat: no-repeat;
+		/* background-position: center; */
+		background-size: cover;
+	}
+</style>
+
+<body>
+	<div class="main">
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+		<div class="signup">
+			<form>
+				<label id="s-heading" for="chk" aria-hidden="true" class="heading">Sign up</label>
+				<input id="username-enter" type="text" name="txt" placeholder="User name" required>
+				<input id="email-enter" type="email" name="email" placeholder="Email" required>
+				<input id="password-enter" type="password" name="pswd" placeholder="Password" required>
+				<div style="text-align: center;">
+					<span class="form-button" onclick="status(1)" id="sign">Sign up</span>
+				<span class="form-button"  id="sign"><a href="index.html" id="skip">Skip</a></span>
+				</div>
+
+			</form>
+			<!-- <div>
+				<a href="index.html" id="skip">Skip Anyway</a>
+			</div> -->
+		</div>
+
+		<div class="login">
+			<form>
+				<label id="l-heading" for="chk" aria-hidden="true" class="heading">Login</label>
+				<input id="username-enter-2" type="text" name="name" placeholder="User name" required>
+				<input id="password-enter-2" type="password" name="pswd" placeholder="Password" required>
+				<div style="text-align: center;">
+					<span onclick="status(2)" class="form-button" id="login">Login</span>
+
+				</div>
+	</form>
+		</div>
+
+	</div>
+
+	<div id="blurpop"></div>
+	<div id="popup">
+		
+	</div>
+	<script>
+		function status(logCount) {
+			switch (logCount) {
+				case 1:
+					document.getElementById("l-heading").innerHTML = "Login"
+					var input1 = document.getElementById("username-enter").value;
+					var input2 = document.getElementById("email-enter").value;
+					var input3 = document.getElementById("password-enter").value;
+					var reg_name=/^[a-zA-Z\s\d]{3,}$/;
+					var reg_email=/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+					if (reg_name.test(input1) == true && reg_email.test(input2) == true) {
+						document.getElementById("blurpop").style.display = "block"
+						document.getElementById("popup").innerHTML = `
+						<h1>
+							<span>S</span>
+							<span>i</span>
+							<span>g</span>
+							<span>n</span>
+							<span>i</span>
+							<span>n</span>
+							<span>g</span>
+							<br />
+							<span>U</span>
+							<span>p</span>
+							<span>.</span>
+							<span>.</span>
+							<span>.</span>
+						</h1>
+						`
+						var popup = document.getElementById('popup');
+						popup.classList.toggle('active');
+						setTimeout(function () {
+							document.getElementById("blurpop").style.display = "none"
+							var popup = document.getElementById('popup');
+							popup.classList.toggle('active');
+							document.getElementById("s-heading").innerHTML = "Successfull"
+						}, 5000);  // 1 seconds
+						sessionStorage.setItem("usernameTest", input1)
+						sessionStorage.setItem("email", input2)
+						sessionStorage.setItem("passwordTest", input3)
+						document.getElementById("username-enter").value = "";
+						document.getElementById("email-enter").value = "";
+						document.getElementById("password-enter").value = "";
+					}
+					else{
+						alert("fill according ro regex");
+					}
+					break;
+				case 2:
+					document.getElementById("s-heading").innerHTML = "Sign up"
+					var input1 = document.getElementById("username-enter-2").value;
+					var input2 = document.getElementById("password-enter-2").value;
+					if (input1 == sessionStorage.getItem("usernameTest") && input2 == sessionStorage.getItem("passwordTest")) {
+						sessionStorage.setItem("username", input1)
+						document.getElementById("blurpop").style.display = "block"
+						document.getElementById("popup").innerHTML = `
+						<h1>
+							<span>L</span>
+							<span>o</span>
+							<span>g</span>
+							<span>i</span>
+							<span>n</span>
+							<span>i</span>
+							<span>n</span>
+							<span>g</span>
+							<br />
+							<span>I</span>
+							<span>n</span>
+							<span>.</span>
+							<span>.</span>
+							<span>.</span>
+						</h1>
+						`
+						var popup = document.getElementById('popup');
+						popup.classList.toggle('active');
+						setTimeout(function () {
+							document.getElementById("blurpop").style.display = "none"
+							var popup = document.getElementById('popup');
+							popup.classList.toggle('active');
+							document.getElementById("l-heading").innerHTML = "Successfull"
+						}, 5000);  // 5 seconds
+						// document.getElementById("main").style.display = "none";
+						// document.getElementById("Login_Sign_Up").style.display = "none";
+						// document.getElementById("triggerId").style.display = "block";
+						// document.getElementById("triggerId").innerHTML = input1;
+						document.getElementById("username-enter-2").value = ""
+						document.getElementById("password-enter-2").value = ""
+						setTimeout(function () {
+							location.replace("index.html");
+						}, 500);
+					}
+					else{
+						alert("USERNAME OR PASSWORD IS INCORRECT");
+					}
+					break;
+				default:
+					break;
+			}
+		}
+	</script>
+</body>
+
+</html>

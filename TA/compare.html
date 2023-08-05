@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>COMPARE</title>
+
+    <link rel="icon" type="image/png" href="images/logo.png">
+    
+
+    <!-- CSS
+================================================== -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
+    <!-- Animation -->
+    <link rel="stylesheet" href="plugins/animate-css/animate.css">
+    <!-- slick Carousel -->
+    <link rel="stylesheet" href="plugins/slick/slick.css">
+    <link rel="stylesheet" href="plugins/slick/slick-theme.css">
+    <!-- Colorbox -->
+    <link rel="stylesheet" href="plugins/colorbox/colorbox.css">
+    <!-- Template styles-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/nav1.css">
+    <link rel="stylesheet" href="css/nav2.css">
+
+    <script src="js/json.js"></script>
+<script src="js/script.js"></script>
+</head>
+<style>
+    #img img,
+    #rating {
+        float: right;
+        margin: 5px;
+        width: 200px;
+        height: 200px;
+    }
+
+    #info p {
+        text-align: justify;
+        font-size: 15px;
+    }
+
+    #product-names-1,
+    #product-names-2 {
+        display: none;
+    }
+
+    body>* {
+        color: white;
+    }
+
+    #status {
+        border: 1px solid white;
+    }
+
+    #comment {
+        /* background-color: #505784; */
+    }
+
+    #sign-up a{
+        color: black !important;
+    }
+    #compare-2 div{
+        padding: 20px !important;
+        background-color: white !important;
+      color: black !important;
+    }
+    #compare-1 div{
+        padding: 20px !important;
+       color: black !important;
+       background-color: white !important;
+    }
+    #compare-1 div h1{
+    
+       color: #3cb9fc !important;
+     
+    }
+    #compare-2 div h1{
+    
+    color: #3cb9fc !important;
+  
+ }
+/* TEXT ANIMATION css */
+ @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+ 
+.container2 p {
+  font-size: 3rem;
+  padding: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  /* overflow: hidden; */
+  color: black;
+}
+.container2 p span.typed-text {
+  font-weight: normal;
+  color: #3cb9fc;
+}
+.container2 p span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+.container2 p span.cursor.typing {
+  animation: none;
+}
+@keyframes blink {
+  0%  { background-color: #ccc; }
+  49% { background-color: #ccc; }
+  50% { background-color: transparent; }
+  99% { background-color: transparent; }
+  100%  { background-color: #ccc; }
+}
+#names,#product-names-1,#product-names-2{
+border: 3px solid #3cb9fc;
+padding: 10px;
+}
+
+
+#popup {
+        position: fixed;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* width: 600px; */
+        padding: 50px;
+        box-shadow: 0 5px 30px #0000004d;
+        background-color: #3cb9fc;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.5s;
+        z-index: 25;
+    }
+
+    #popup.active {
+        top: 50%;
+        visibility: visible;
+        opacity: 1;
+        transform: 0.5s;
+    }
+
+    #blurpop {
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        width: 100vw;
+        height: 110vh;
+        display: none;
+        z-index: 18;
+        background-color: #77d0ff;
+        /* filter: blur(200px); */
+        opacity: 0.75;
+    }
+
+    h1 {
+        /* margin-top: 5em; */
+        text-align: center;
+    }
+
+    h1 span {
+        font-family: "Luckiest Guy", cursive;
+        /* position: relative;
+        top: 20px; */
+        font-size: 80px;
+        color: #fff;
+        text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+            0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+            0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+        animation: bounce 0.3s infinite alternate;
+    }
+
+    @keyframes bounce {
+        100% {
+            top: -20px;
+            text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+                0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
+                0 50px 25px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    h1 span:nth-child(2) {
+        animation-delay: 0.1s;
+    }
+
+    h1 span:nth-child(3) {
+        animation-delay: 0.2s;
+    }
+
+    h1 span:nth-child(4) {
+        animation-delay: 0.3s;
+    }
+
+    h1 span:nth-child(5) {
+        animation-delay: 0.4s;
+    }
+
+    h1 span:nth-child(6) {
+        animation-delay: 0.5s;
+    }
+
+    h1 span:nth-child(7) {
+        animation-delay: 0.6s;
+    }
+
+    h1 span:nth-child(8) {
+        animation-delay: 0.7s;
+    }
+
+    h1 span:nth-child(9) {
+        animation-delay: 0.8s;
+    }
+
+    h1 span:nth-child(10) {
+        animation-delay: 0.9s;
+    }
+
+    /* h1 span:nth-child(11) {
+		animation-delay: 1.0s;
+	}
+
+	h1 span:nth-child(12) {
+		animation-delay: 1.1s;
+	}
+
+	h1 span:nth-child(13) {
+		animation-delay: 1.2s;
+	}
+
+	h1 span:nth-child(14) {
+		animation-delay: 1.3s;
+	}
+
+	h1 span:nth-child(15) {
+		animation-delay: 1.4s;
+	}
+
+	h1 span:nth-child(16) {
+		animation-delay: 1.5s;
+	} */
+
+    #popup h1 span {
+        color: white;
+        padding: 10px 0px;
+    }
+</style>
+
+<body style="background-color: white" onload="selectTag(),chkLogIn(),innerPages(),loaderAll()">
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+
+        <div id="top-bar" class="top-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8">
+                        <ul class="top-info text-center text-md-left">
+                            <li><i class="fas fa-map-marker-alt"></i>
+                                <p class="info-text pt-2">World Wide Completely Free Returns and Shipping</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--/ Top info end -->
+
+                    <div class="col-lg-4 col-md-4 top-social text-center text-md-right">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a title="Facebook" href="https://facebbok.com" target="_blank">
+                                    <span class="social-icon"><i class="fab fa-facebook-f"></i></span>
+                                </a>
+                                <a title="Twitter" href="https://twitter.com" target="_blank">
+                                    <span class="social-icon"><i class="fab fa-twitter"></i></span>
+                                </a>
+                                <a title="Instagram" href="https://instagram.com" target="_blank">
+                                    <span class="social-icon"><i class="fab fa-instagram"></i></span>
+                                </a>
+                                <a title="Linkdin" href="https://github.com" target="_blank">
+                                    <span class="social-icon"><i class="fab fa-github"></i></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--/ Top social end -->
+                </div>
+                <!--/ Content row end -->
+            </div>
+            <!--/ Container end -->
+        </div>
+
+        <header id="header" class="header-one">
+            <div class="bg-white">
+                <div class="container">
+                    <div class="logo-area">
+                        <div class="row align-items-center">
+                            <div
+                                class="logo col-sm-12 col-md-12 col-lg-3 col-xl-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
+                                <a class="d-block" href="index.html">
+                                    <img loading="lazy" src="images/logo.png" alt="Constra">
+                                </a>
+                            </div><!-- logo end -->
+                            <div class="col-sm-8 col-md-8 col-lg-7 col-xl-7 align-self-center"
+                                style="display: flex;justify-content: center;">
+                                <input class="form-control w-75  border-radius-3" list="datalistOptions" id="data-list"
+                                    placeholder="Type to search..." style="border-top-left-radius: 8px;
+              border-bottom-left-radius: 8px;"> <button onclick="redirect2()" class="btn btn-outline-secondary"
+                                    type="button" id="button-addon2" style="border-radius: 0px!important;"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                        class="bi bi-search" viewBox="0 0 16 16">
+                                        <path
+                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                    </svg></button>
+                                <datalist id="datalistOptions">
+                                </datalist>
+                            </div>
+                            <div class="col-sm-4 col-md-4 col-lg-2 col-xl-2 align-self-center mt-2"
+                                style="display: flex;justify-content:space-around;">
+                                <div id="sign-up">
+                                    <a href="form.html">Login/SignUp</a>
+                                </div>
+                                <div class="dropdown" id="log-in" style="display: none;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                                        class="bi bi-person-circle ico" viewBox="0 0 16 16">
+                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                        <path fill-rule="evenodd"
+                                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                    </svg>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"
+                                        style="background-color: #23282d;">
+                                        <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                                        <li><a class="dropdown-item" href="cart.html">Cart</a></li>
+                                        <li><a class="dropdown-item" href="myorders.html">MY Orders</a></li>
+                                        <li><a class="dropdown-item" href="voucher.html">Vouchers</a></li>
+                                        <li><a class="dropdown-item" href="fav.html">Wishlist</a></li>
+                                        <li><a class="dropdown-item" href="return_policy.html">Return Policy</a></li>
+                                        <li><a class="dropdown-item" href="claim_warienty.html">Claim Warranty</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="privacy_policy.html">Privacy Policy</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="term_and_condition.html">Terms &
+                                                Conditions</a></li>
+                                        <li><a class="dropdown-item" style="cursor: pointer;" onclick="SignOut()">Sign
+                                                Out</a></li>
+                                    </ul>
+                                </div>
+
+                                <a href="cart.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                                        class="bi bi-cart-plus-fill ico" viewBox="0 0 16 16">
+                                        <path
+                                            d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 1 0z" />
+                                    </svg>
+                                    <sup id="counter"></sup>
+                                </a>
+
+                                <a href="fav.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                                        class="bi bi-suit-heart-fill ico" viewBox="0 0 16 16">
+                                        <path
+                                            d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z" />
+                                    </svg>
+                                    <sup id="counter2"></sup>
+                                </a>
+                            </div>
+                            <span style="position: absolute;right: 8%;" id="usernameSaved"></span>
+                        </div><!-- logo area end -->
+
+                    </div><!-- Row end -->
+                </div><!-- Container end -->
+            </div>
+
+            <div class="site-navigation">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <nav class="navbar navbar-expand-lg navbar-dark p-0">
+                                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                    data-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false"
+                                    aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+
+                                <div id="navbar-collapse" class="collapse navbar-collapse">
+                                    <ul class="nav navbar-nav m-auto">
+                                        <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+
+                                        <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+
+                                        <li class="nav-item dropdown dropdown-mega position-static  fade-in">
+                                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                                                data-bs-auto-close="outside">Products <i
+                                                    class="fa fa-angle-down"></i></a>
+                                            <div class="dropdown-menu shadow"
+                                                style="width: 75%!important;background-color: #23282d;">
+                                                <div class="mega-content px-4">
+                                                    <div class="container-fluid">
+                                                        <div class="row">
+                                                            <div class="col-12 col-sm-6 col-md-3 py-3">
+                                                                <div class="list-group">
+                                                                    <a class="list-group-item border-0"
+                                                                        style="cursor: pointer;"
+                                                                        onclick="navProductLoad(this)">Laptop</a>
+                                                                    <a class="list-group-item border-0"
+                                                                        style="cursor: pointer;"
+                                                                        onclick="navProductLoad(this)">Desktop-Computer</a>
+                                                                    <a class="list-group-item border-0"
+                                                                        style="cursor: pointer;"
+                                                                        onclick="navProductLoad(this)">Graphic Card</a>
+                                                                    <a class="list-group-item border-0"
+                                                                        style="cursor: pointer;"
+                                                                        onclick="navProductLoad(this)">Graphic
+                                                                        Tablets</a>
+                                                                        <a class="list-group-item border-0"
+                                                                        style="cursor: pointer;"
+                                                                        onclick="navProductLoad(this)">
+                                                                        LCD / LED Monitors
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-6 col-md-3 py-4">
+                                                                <div class="list-group">
+                                                                    <a class="list-group-item border-0"
+                                                                        style="cursor: pointer;"
+                                                                        onclick="navProductLoad(this)">Processor</a>
+                                                                    <a class="list-group-item border-0"
+                                                                        style="cursor: pointer;"
+                                                                        onclick="navProductLoad(this)">Motherboard</a>
+                                                                    <a class="list-group-item border-0"
+                                                                        style="cursor: pointer;"
+                                                                        onclick="navProductLoad(this)">PC Casing</a>
+                                                                    <a class="list-group-item border-0"
+                                                                        style="cursor: pointer;"
+                                                                        onclick="navProductLoad(this)">Keyboard</a>
+                                                                    <a class="list-group-item border-0"
+                                                                        style="cursor: pointer;"
+                                                                        onclick="navProductLoad(this)">Mouse</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-6 col-md-3 py-4">
+                                                                <div class="list-group">
+                                                                    <a class="list-group-item border-0"
+                                                                        style="cursor: pointer;"
+                                                                        onclick="navProductLoad(this)">RAM</a>
+                                                                    <a class="list-group-item border-0"
+                                                                        style="cursor: pointer;"
+                                                                        onclick="navProductLoad(this)">SSD</a>
+                                                                    <a class="list-group-item border-0"
+                                                                        style="cursor: pointer;"
+                                                                        onclick="navProductLoad(this)">Hard Drives</a>
+                                                                    <a class="list-group-item border-0"
+                                                                        style="cursor: pointer;"
+                                                                        onclick="navProductLoad(this)">Power Supply</a>
+                                                                    <a class="list-group-item border-0"
+                                                                        style="cursor: pointer;"
+                                                                        onclick="navProductLoad(this)">Cooling Fans</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-6 col-md-3 py-4">
+                                                                <div class="list-group">
+                                                                    <a class="list-group-item border-0"
+                                                                        style="cursor: pointer;"
+                                                                        onclick="navProductLoad(this)">Printer</a>
+                                                                    <a class="list-group-item border-0"
+                                                                        style="cursor: pointer;"
+                                                                        onclick="navProductLoad(this)">Camera</a>
+                                                                    <a class="list-group-item border-0"
+                                                                        style="cursor: pointer;"
+                                                                        onclick="navProductLoad(this)">Speaker</a>
+                                                                    <a class="list-group-item border-0"
+                                                                        style="cursor: pointer;"
+                                                                        onclick="navProductLoad(this)">Mic</a>
+                                                                        <a class="list-group-item border-0"
+                                                                        style="cursor: pointer;"
+                                                                        onclick="navProductLoad(this)">
+                                                                        USB Flash Drive
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item dropdown dropdown-mega position-static  fade-in text-dark">
+                                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                                                data-bs-auto-close="outside">Console <i
+                                                    class="fa fa-angle-down"></i></a>
+                                            <div class="dropdown-menu shadow" style="background-color: #23282d;">
+                                                <div class="mega-content px-4">
+                                                    <div class="container-fluid">
+                                                        <div class="row">
+                                                            <div class="col-12 col-sm-6 col-md-3 py-3">
+                                                                <div class="list-group">
+                                                                    <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                                                            src="images/services/nin_lite.png"
+                                                                            alt="" height="100px"
+                                                                            class="w-auto">
+                                                                            Nintendo Switch lite</a>
+                                                                    <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                                                            src="images/services/nintendo1.png" alt=""
+                                                                            height="100px" class="w-auto">
+                                                                            Nintendo Switch oled</a>
+                                                                    <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                                                            src="images/services/nintendo.png" alt=""
+                                                                            height="100px" class="w-auto">
+                                                                            Nintendo Switch</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-6 col-md-3 py-4">
+                                                                <div class="list-group">
+                                                                    <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                                                        src="images/services/ps4-pro.png" alt=""
+                                                                        height="100px" class="w-auto">
+                                                                        Play Station 4 Pro</a>
+                                                                    <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                                                        src="images/services/ps4 slim.png" alt=""
+                                                                        height="100px" class="w-auto">
+                                                                        PS4 Slim</a>
+                                                                    <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                                                        src="images/services/xbox one.png" alt=""
+                                                                        height="100px" class="w-auto">
+                                                                        XBOX one s</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-6 col-md-3 py-4">
+                                                                <div class="list-group">
+                                                                    <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                                                        src="images/services/xbox-series-s.png" alt=""
+                                                                        height="100px" class="w-auto">
+                                                                        XBOX series s</a>
+                                                                    <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                                                        src="images/services/xbox-series-x.png" alt=""
+                                                                        height="100px" class="w-auto">
+                                                                        XBOX series x</a>
+                                                                    <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                                                        src="images/services/dreamcast.png" alt=""
+                                                                        height="100px" class="w-auto">
+                                                                        sega dreamcast</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-6 col-md-3 py-4">
+                                                                <div class="list-group">
+                                                                    <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                                                        src="images/services/genesis.png" alt=""
+                                                                        height="100px" class="w-auto">
+                                                                        sega genesis</a>
+                                                                    <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                                                        src="images/services/saturn.webp" alt=""
+                                                                        height="100px" class="w-auto">
+                                                                        sega saturn</a>
+                                                                    <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                                                        src="images/services/ps5-photo.png" alt=""
+                                                                        height="100px" class="w-auto">
+                                                                        Play Station 5</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item dropdown dropdown-mega position-static  fade-in text-dark">
+                                            <a class="nav-link dropdown-toggle " href="#" data-bs-toggle="dropdown"
+                                                data-bs-auto-close="outside">Software <i
+                                                    class="fa fa-angle-down"></i></a>
+                                            <div class="dropdown-menu shadow" style="background-color: #23282d;">
+                                                <div class="mega-content px-4">
+                                                    <div class="container-fluid">
+                                                        <div class="row">
+                                                            <div class="col-12 col-sm-4 col-md-3 py-3">
+                                                                <div class="card border-0" style="background-color: transparent;">
+                                                                    <img src="images/softImg-1.jpg" class="img-fluid "
+                                                                        alt="image"
+                                                                        style="height: 100%; width: 100%;">
+                                                                    <div class="card-body">
+                                                                        <h5>ClickUp</h5>
+                                                                        <p class="card-text">
+                                                                            ADOBE SENSEI AI TECHNOLOGY: Automated options do the heavy lifting so you can instantly...
+                                                                            <br><a href="SOFTWARE/software1.html">See More...</a></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-4 col-md-3 py-4">
+                                                                <div class="card border-0" style="background-color: transparent;">
+                                                                    <img src="images/softImg-2.jpg" class="img-fluid "
+                                                                        alt="image"
+                                                                        style="height: 100%; width: 100%;">
+                                                                    <div class="card-body">
+                                                                        <h5>MLead</h5>
+                                                                        <p class="card-text">
+                                                                            Subscription-free photo editing and design software PLUS the ultimate creative...
+                                                                            <br><a href="SOFTWARE/software2.html">See More...</a></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-4 col-md-3 py-4">
+                                                                <div class="card border-0" style="background-color: transparent;">
+                                                                    <img src="images/softImg-3.jpg" class="img-fluid "
+                                                                        alt="image"
+                                                                        style="height: 100%; width: 100%;">
+                                                                    <div class="card-body">
+                                                                        <h5>Salesflare</h5>
+                                                                        <p class="card-text">
+                                                                            Powerful fully functional 3d content creation software suite...
+                                                                            <br><a href="SOFTWARE/software3.html">See More...</a></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-4 col-md-3 py-4">
+                                                                <div class="card border-0" style="background-color: transparent;">
+                                                                    <img src="images/softImg-4.jpg" class="img-fluid "
+                                                                        alt="image"
+                                                                        style="height: 100%; width: 100%;">
+                                                                    <div class="card-body">
+                                                                        <h5>Pipedrive</h5>
+                                                                        <p class="card-text">
+                                                                            Powerful fully functional 3d content creation software suite...
+                                                                            <a href="SOFTWARE/software4.html">See More...</a></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="nav-item"><a class="nav-link" href="compare.html" style="color: #3cb9fc !important;">COMPARE </a>
+                                        </li>
+
+                                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                        <!--/ Col end -->
+                    </div>
+                    <!--/ Row end -->
+
+                    <div class="search-block" style="display: none;">
+                        <label for="search-field" class="w-100 mb-0">
+                            <input type="text" class="form-control" id="search-field"
+                                placeholder="Type what you want and enter">
+                        </label>
+                        <span class="search-close">&times;</span>
+                    </div><!-- Site search end -->
+                </div>
+                <!--/ Container end -->
+
+            </div>
+            <!--/ Navigation end -->
+        </header>
+
+        <div id="blurpop"></div>
+        <div id="popup"></div>
+           <!-- TEXT ANIMATION DIV -->
+        <div class="container2 mt-5">
+            <p >COMPARE <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+          </div>
+          <!-- TEXT ANIMATION SCRIPT -->
+<script>
+const typedTextSpan = document.querySelector(".typed-text");
+    const cursorSpan = document.querySelector(".cursor");
+    
+  const textArray = ["THE", "PRODUCT", ];  // ADD MORE WORD HERE"", ""
+    const typingDelay = 200;
+    const erasingDelay = 100;
+    const newTextDelay = 2000; // Delay between current and next text
+    let textArrayIndex = 0;
+    let charIndex = 0;
+    
+    function type() {
+      if (charIndex < textArray[textArrayIndex].length) {
+        if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+        typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, typingDelay);
+      } 
+      else {
+        cursorSpan.classList.remove("typing");
+          setTimeout(erase, newTextDelay);
+      }
+    }
+    
+    function erase() {
+        if (charIndex > 0) {
+        if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+        typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+        charIndex--;
+        setTimeout(erase, erasingDelay);
+      } 
+      else {
+        cursorSpan.classList.remove("typing");
+        textArrayIndex++;
+        if(textArrayIndex>=textArray.length) textArrayIndex=0;
+        setTimeout(type, typingDelay + 1100);
+      }
+    }
+    
+    document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+      if(textArray.length) setTimeout(type, newTextDelay + 250);
+    });
+    </script>
+    <div class="row mt-5">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <select name="" id="names" style="width: 100%;" onclick="more()">
+                <!-- <option value="" style="text-align: center;" disabled selected>SELECT</option>-->
+                <!-- <option value="" style="text-align: center;">hello</option>  -->
+            </select>
+        </div>
+    </div>
+    <div class="row my-5">
+        <div class="col-1"></div>
+        <div class="col-4">
+            <select name="" id="product-names-1" style="width: 100%;" onclick="show(1)">
+                <option value="" style="text-align: center;" disabled selected>SELECT</option>
+            </select>
+        </div>
+        <div class="col-2"></div>
+        <div class="col-4">
+            <select name="" id="product-names-2" style="width: 100%;" onclick="show(2)">
+                <option value="" style="text-align: center;" disabled selected>SELECT</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row mx-5">
+        <div class="row">
+            <div class="col-6 my-5" id="compare-1"  >
+                <!-- <div style="margin: 0 2rem;background-color: #b1b400;">
+                    <h1 id="name">RAM-1</h1>
+                    <div id="img">
+                        <img src="images/keyboard.png" alt="">
+                    </div>
+
+                    <p id="info">
+                        How many times were you frustrated while looking
+                        out for a good collection of programming/algorithm
+                        /interview questions? What did you expect and what
+                        did you get? This portal has been created to
+                        provide well written, well thought and well
+                        explained solutions for selected questions.
+                        An IIT Roorkee alumnus and founder of GeeksforGeeks.
+                        He loves to solve programming problems in most
+                        efficient ways. Apart from GeeksforGeeks, he has
+                        worked with DE Shaw and Co. as a software developer
+                        and JIIT Noida as an assistant professor. It is a
+                        good platform to learn programming. It is an
+                        educational website. Prepare for the Recruitment
+                        drive of product based companies like Microsoft,
+                        Amazon, Adobe etc with a free online placement
+                        preparation course.
+                    </p>
+                    <div id="price-1">
+                        <div id="real_price">$100</div>
+                        <div id="price_now">$90</div>
+                        <div id="see-more"><a href="#">see more</a></div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="col-6 my-5" id="compare-2">
+                <!-- <div style="margin: 0 2rem;background-color: #b1b400;">
+                    <h1 id="name">RAM-1</h1>
+                    <div id="img">
+                        <img src="images/keyboard.png" alt="">
+                    </div>
+
+                    <p id="info">
+                        How many times were you frustrated while looking
+                        out for a good collection of programming/algorithm
+                        /interview questions? What did you expect and what
+                        did you get? This portal has been created to
+                        provide well written, well thought and well
+                        explained solutions for selected questions.
+                        An IIT Roorkee alumnus and founder of GeeksforGeeks.
+                        He loves to solve programming problems in most
+                        efficient ways. Apart from GeeksforGeeks, he has
+                        worked with DE Shaw and Co. as a software developer
+                        and JIIT Noida as an assistant professor. It is a
+                        good platform to learn programming. It is an
+                        educational website. Prepare for the Recruitment
+                        drive of product based companies like Microsoft,
+                        Amazon, Adobe etc with a free online placement
+                        preparation course.
+                    </p>
+                    <div id="price-1">
+                        <div id="real_price">$100</div>
+                        <div id="price_now">$90</div>
+                        <div id="see-more"><a href="#">see more</a></div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer" class="footer bg-overlay">
+        <div class="footer-main">
+          <div class="container">
+            <div class="row justify-content-between">
+              <div class="col-lg-4 col-md-6 footer-widget footer-about">
+                <a href="index.html">
+                <img loading="lazy" width="200px" class="footer-logo" src="images/footer-logo.png" alt="TECHNOLOGY-ACCESS">
+                </a>
+                <p>Welcome to Technology Access. Online Computer Store in Pakistan.You Can Buy Computer Hardware
+                  Components, Software And Gaming Console at the best prices in Pakistan.</p>
+                <div class="footer-social">
+                  <ul>
+                    <li><a href="https://facebook.com" aria-label="Facebook"><i
+                          class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li><a href="https://instagram.com" aria-label="Instagram"><i
+                          class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://github.com" aria-label="Github"><i class="fab fa-github"></i></a>
+                    </li>
+                  </ul>
+                </div><!-- Footer social end -->
+              </div><!-- Col end -->
+  
+              <div class="col-lg-2 col-md-6 mt-5 mt-lg-0 footer-widget">
+                <h3 class="widget-title"> Shop Services / Info</h3>
+                <ul class="list-arrow">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="return_policy.html">Return Policy</a></li>
+                    <li><a href="claim_warienty.html">Claim Warranty</a></li>
+                    <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                </ul>
+            </div><!-- Col end -->
+  
+            <div class="col-lg-2 col-md-6 mt-5 mt-lg-0 footer-widget">
+                <h3 class="widget-title"> Account</h3>
+                <ul class="list-arrow">
+                    <li><a href="voucher.html">Vouchers</a></li>
+                    <li><a href="fav.html">Wishlist</a></li>
+                    <li><a href="cart.html">Shopping Cart</a></li>
+                    <li><a href="term_and_condition.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+  
+  
+              <div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0">
+                <h3 class="widget-title">Payment With</h3>
+                <!-- <div class="working-hours">
+                We work 7 days a week, every day excluding major holidays. Contact us if you have an emergency, with our
+                Hotline and Contact form.
+                <br><br> Monday - Friday: <span class="text-right">10:00 - 16:00 </span>
+                <br> Saturday: <span class="text-right">12:00 - 15:00</span>
+                <br> Sunday and holidays: <span class="text-right">09:00 - 12:00</span>
+              </div> -->
+                <a href=""><img src="images/icon-image/gpay.png" alt="" class="w-25 pl-1"></a>
+                <a href=""><img src="images/icon-image/papal.png" alt="" style="width: 38%;" class="pl-1"></a>
+                <a href=""><img src="images/icon-image/paytm.png" alt="" class="w-25  pl-1"></a>
+  
+                <h3 class="widget-title">Delivery With</h3>
+  
+                <a href=""><img src="images/icon-image/dhl-logo-400x267.png" alt="" class="pl-1" style="width: 38%;"></a>
+                <a href=""><img src="images/icon-image/LCS-Main-Logo-300x128.png" alt="" class="w-25 pl-1"></a>
+                <a href=""><img src="images/icon-image/TCS-logo-F2F6F6CB0E-seeklogo.com.png" alt="" class="w-25 pl-1"></a>
+  
+  
+              </div><!-- Col end -->
+            </div><!-- Row end -->
+          </div><!-- Container end -->
+        </div><!-- Footer main end -->
+  
+        <div class="copyright">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col">
+                <div style="text-align: center;"> All right reserved by Technology Access<br>
+                  Copyright &copy; 2022
+                </div>
+              </div>
+  
+  
+            </div><!-- Row end -->
+  
+            <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top position-fixed">
+              <button class="btn btn-primary" title="Back to Top">
+                <i class="fa fa-angle-double-up"></i>
+              </button>
+            </div>
+  
+          </div><!-- Container end -->
+        </div><!-- Copyright end -->
+      </footer>
+
+    <script>
+
+        function selectTag() {
+            var data = [];
+            var count = 0;
+            for (const x in product) {
+                if (data == []) {
+                    data.push(product[x].whatIs)
+                }
+                else {
+                    for (let i = 0; i < data.length; i++) {
+                        if (data[i] != product[x].whatIs) {
+                            count++;
+                        }
+                    }
+                    if (count == data.length) {
+                        data.push(product[x].whatIs)
+                    }
+                }
+                count = 0;
+            }
+            var text = "";
+            console.log(data);
+            for (let i = 0; i < data.length; i++) {
+                text += `<option value="${data[i]}" style="text-align: center;">${(data[i]).toUpperCase()}</option>`;
+            }
+            document.getElementById("names").innerHTML = `
+                <option value="" style="text-align: center;" disabled selected>SELECT CATEGORY</option>
+                ${text}
+            `;
+        }
+        function more() {
+            document.getElementById("product-names-1").style.display = "block";
+            document.getElementById("product-names-2").style.display = "block";
+            document.getElementById("compare-1").style.display = "none";
+            document.getElementById("compare-2").style.display = "none";
+            var value = document.getElementById("names").value;
+            var data = [];
+            for (const x in product) {
+                if (value == product[x].whatIs) {
+                    data.push(product[x].name);
+                }
+            }
+            var text = "";
+            for (let i = 0; i < data.length; i++) {
+                text += `<option value="${(data[i])}" style="text-align: center;">${(data[i]).toUpperCase()}</option>`
+            }
+            // console.log(data);
+            // console.log(text);
+            document.getElementById("product-names-1").innerHTML = `
+            <option value="" style="text-align: center;" disabled selected>SELECT PRODUCT</option>
+            ${text}
+            `;
+            document.getElementById("product-names-2").innerHTML = `
+            <option value="" style="text-align: center;" disabled selected>SELECT PRODUCT</option>
+            ${text}
+            `;
+        }
+        function show(idValue) {
+            if (idValue == 1) {
+                var value = document.getElementById("product-names-1").value;
+            }
+            else if (idValue == 2) {
+                var value = document.getElementById("product-names-2").value;
+            }
+            console.log(value)
+            var text = "";
+            var price = "";
+            for (const x in product) {
+                if (value == product[x].name) {
+                    console.log("inif")
+                    if (product[x].real_price != null) {
+                        price = `
+                    <span id="real_price">$${product[x].real_price}</span>
+                    <span>-------></span>
+                    <span id="price_now">$${product[x].price}</span>
+                    `
+                    }
+                    else {
+                        price = `
+                    <span id="price_now">$${product[x].price}</span>
+                    `
+                    }
+                    var infor = product[x].information.split(".");
+                    var temp3 = "";
+                    for (let i = 0; i < infor.length - 1; i++) {
+                        temp3 += `<li>${infor[i]}</li>`;
+                    }
+                    var status = "";
+                    if (product[x].status == 1) {
+                        status = `
+                        <span id="status" class="mx-2" style="color: #28ff28;">In Stock</span>
+                        `;
+                    } else if (product[x].status == 0) {
+                        status = `
+                        <span id="status" class="mx-2" style="color: #f34e4e;">Out Of Stock</span>
+                        `;
+                    }
+                    var comment = "";
+                    if (product[x].comment == null) {
+                        comment = `<a href="${product[x].url}">No Comment Yet...Be The First One To Comment</a>`;
+                        // comment=`No Comment Yet...Be The First One To Comment`;
+                    }
+                    else {
+                        comment = product[x].comment;
+                    }
+                    text += `
+                    <div style="margin: 0 2rem;background-color: #353b64;">
+                    <h1 id="name">${product[x].name}</h1>
+                    <div id="img">
+                        <a href="${product[x].url}"><img src="${product[x].cart_image}" alt="${product[x].name}"></a>
+                        <div id="rating">Rating:${product[x].rating}${status}</div>
+                    </div>
+
+                    <p id="info">
+                        ${product[x].information}
+                    </p>
+                    <div id="price-1">
+                        ${price}
+                        </div>
+                        <div id="see-more"><a href="${product[x].url}">see more--></a></div>
+                    <div id="comment" class="my-2 mx-2">${comment}</div>
+                </div>
+                    `
+                }
+            }
+            console.log(idValue)
+            if (idValue == 1) {
+                document.getElementById("compare-1").style.display = "block";
+                document.getElementById("compare-1").innerHTML = `${text}`;
+            }
+            else if (idValue == 2) {
+                document.getElementById("compare-2").style.display = "block";
+                document.getElementById("compare-2").innerHTML = `${text}`;
+            }
+            // if (status == "In Stock") {
+            //     document.getElementById("status").style.color = "#28ff28";
+            // } else if (status == "Out Of Stock") {
+            //     document.getElementById("status").style.color = "#f34e4e";
+            // }
+        }
+    </script>
+
+    <script>
+        function loaderAll() {
+    document.getElementById("blurpop").style.display = "block";
+    document.getElementById("popup").innerHTML = `
+                          <h1>
+                              <span>L</span>
+                              <span>O</span>
+                              <span>A</span>
+                              <span>D</span>
+                              <span>I</span>
+                              <span>N</span>
+                              <span>G</span>
+                              <span>.</span>
+                              <span>.</span>
+                              <span>.</span>
+                          </h1>
+                          `
+    var popup = document.getElementById('popup');
+    popup.classList.toggle('active');
+    setTimeout(function () {
+        document.getElementById("blurpop").style.display = "none";
+        var popup = document.getElementById('popup');
+        popup.classList.toggle('active');
+    }, 2000); // 5 seconds
+}
+    </script>
+</body>
+
+</html>

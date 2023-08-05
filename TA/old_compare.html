@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="js/json.js"></script>
+</head>
+<style>
+    .flexDivs {}
+</style>
+
+<body onload="selectTag()">
+    <div class="row mt-5">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <select name="" id="names" style="width: 100%;" onclick="more()">
+                <!-- <option value="" style="text-align: center;" disabled selected>SELECT</option>
+                <option value="" style="text-align: center;">hello</option> -->
+            </select>
+        </div>
+    </div>
+
+    <div class="row my-5">
+        <div class="col-1"></div>
+        <div class="col-4">
+            <select name="" id="product-names-1" style="width: 100%;" onclick="show(1)">
+                <option value="" style="text-align: center;" disabled selected>SELECT</option>
+            </select>
+        </div>
+        <div class="col-2"></div>
+        <div class="col-4">
+            <select name="" id="product-names-2" style="width: 100%;" onclick="show(2)">
+                <option value="" style="text-align: center;" disabled selected>SELECT</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- <div class="row mt-5">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <div class="text-center">
+                <button class="btn btn-primary">COMPARE</button>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <div class="container-fluid">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr class="simple-head">
+                        <th width="20%">
+                            <div class="bg-white h-100 w-100" id="comparing-item-name">
+                                LAPTOPS
+                            </div>
+                        </th>
+                        <th width="20%">
+                            <div class="mb-2">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <img src="https://m.media-amazon.com/images/I/61WNxdAeAoL._AC_SS350_.jpg"
+                                        width="50">
+                                    <span class="d-block text-custom-truncate ml-1">Lenovo IdeaPad Slim 5i 11th Gen
+                                        Intel Core i5 15.6&rdquo; FHD IPS Thin & Light Laptop (8GB/1TB HDD+256GB</span>
+                                </div>
+                                <hr>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h6 class="mb-0">₹ 68,500.00</h6>
+                                    <button class="btn btn-sm btn-primary">Add to cart</button>
+                                </div>
+                            </div>
+                        </th>
+                        <th width="20%">
+                            <div class="mb-2">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <img src="https://m.media-amazon.com/images/I/61WNxdAeAoL._AC_SS350_.jpg"
+                                        width="50">
+                                    <span class="d-block text-custom-truncate ml-1">Lenovo IdeaPad Slim 5i 11th Gen
+                                        Intel Core i5 15.6&rdquo; FHD IPS Thin & Light Laptop (8GB/1TB HDD+256GB</span>
+                                </div>
+                                <hr>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h6 class="mb-0">₹ 68,500.00</h6>
+                                    <button class="btn btn-sm btn-primary">Add to cart</button>
+                                </div>
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Processor Name</th>
+                        <td class="base-item">Core i5</td>
+                        <td>Core i5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div> -->
+
+    <div class="row">
+        <div class="col-4 mb-2">
+            <div class="bg-white h-100 w-100 text-center"
+                style="display: flex;justify-content: center;align-items: center;">
+                <b><u>COMPARING: <span id="comparing-item-name">LAPTOP</span></u></b>
+            </div>
+        </div>
+        <div class="col-4 mb-2">
+            <div class="d-flex justify-content-between align-items-center" id="price-btn-1">
+                <h6 class="mb-0">₹ 68,500.00</h6>
+                <button class="btn btn-sm btn-primary">Add to cart</button>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between align-items-center">
+                <img src="https://m.media-amazon.com/images/I/61WNxdAeAoL._AC_SS350_.jpg" width="50" id="img-1">
+                <span class="d-block text-custom-truncate ml-1" id="name1">Lenovo IdeaPad Slim 5i 11th Gen
+                    Intel Core i5 15.6&rdquo; FHD IPS Thin & Light Laptop (8GB/1TB HDD+256GB</span>
+            </div>
+        </div>
+        <div class="col-4 mb-2">
+            <div class="d-flex justify-content-between align-items-center" id="price-btn-2">
+                <h6 class="mb-0">₹ 68,500.00</h6>
+                <button class="btn btn-sm btn-primary">Add to cart</button>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between align-items-center">
+                <img src="https://m.media-amazon.com/images/I/61WNxdAeAoL._AC_SS350_.jpg" width="50" id="img-2">
+                <span class="d-block text-custom-truncate ml-1" id="name-2">Lenovo IdeaPad Slim 5i 11th Gen
+                    Intel Core i5 15.6&rdquo; FHD IPS Thin & Light Laptop (8GB/1TB HDD+256GB</span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 mb-2" id="compare-specs"
+            style="display: flex;justify-content: center;align-items: center;flex-direction: column;">
+        </div>
+        <div class="col-4 mb-2" id="compare-1"
+            style="display: flex;justify-content: center;align-items: center;flex-direction: column;">
+        </div>
+        <div class="col-4 mb-2" id="compare-2"
+            style="display: flex;justify-content: center;align-items: center;flex-direction: column;">
+        </div>
+    </div>
+
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous">
+        </script>
+    <script>
+
+        function selectTag() {
+            var data = [];
+            var count = 0;
+            var temp = 0;
+            for (const x in product) {
+                if (data == [] && product[x].specs[0] == 1) {
+                    data.push(product[x].whatIs)
+                }
+                else {
+                    for (let i = 0; i < data.length; i++) {
+                        if (data[i] != product[x].whatIs) {
+                            count++;
+                        }
+                    }
+                    // console.log(product[x].specs[0])
+                    if (count == data.length && product[x].specs[0] == 1) {
+                        data.push(product[x].whatIs)
+                        temp++;
+                        if (temp == 3) {
+                            break;
+                        }
+                    }
+                }
+                count = 0;
+            }
+            var text = "";
+            console.log(data);
+            for (let i = 0; i < data.length; i++) {
+                text += `<option value="${data[i]}" style="text-align: center;">${(data[i]).toUpperCase()}</option>`;
+            }
+            document.getElementById("names").innerHTML = `
+                    <option value="" style="text-align: center;" disabled selected>SELECT CATEGORY</option>
+                    ${text}
+                `;
+        }
+
+        function more() {
+            document.getElementById("product-names-1").style.display = "block";
+            document.getElementById("product-names-2").style.display = "block";
+            // document.getElementById("compare-1").style.display = "none";
+            // document.getElementById("compare-2").style.display = "none";
+            var value = document.getElementById("names").value;
+            var data = [];
+            var data2 = [];
+            var temp_data = "";
+            for (const x in product) {
+                if (value == product[x].whatIs) {
+                    data.push(product[x].name);
+                }
+            }
+
+            var text = "";
+            for (let i = 0; i < data.length; i++) {
+                text += `<option value="${(data[i])}" style="text-align: center;">${(data[i]).toUpperCase()}</option>`
+            }
+            // console.log(data);
+            // console.log(text);
+            document.getElementById("product-names-1").innerHTML = `
+                <option value="" style="text-align: center;" disabled selected>SELECT PRODUCT</option>
+                ${text}
+                `;
+            document.getElementById("product-names-2").innerHTML = `
+                <option value="" style="text-align: center;" disabled selected>SELECT PRODUCT</option>
+                ${text}
+                `;
+            for (const x in product) {
+                if (value == product[x].whatIs) {
+                    for (let i = 1; i < (product[x].specs).length; i++) {
+                        temp_data = (product[x].specs[i]).split("=")
+                        document.getElementById("compare-specs").innerHTML += `
+            <div style="padding: 20px;">${temp_data[0]}</div>
+            `;
+                    }
+                    break;
+                }
+            }
+        }
+
+        function show(idValue) {
+            if (idValue == 1) {
+                var value = document.getElementById("product-names-1").value;
+            }
+            else if (idValue == 2) {
+                var value = document.getElementById("product-names-2").value;
+            }
+            console.log(value)
+            var text = "";
+            var price = "";
+            for (const x in product) {
+                if (value == product[x].name) {
+                    console.log("inif")
+                    if (product[x].real_price != null) {
+                        price = `
+                        <span id="real_price">$${product[x].real_price}</span>
+                        <i class='fas fa-arrow-right' style="color:red;"></i>
+                        <i class='fas fa-arrow-right' style="color:green;"></i>
+                        <span id="price_now">$${product[x].price}</span>
+                        `
+                    }
+                    else {
+                        price = `
+                        <span id="price_now">$${product[x].price}</span>
+                        `
+                    }
+                    console.log((product[x].specs).length)
+                    console.log((product[x].specs[2]))
+                    // var specs = product[x].information.split(".");
+                    var data = [];
+                    var temp_data = "";
+                    for (let i = 0; i < (product[x].specs).length - 1; i++) {
+                        temp_data = (product[x].specs[i]).split("=")
+                        data.push(temp_data[1])
+                    }
+                    var status = "";
+                    if (product[x].status == 1) {
+                        status = `
+                            <span id="status" class="mx-2" style="color: #28ff28;">In Stock</span>
+                            `;
+                    } else if (product[x].status == 0) {
+                        status = `
+                            <span id="status" class="mx-2" style="color: #f34e4e;">Out Of Stock</span>
+                            `;
+                    }
+                    var comment = "";
+                    if (product[x].comment == null) {
+                        comment = `<a href="${product[x].url}">No Comment Yet...Be The First One To Comment</a>`;
+                        // comment=`No Comment Yet...Be The First One To Comment`;
+                    }
+                    else {
+                        comment = product[x].comment;
+                    }
+                    for (let i = 1; i < data.length; i++) {
+                        text += `
+                            <div style="padding: 20px;">${data[i]}</div>
+                            `
+                    }
+                }
+            }
+            console.log(idValue)
+            if (idValue == 1) {
+                document.getElementById("compare-1").style.display = "block";
+                document.getElementById("compare-1").innerHTML = `${text}`;
+            }
+            else if (idValue == 2) {
+                document.getElementById("compare-2").style.display = "block";
+                document.getElementById("compare-2").innerHTML = `${text}`;
+            }
+            // if (status == "In Stock") {
+            //     document.getElementById("status").style.color = "#28ff28";
+            // } else if (status == "Out Of Stock") {
+            //     document.getElementById("status").style.color = "#f34e4e";
+            // }
+        }
+    </script>
+</body>
+
+</html>

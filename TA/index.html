@@ -1,0 +1,2032 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Home</title>
+
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+  <!-- CSS
+================================================== -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
+  <!-- Animation -->
+  <link rel="stylesheet" href="plugins/animate-css/animate.css">
+  <!-- slick Carousel -->
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <link rel="stylesheet" href="plugins/slick/slick-theme.css">
+  <!-- Colorbox -->
+  <link rel="stylesheet" href="plugins/colorbox/colorbox.css">
+  <!-- Template styles-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/nav1.css">
+  <link rel="stylesheet" href="css/nav2.css">
+  <link rel="stylesheet" href="css/Simple AOS Animation.css">
+
+  <link rel="stylesheet" href="	https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+  <style>
+    .heart {
+      cursor: pointer;
+    }
+
+    #popup {
+      position: fixed;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      /* width: 600px; */
+      padding: 50px;
+      box-shadow: 0 5px 30px #0000004d;
+      background-color: #3cb9fc;
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.5s;
+      z-index: 25;
+    }
+
+    #popup.active {
+      top: 50%;
+      visibility: visible;
+      opacity: 1;
+      transform: 0.5s;
+    }
+
+    #blurpop {
+      position: fixed;
+      top: 0%;
+      left: 0%;
+      width: 100vw;
+      height: 110vh;
+      display: none;
+      z-index: 18;
+      background-color: #77d0ff;
+      /* filter: blur(200px); */
+      opacity: 0.75;
+    }
+
+    h1 {
+      /* margin-top: 5em; */
+      text-align: center;
+    }
+
+    h1 span {
+      font-family: "Luckiest Guy", cursive;
+      /* position: relative;
+        top: 20px; */
+      font-size: 80px;
+      color: #fff;
+      text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+        0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+        0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+      animation: bounce 0.3s infinite alternate;
+    }
+
+    @keyframes bounce {
+      100% {
+        top: -20px;
+        text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+          0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
+          0 50px 25px rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    h1 span:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+
+    h1 span:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+
+    h1 span:nth-child(4) {
+      animation-delay: 0.3s;
+    }
+
+    h1 span:nth-child(5) {
+      animation-delay: 0.4s;
+    }
+
+    h1 span:nth-child(6) {
+      animation-delay: 0.5s;
+    }
+
+    h1 span:nth-child(7) {
+      animation-delay: 0.6s;
+    }
+
+    h1 span:nth-child(8) {
+      animation-delay: 0.7s;
+    }
+
+    h1 span:nth-child(9) {
+      animation-delay: 0.8s;
+    }
+
+    h1 span:nth-child(10) {
+      animation-delay: 0.9s;
+    }
+
+    h1 span:nth-child(11) {
+      animation-delay: 1.0s;
+    }
+
+    h1 span:nth-child(12) {
+      animation-delay: 1.1s;
+    }
+
+    h1 span:nth-child(13) {
+      animation-delay: 1.2s;
+    }
+
+    h1 span:nth-child(14) {
+      animation-delay: 1.3s;
+    }
+
+    h1 span:nth-child(15) {
+      animation-delay: 1.4s;
+    }
+
+    h1 span:nth-child(16) {
+      animation-delay: 1.5s;
+    }
+
+    #popup h1 span {
+      color: white;
+      padding: 10px 0px;
+    }
+
+    #box11>div{
+      width: 16rem;
+    }
+  </style>
+</head>
+
+<body
+  onload="loadDataRp('laptop1','ram1','mouse1','speaker1','laptop2','ram2','mouse2','speaker2','laptop3','ram3','mouse3','speaker3'),loadDataFp(),innerPages(),chkLogIn(),chksl(),nameOf()">
+  <div class="body-inner">
+
+    <div id="top-bar" class="top-bar">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-8">
+            <ul class="top-info text-center text-md-left">
+              <li><i class="fas fa-map-marker-alt"></i>
+                <p class="info-text pt-2">World Wide Completely Free Returns and Shipping</p>
+              </li>
+            </ul>
+          </div>
+          <!--/ Top info end -->
+
+          <div class="col-lg-4 col-md-4 top-social text-center text-md-right">
+            <ul class="list-unstyled">
+              <li>
+                <a title="Facebook" href="https://facebbok.com" target="_blank">
+                  <span class="social-icon"><i class="fab fa-facebook-f"></i></span>
+                </a>
+                <a title="Twitter" href="https://twitter.com" target="_blank">
+                  <span class="social-icon"><i class="fab fa-twitter"></i></span>
+                </a>
+                <a title="Instagram" href="https://instagram.com" target="_blank">
+                  <span class="social-icon"><i class="fab fa-instagram"></i></span>
+                </a>
+                <a title="Linkdin" href="https://github.com" target="_blank">
+                  <span class="social-icon"><i class="fab fa-github"></i></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!--/ Top social end -->
+        </div>
+        <!--/ Content row end -->
+      </div>
+      <!--/ Container end -->
+    </div>
+
+    <header id="header" class="header-one">
+      <div class="bg-white">
+        <div class="container">
+          <div class="logo-area">
+            <div class="row align-items-center">
+              <div class="logo col-sm-12 col-md-12 col-lg-3 col-xl-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
+                <a class="d-block" href="index.html">
+                  <img loading="lazy" src="images/logo.png" alt="Constra">
+                </a>
+              </div><!-- logo end -->
+              <div class="col-sm-8 col-md-8 col-lg-7 col-xl-7 align-self-center"
+                style="display: flex;justify-content: center;">
+                <input class="form-control w-75  border-radius-3" list="datalistOptions" id="data-list"
+                  placeholder="Type to search..." style="border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;"> <button onclick="redirect2()" class="btn btn-outline-secondary" type="button"
+                  id="button-addon2" style="border-radius: 0px!important;"><svg xmlns="http://www.w3.org/2000/svg"
+                    width="18" height="18" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                  </svg></button>
+                <datalist id="datalistOptions">
+                </datalist>
+              </div>
+              <div class="col-sm-4 col-md-4 col-lg-2 col-xl-2 align-self-center mt-2"
+                style="display: flex;justify-content:space-around;">
+                <div id="sign-up">
+                  <a href="form.html">Login/SignUp</a>
+                </div>
+                <div class="dropdown" id="log-in" style="display: none;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                    class="bi bi-person-circle ico" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                    <path fill-rule="evenodd"
+                      d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                  </svg>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="background-color: #23282d;">
+                    <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                    <li><a class="dropdown-item" href="cart.html">Cart</a></li>
+                    <li><a class="dropdown-item" href="myorders.html">MY Orders</a></li>
+                    <li><a class="dropdown-item" href="voucher.html">Vouchers</a></li>
+                    <li><a class="dropdown-item" href="fav.html">Wishlist</a></li>
+                    <li><a class="dropdown-item" href="return_policy.html">Return Policy</a></li>
+                    <li><a class="dropdown-item" href="claim_warienty.html">Claim Warranty</a>
+                    </li>
+                    <li><a class="dropdown-item" href="privacy_policy.html">Privacy Policy</a>
+                    </li>
+                    <li><a class="dropdown-item" href="term_and_condition.html">Terms &
+                        Conditions</a></li>
+                    <li><a class="dropdown-item" style="cursor: pointer;" onclick="SignOut()">Sign
+                        Out</a></li>
+                  </ul>
+                </div>
+
+                <a href="cart.html">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                    class="bi bi-cart-plus-fill ico" viewBox="0 0 16 16">
+                    <path
+                      d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 1 0z" />
+                  </svg>
+                  <sup id="counter"></sup>
+                </a>
+
+                <a href="fav.html">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                    class="bi bi-suit-heart-fill ico" viewBox="0 0 16 16">
+                    <path
+                      d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z" />
+                  </svg>
+                  <sup id="counter2"></sup>
+                </a>
+              </div>
+              <span style="position: absolute;right: 8%;" id="usernameSaved"></span>
+            </div><!-- logo area end -->
+
+          </div><!-- Row end -->
+        </div><!-- Container end -->
+      </div>
+
+      <div class="site-navigation">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <nav class="navbar navbar-expand-lg navbar-dark p-0">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+                  aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div id="navbar-collapse" class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav m-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html"
+                        style="color: #3cb9fc !important;">HOME</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+
+                    <li class="nav-item dropdown dropdown-mega position-static  fade-in">
+                      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                        data-bs-auto-close="outside">Products <i class="fa fa-angle-down"></i></a>
+                      <div class="dropdown-menu shadow" style="width: 75%!important;background-color: #23282d;">
+                        <div class="mega-content px-4">
+                          <div class="container-fluid">
+                            <div class="row">
+                              <div class="col-12 col-sm-6 col-md-3 py-3">
+                                <div class="list-group">
+                                  <a class="list-group-item border-0" style="cursor: pointer;"
+                                    onclick="navProductLoad(this)">Laptop</a>
+                                  <a class="list-group-item border-0" style="cursor: pointer;"
+                                    onclick="navProductLoad(this)">Desktop-Computer</a>
+                                  <a class="list-group-item border-0" style="cursor: pointer;"
+                                    onclick="navProductLoad(this)">Graphic Card</a>
+                                  <a class="list-group-item border-0" style="cursor: pointer;"
+                                    onclick="navProductLoad(this)">Graphic
+                                    Tablets</a>
+                                    <a class="list-group-item border-0"
+                                    style="cursor: pointer;"
+                                    onclick="navProductLoad(this)">
+                                    LCD / LED Monitors
+                                </a>
+                                </div>
+                              </div>
+                              <div class="col-12 col-sm-6 col-md-3 py-4">
+                                <div class="list-group">
+                                  <a class="list-group-item border-0" style="cursor: pointer;"
+                                    onclick="navProductLoad(this)">Processor</a>
+                                  <a class="list-group-item border-0" style="cursor: pointer;"
+                                    onclick="navProductLoad(this)">Motherboard</a>
+                                  <a class="list-group-item border-0" style="cursor: pointer;"
+                                    onclick="navProductLoad(this)">PC Casing</a>
+                                  <a class="list-group-item border-0" style="cursor: pointer;"
+                                    onclick="navProductLoad(this)">Keyboard</a>
+                                  <a class="list-group-item border-0" style="cursor: pointer;"
+                                    onclick="navProductLoad(this)">Mouse</a>
+                                </div>
+                              </div>
+                              <div class="col-12 col-sm-6 col-md-3 py-4">
+                                <div class="list-group">
+                                  <a class="list-group-item border-0" style="cursor: pointer;"
+                                    onclick="navProductLoad(this)">RAM</a>
+                                  <a class="list-group-item border-0" style="cursor: pointer;"
+                                    onclick="navProductLoad(this)">SSD</a>
+                                  <a class="list-group-item border-0" style="cursor: pointer;"
+                                    onclick="navProductLoad(this)">Hard Drives</a>
+                                  <a class="list-group-item border-0" style="cursor: pointer;"
+                                    onclick="navProductLoad(this)">Power Supply</a>
+                                  <a class="list-group-item border-0" style="cursor: pointer;"
+                                    onclick="navProductLoad(this)">Cooling Fans</a>
+                                </div>
+                              </div>
+                              <div class="col-12 col-sm-6 col-md-3 py-4">
+                                <div class="list-group">
+                                  <a class="list-group-item border-0" style="cursor: pointer;"
+                                    onclick="navProductLoad(this)">Printer</a>
+                                  <a class="list-group-item border-0" style="cursor: pointer;"
+                                    onclick="navProductLoad(this)">Camera</a>
+                                  <a class="list-group-item border-0" style="cursor: pointer;"
+                                    onclick="navProductLoad(this)">Speaker</a>
+                                  <a class="list-group-item border-0" style="cursor: pointer;"
+                                    onclick="navProductLoad(this)">Mic</a>
+                                  <a class="list-group-item border-0" style="cursor: pointer;"
+                                    onclick="navProductLoad(this)">
+                                    USB Flash Drive
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown dropdown-mega position-static  fade-in text-dark">
+                      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                        data-bs-auto-close="outside">Console <i class="fa fa-angle-down"></i></a>
+                      <div class="dropdown-menu shadow" style="background-color: #23282d;">
+                        <div class="mega-content px-4">
+                          <div class="container-fluid">
+                            <div class="row">
+                              <div class="col-12 col-sm-6 col-md-3 py-3">
+                                <div class="list-group">
+                                  <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                      src="images/services/nin_lite.png" alt="" height="100px" class="w-auto">
+                                    Nintendo Switch lite</a>
+                                  <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                      src="images/services/nintendo1.png" alt="" height="100px" class="w-auto">
+                                    Nintendo Switch oled</a>
+                                  <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                      src="images/services/nintendo.png" alt="" height="100px" class="w-auto">
+                                    Nintendo Switch</a>
+                                </div>
+                              </div>
+                              <div class="col-12 col-sm-6 col-md-3 py-4">
+                                <div class="list-group">
+                                  <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                      src="images/services/ps4-pro.png" alt="" height="100px" class="w-auto">
+                                    Play Station 4 Pro</a>
+                                  <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                      src="images/services/ps4 slim.png" alt="" height="100px" class="w-auto">
+                                    PS4 Slim</a>
+                                  <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                      src="images/services/xbox one.png" alt="" height="100px" class="w-auto">
+                                    XBOX one s</a>
+                                </div>
+                              </div>
+                              <div class="col-12 col-sm-6 col-md-3 py-4">
+                                <div class="list-group">
+                                  <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                      src="images/services/xbox-series-s.png" alt="" height="100px" class="w-auto">
+                                    XBOX series s</a>
+                                  <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                      src="images/services/xbox-series-x.png" alt="" height="100px" class="w-auto">
+                                    XBOX series x</a>
+                                  <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                      src="images/services/dreamcast.png" alt="" height="100px" class="w-auto">
+                                    sega dreamcast</a>
+                                </div>
+                              </div>
+                              <div class="col-12 col-sm-6 col-md-3 py-4">
+                                <div class="list-group">
+                                  <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                      src="images/services/genesis.png" alt="" height="100px" class="w-auto">
+                                    sega genesis</a>
+                                  <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                      src="images/services/saturn.webp" alt="" height="100px" class="w-auto">
+                                    sega saturn</a>
+                                  <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                      src="images/services/ps5-photo.png" alt="" height="100px" class="w-auto">
+                                    Play Station 5</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown dropdown-mega position-static  fade-in text-dark">
+                      <a class="nav-link dropdown-toggle " href="#" data-bs-toggle="dropdown"
+                        data-bs-auto-close="outside">Software <i class="fa fa-angle-down"></i></a>
+                      <div class="dropdown-menu shadow" style="background-color: #23282d;">
+                        <div class="mega-content px-4">
+                          <div class="container-fluid">
+                            <div class="row">
+                              <div class="col-12 col-sm-4 col-md-3 py-3">
+                                <div class="card border-0" style="background-color: transparent;">
+                                  <img src="images/softImg-1.jpg" class="img-fluid " alt="image"
+                                    style="height: 100%; width: 100%;">
+                                  <div class="card-body">
+                                    <h5>ClickUp</h5>
+                                    <p class="card-text">
+                                      ADOBE SENSEI AI TECHNOLOGY: Automated options do the heavy lifting so you can
+                                      instantly...
+                                      <br><a href="SOFTWARE/software1.html">See More...</a>
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-3 py-4">
+                                <div class="card border-0" style="background-color: transparent;">
+                                  <img src="images/softImg-2.jpg" class="img-fluid " alt="image"
+                                    style="height: 100%; width: 100%;">
+                                  <div class="card-body">
+                                    <h5>MLead</h5>
+                                    <p class="card-text">
+                                      Subscription-free photo editing and design software PLUS the ultimate creative...
+                                      <br><a href="SOFTWARE/software2.html">See More...</a>
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-3 py-4">
+                                <div class="card border-0" style="background-color: transparent;">
+                                  <img src="images/softImg-3.jpg" class="img-fluid " alt="image"
+                                    style="height: 100%; width: 100%;">
+                                  <div class="card-body">
+                                    <h5>Salesflare</h5>
+                                    <p class="card-text">
+                                      Powerful fully functional 3d content creation software suite...
+                                      <br><a href="SOFTWARE/software3.html">See More...</a>
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-12 col-sm-4 col-md-3 py-4">
+                                <div class="card border-0" style="background-color: transparent;">
+                                  <img src="images/softImg-4.jpg" class="img-fluid " alt="image"
+                                    style="height: 100%; width: 100%;">
+                                  <div class="card-body">
+                                    <h5>Pipedrive</h5>
+                                    <p class="card-text">
+                                      Powerful fully functional 3d content creation software suite...
+                                      <a href="SOFTWARE/software4.html">See More...</a>
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="compare.html">COMPARE </a>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+            <!--/ Col end -->
+          </div>
+          <!--/ Row end -->
+
+          <div class="search-block" style="display: none;">
+            <label for="search-field" class="w-100 mb-0">
+              <input type="text" class="form-control" id="search-field" placeholder="Type what you want and enter">
+            </label>
+            <span class="search-close">&times;</span>
+          </div><!-- Site search end -->
+        </div>
+        <!--/ Container end -->
+
+      </div>
+      <!--/ Navigation end -->
+    </header>
+
+    <div class="banner-carousel banner-carousel-1 mb-0">
+      <div class="banner-carousel-item" style="background-image:url(images/slider-main/bg1.jpg)">
+        <div class="slider-content">
+          <div class="container h-100">
+            <div class="row align-items-center h-100">
+              <div class="col-md-12 text-center">
+                <h2 class="slide-title" data-animation-in="slideInLeft">17 Years of excellence in</h2>
+                <h3 class="slide-sub-title" data-animation-in="slideInRight">TECHNOLOGY-ACCESS</h3>
+                <p data-animation-in="slideInLeft" data-duration-in="1.2">
+                  <a href="all.html" class="slider btn btn-primary" style="color: white !important;">Our Services</a>
+                  <a href="contact.html" class="slider btn btn-primary border">Contact Now</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="banner-carousel-item" style="background-image:url(images/slider-main/5.webp)">
+        <div class="slider-content text-left">
+          <div class="container h-100">
+            <div class="row align-items-center h-100">
+              <div class="col-md-12">
+                <h2 class="slide-title-box" data-animation-in="slideInDown">World Class Service</h2>
+                <h3 class="slide-title" data-animation-in="fadeIn">When Service Matters</h3>
+                <h3 class="slide-sub-title" data-animation-in="slideInLeft">Your Choice is Simple</h3>
+                <p data-animation-in="slideInRight">
+                  <a href="all.html" class="slider btn btn-primary border">Our Services</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="banner-carousel-item" style="background-image:url(images/slider-main/12.jpg)">
+        <div class="slider-content text-right">
+          <div class="container h-100">
+            <div class="row align-items-center h-100">
+              <div class="col-md-12">
+                <h2 class="slide-title" data-animation-in="slideInDown">Meet Our Developers</h2>
+                <h3 class="slide-sub-title" data-animation-in="fadeIn">We believe sustainability</h3>
+                <p class="slider-description lead" data-animation-in="slideInRight">We will deal with your failure that
+                  determines how you achieve success.</p>
+                <div data-animation-in="slideInLeft">
+                  <a href="contact.html" class="slider btn btn-primary" aria-label="contact-with-us">Get Free Quote</a>
+                  <a href="about.html" class="slider btn btn-primary border" aria-label="learn-more-about-us">Learn
+                    more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="banner-carousel-item" style="background-image:url(images/slider-main/11.jpg)">
+        <div class="slider-content text-right">
+          <div class="container h-100">
+            <div class="row align-items-center h-100">
+              <div class="col-md-12">
+                <h2 class="slide-title" data-animation-in="slideInDown">Meet Our Developers</h2>
+                <h3 class="slide-sub-title" data-animation-in="fadeIn">We believe sustainability</h3>
+                <p class="slider-description lead" data-animation-in="slideInRight">We will deal with your failure that
+                  determines how you achieve success.</p>
+                <div data-animation-in="slideInLeft">
+                  <a href="contact.html" class="slider btn btn-primary" aria-label="contact-with-us">Get Free Quote</a>
+                  <a href="about.html" class="slider btn btn-primary border" aria-label="learn-more-about-us">Learn
+                    more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="banner-carousel-item" style="background-image:url(images/slider-main/15.jpg)">
+        <div class="slider-content text-right">
+          <div class="container h-100">
+            <div class="row align-items-center h-100">
+              <div class="col-md-12">
+                <h2 class="slide-title" data-animation-in="slideInDown">Meet Our Developers</h2>
+                <h3 class="slide-sub-title" data-animation-in="fadeIn">We believe sustainability</h3>
+                <p class="slider-description lead" data-animation-in="slideInRight">We will deal with your failure that
+                  determines how you achieve success.</p>
+                <div data-animation-in="slideInLeft">
+                  <a href="contact.html" class="slider btn btn-primary" aria-label="contact-with-us">Get Free Quote</a>
+                  <a href="about.html" class="slider btn btn-primary border" aria-label="learn-more-about-us">Learn
+                    more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="blurpop"></div>
+    <div id="popup"></div>
+
+    <div class="row" id="cartClick">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="preloader">
+          <div class="box">
+            <div class="box__inner">
+              <div class="box__back-flap"></div>
+              <div class="box__right-flap"></div>
+              <div class="box__front-flap"></div>
+              <div class="box__left-flap"></div>
+              <div class="box__front"></div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="box__inner">
+              <div class="box__back-flap"></div>
+              <div class="box__right-flap"></div>
+              <div class="box__front-flap"></div>
+              <div class="box__left-flap"></div>
+              <div class="box__front"></div>
+            </div>
+          </div>
+          <div class="line">
+            <div class="line__inner"></div>
+          </div>
+          <div class="line">
+            <div class="line__inner"></div>
+          </div>
+          <div class="line">
+            <div class="line__inner"></div>
+          </div>
+          <div class="line">
+            <div class="line__inner"></div>
+          </div>
+          <div class="line">
+            <div class="line__inner"></div>
+          </div>
+          <div class="line">
+            <div class="line__inner"></div>
+          </div>
+          <div class="line">
+            <div class="line__inner"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="pt-5 pb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <h3 class="mb-3">FEATURED PRODUCTS</h3>
+          </div>
+          <div class="col-6 text-right">
+            <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+              <i class="fa fa-arrow-left"></i>
+            </a>
+            <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
+              <i class="fa fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="col-12">
+            <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row" id="rp-1">
+
+                    <div class="col-md-3 d-flex justify-content-center">
+                      <div class="card p-2 carda">
+                        <div class="text-center">
+                          <img src="https://i.imgur.com/Sp5bXsO.png" class="img-fluid" width="200" />
+                        </div>
+                        <div class="content">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <span class="category">Laptop</span> <span class="price">$599</span>
+                          </div>
+                          <span>Dell Astro 3044</span>
+                          <div class="buttons d-flex justify-content-center">
+                            <button class="btn btn-primary mr-1">Buy Now</button>
+                            <button class="btn btn-primary">Add to cart</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 d-flex justify-content-center">
+                      <div class="card p-2 carda">
+                        <div class="text-center">
+                          <img src="https://i.imgur.com/Sp5bXsO.png" class="img-fluid" width="200" />
+                        </div>
+                        <div class="content">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <span class="category">Laptop</span> <span class="price">$599</span>
+                          </div>
+                          <p>Dell Astro 3044</p>
+                          <div class="buttons d-flex justify-content-center">
+                            <button class="btn btn-primary mr-1">Buy Now</button>
+                            <button class="btn btn-primary">Add to cart</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 d-flex justify-content-center">
+                      <div class="card p-2 carda">
+                        <div class="text-center">
+                          <img src="https://i.imgur.com/LaGzgLp.png" class="img-fluid" width="200" />
+                        </div>
+                        <div class="content">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <span class="category">Laptop</span> <span class="price">$799</span>
+                          </div>
+                          <p>Dell Astro 3434</p>
+                          <div class="buttons d-flex justify-content-center">
+                            <button class="btn btn-primary mr-1">Buy Now</button>
+                            <button class="btn btn-primary">Add to cart</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 d-flex justify-content-center">
+                      <div class="card p-2 carda">
+                        <div class="text-center">
+                          <img src="https://i.imgur.com/6c6dloN.png" class="img-fluid" width="200" />
+                        </div>
+                        <div class="content">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <span class="category">Laptop</span>
+                            <span class="price">$999</span>
+                          </div>
+                          <p>Dell Latitude 3340</p>
+                          <div class="buttons d-flex justify-content-center">
+                            <button class="btn btn-primary mr-1">Buy Now</button>
+                            <button class="btn btn-primary">Add to cart</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row" id="rp-2">
+
+                    <div class="col-md-3 d-flex justify-content-center">
+                      <div class="card p-2 carda">
+                        <div class="text-center">
+                          <img src="https://i.imgur.com/6c6dloN.png" class="img-fluid" width="200" />
+                        </div>
+                        <div class="content">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <span class="category">Laptop</span>
+                            <span class="price">$999</span>
+                          </div>
+                          <p>Dell Latitude 3340</p>
+                          <div class="buttons d-flex justify-content-center">
+                            <button class="btn btn-primary mr-1">Buy Now</button>
+                            <button class="btn btn-primary">Add to cart</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 d-flex justify-content-center">
+                      <div class="card p-2 carda">
+                        <div class="text-center">
+                          <img src="https://i.imgur.com/6c6dloN.png" class="img-fluid" width="200" />
+                        </div>
+                        <div class="content">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <span class="category">Laptop</span>
+                            <span class="price">$999</span>
+                          </div>
+                          <p>Dell Latitude 3340</p>
+                          <div class="buttons d-flex justify-content-center">
+                            <button class="btn btn-primary mr-1">Buy Now</button>
+                            <button class="btn btn-primary">Add to cart</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 d-flex justify-content-center">
+                      <div class="card p-2 carda">
+                        <div class="text-center">
+                          <img src="https://i.imgur.com/LaGzgLp.png" class="img-fluid" width="200" />
+                        </div>
+                        <div class="content">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <span class="category">Laptop</span> <span class="price">$799</span>
+                          </div>
+                          <p>Dell Astro 3434</p>
+                          <div class="buttons d-flex justify-content-center">
+                            <button class="btn btn-primary mr-1">Buy Now</button>
+                            <button class="btn btn-primary">Add to cart</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 d-flex justify-content-center">
+                      <div class="card p-2 carda">
+                        <div class="text-center">
+                          <img src="https://i.imgur.com/Sp5bXsO.png" class="img-fluid" width="200" />
+                        </div>
+                        <div class="content">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <span class="category">Laptop</span> <span class="price">$599</span>
+                          </div>
+                          <p>Dell Astro 3044</p>
+                          <div class="buttons d-flex justify-content-center">
+                            <button class="btn btn-primary mr-1">Buy Now</button>
+                            <button class="btn btn-primary">Add to cart</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row" id="rp-3">
+
+                    <div class="col-md-3 d-flex justify-content-center">
+                      <div class="card p-2 carda">
+                        <div class="text-center">
+                          <img src="https://i.imgur.com/LaGzgLp.png" class="img-fluid" width="200" />
+                        </div>
+                        <div class="content">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <span class="category">Laptop</span> <span class="price">$799</span>
+                          </div>
+                          <p>Dell Astro 3434</p>
+                          <div class="buttons d-flex justify-content-center">
+                            <button class="btn btn-primary mr-1">Buy Now</button>
+                            <button class="btn btn-primary">Add to cart</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 d-flex justify-content-center">
+                      <div class="card p-2 carda">
+                        <div class="text-center">
+                          <img src="https://i.imgur.com/LaGzgLp.png" class="img-fluid" width="200" />
+                        </div>
+                        <div class="content">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <span class="category">Laptop</span> <span class="price">$799</span>
+                          </div>
+                          <p>Dell Astro 3434</p>
+                          <div class="buttons d-flex justify-content-center">
+                            <button class="btn btn-primary mr-1">Buy Now</button>
+                            <button class="btn btn-primary">Add to cart</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 d-flex justify-content-center">
+                      <div class="card p-2 carda">
+                        <div class="text-center">
+                          <img src="https://i.imgur.com/Sp5bXsO.png" class="img-fluid" width="200" />
+                        </div>
+                        <div class="content">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <span class="category">Laptop</span> <span class="price">$599</span>
+                          </div>
+                          <p>Dell Astro 3044</p>
+                          <div class="buttons d-flex justify-content-center">
+                            <button class="btn btn-primary mr-1">Buy Now</button>
+                            <button class="btn btn-primary">Add to cart</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 d-flex justify-content-center">
+                      <div class="card p-2 carda">
+                        <div class="text-center">
+                          <img src="https://i.imgur.com/6c6dloN.png" class="img-fluid" width="200" />
+                        </div>
+                        <div class="content">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <span class="category">Laptop</span>
+                            <span class="price">$999</span>
+                          </div>
+                          <p>Dell Latitude 3340</p>
+                          <div class="buttons d-flex justify-content-center">
+                            <button class="btn btn-primary mr-1">Buy Now</button>
+                            <button class="btn btn-primary">Add to cart</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div>
+        <h1 class="fp">DISCOUNTED PRODUCTS</h1>
+      </div>
+      <div class="row" id="fp-1">
+        <div class="col-sm-12 col-md-3 aos_container">
+          <div class="aos_content" id="box1">
+            <div class="card  border-0">
+              <div class="d-flex justify-content-between p-3">
+                <p class="lead mb-0">Today's Combo Offer</p>
+                <div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+                  style="width: 35px; height: 28px;">
+                  <p class="text-white mb-0 small">x4</p>
+                </div>
+              </div>
+              <img src="images/services/omen.png" class="card-img-top" alt="laptop" />
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
+                  <p class="small text-danger"><s>$1099</s></p>
+                </div>
+
+                <div class="d-flex justify-content-between mb-3">
+                  <h5 class="mb-0">HP OMEN X</h5>
+                  <h5 class="text-dark mb-0">$999</h5>
+                </div>
+
+                <div class="d-flex justify-content-between mb-2">
+                  <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
+                  <div class="ms-auto text-warning">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <ul class="text-truncate">
+                    <li class="card-text">AMD Ryzen™ 7 4800H (2.9 GHz base clock, 8 MB L3 cache, 8 cores)</li>
+                    <li class="card-text">16 GB DDR4 (2 x 8 GB)</li>
+                    <li class="card-text">NVIDIA® GeForce® GTX 1650 Ti 4 GB</li>
+                  </ul>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <button class="button-29" role="button">SEE DETAILS</button><button class="button-29"
+                    role="button">SHOP NOW</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-3 aos_container">
+          <div class="aos_content" id="box2">
+            <!-- <div class="card"  style="background-color: #101820FF!important; border: none!important;">
+            <img class="card-img-top" src="case.jpg" alt="Title" >
+            <div class="card-body">
+              <h4 class="card-title">COUGAR GAMING CASE</h4>
+              <ul>
+                <li class="card-text">The COUGAR Design DNA</li>
+              <li class="card-text">Unique aluminium Framing + Immaculate Tempered Glass</li>
+              <li class="card-text">Superior Expandability</li>
+              <li class="card-text">Extreme Cooling Performance</li>
+              </ul>
+              <button>SHOP NOW</button>
+            </div>
+          </div> -->
+            <div class="card  border-0">
+              <div class="d-flex justify-content-between p-3">
+                <p class="lead mb-0">Today's Combo Offer</p>
+                <div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+                  style="width: 35px; height: 28px;">
+                  <p class="text-white mb-0 small">x4</p>
+                </div>
+              </div>
+              <img src="images/services/case.jpg" class="card-img-top" alt="laptop" />
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
+                  <p class="small text-danger"><s>$1099</s></p>
+                </div>
+
+                <div class="d-flex justify-content-between mb-3">
+                  <h5 class="mb-0">COUGAR GAMING CASE</h5>
+                  <h5 class="text-dark mb-0">$999</h5>
+                </div>
+
+                <div class="d-flex justify-content-between mb-2">
+                  <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
+                  <div class="ms-auto text-warning">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <ul class="text-truncate">
+                    <li class="card-text">The COUGAR Design DNA</li>
+                    <li class="card-text">Unique aluminium Framing + Immaculate Tempered Glass</li>
+                    <li class="card-text">Superior Expandability</li>
+                  </ul>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <button class="button-29" role="button">SEE DETAILS</button><button class="button-29"
+                    role="button">SHOP NOW</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-3 aos_container">
+          <div class="aos_content" id="box3">
+            <!-- <div class="card"  style="background-color: #101820FF!important; border: none!important;">
+            <img class="card-img-top" src="ram.png" alt="Title" >
+            <div class="card-body">
+              <h4 class="card-title">AORUS RGB Memory</h4>
+              <ul>
+                <li class="card-text">16GB kit (2x8GB)</li>
+                <li class="card-text">DDR4</li>
+              <li class="card-text">Dual Channel Kit</li>
+              <li class="card-text">RGB Fusion</li>
+              <li class="card-text">Limited Lifetime Warranty</li>
+              </ul>
+              <button>SHOP NOW</button>
+            </div>
+          </div> -->
+            <div class="card  border-0">
+              <div class="d-flex justify-content-between p-3">
+                <p class="lead mb-0">Today's Combo Offer</p>
+                <div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+                  style="width: 35px; height: 28px;">
+                  <p class="text-white mb-0 small">x4</p>
+                </div>
+              </div>
+              <img src="images/services/ram.png" class="card-img-top" alt="laptop" />
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
+                  <p class="small text-danger"><s>$1099</s></p>
+                </div>
+
+                <div class="d-flex justify-content-between mb-3">
+                  <h5 class="mb-0">AORUS RGB Memory</h5>
+                  <h5 class="text-dark mb-0">$999</h5>
+                </div>
+
+                <div class="d-flex justify-content-between mb-2">
+                  <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
+                  <div class="ms-auto text-warning">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <ul class="text-truncate">
+                    <li class="card-text">16GB kit (2x8GB)</li>
+                    <li class="card-text">DDR4</li>
+                    <li class="card-text">Dual Channel Kit</li>
+                  </ul>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <button class="button-29" role="button">SEE DETAILS</button><button class="button-29"
+                    role="button">SHOP NOW</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-3 aos_container">
+          <div class="aos_content" id="box4">
+            <!-- <div class="card"  style="background-color: #101820FF!important; border: none!important;">
+          <img class="card-img-top" src="ram.png" alt="Title" >
+          <div class="card-body">
+            <h4 class="card-title">AORUS RGB Memory</h4>
+            <ul>
+              <li class="card-text">16GB kit (2x8GB)</li>
+              <li class="card-text">DDR4</li>
+            <li class="card-text">Dual Channel Kit</li>
+            <li class="card-text">RGB Fusion</li>
+            <li class="card-text">Limited Lifetime Warranty</li>
+            </ul>
+            <button>SHOP NOW</button>
+          </div>
+        </div> -->
+            <div class="card  border-0">
+              <div class="d-flex justify-content-between p-3">
+                <p class="lead mb-0">Today's Combo Offer</p>
+                <div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+                  style="width: 35px; height:28px;">
+                  <p class="text-white mb-0 small">x4</p>
+                </div>
+              </div>
+              <img src="images/services/18-czone.com.pk-1540-12707-060122094350-removebg-preview.png"
+                class="card-img-top" alt="laptop" />
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
+                  <p class="small text-danger"><s>$1099</s></p>
+                </div>
+
+                <div class="d-flex justify-content-between mb-3">
+                  <h5 class="mb-0">AORUS RGB Memory</h5>
+                  <h5 class="text-dark mb-0">$999</h5>
+                </div>
+
+                <div class="d-flex justify-content-between mb-2">
+                  <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
+                  <div class="ms-auto text-warning">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <ul class="text-truncate">
+                    <li class="card-text">16GB kit (2x8GB)</li>
+                    <li class="card-text">DDR4</li>
+                    <li class="card-text">Dual Channel Kit</li>
+                  </ul>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <button class="button-29" role="button">SEE DETAILS</button><button class="button-29"
+                    role="button">SHOP NOW</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 25px;" id="fp-2">
+        <div class="col-sm-12 col-md-3 aos_container">
+          <div class="aos_content" id="box5">
+            <!-- <div class="card"  style="background-color: #101820FF!important; border: none!important;">
+            <img class="card-img-top" src="gtx-removebg-preview.png" alt="Title" >
+            <div class="card-body">
+              <h4 class="card-title">Gigabyte AORUS RTX 3060 ti</h4>
+              <ul>
+                <li class="card-text">1800 MHz (Reference Card: 1665 MHz)</li>
+                <li class="card-text">4 GB Memory Size</li>
+                <li class="card-text">GDDR6 Memory Type</li>
+                <li class="card-text">256 bit Memory Bus</li>
+                <li class="card-text">650 PSU</li>
+              </ul>
+              <button>SHOP NOW</button>
+            </div>
+          </div> -->
+            <div class="card  border-0">
+              <div class="d-flex justify-content-between p-3">
+                <p class="lead mb-0">Today's Combo Offer</p>
+                <div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+                  style="width: 35px; height: 28px;">
+                  <p class="text-white mb-0 small">x4</p>
+                </div>
+              </div>
+              <img src="images/services/gtx-removebg-preview.png" class="card-img-top" alt="laptop" />
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
+                  <p class="small text-danger"><s>$1099</s></p>
+                </div>
+
+                <div class="d-flex justify-content-between mb-3">
+                  <h5 class="mb-0">Gigabyte AORUS RTX 3060 ti</h5>
+                  <h5 class="text-dark mb-0">$999</h5>
+                </div>
+
+                <div class="d-flex justify-content-between mb-2">
+                  <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
+                  <div class="ms-auto text-warning">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <ul class="text-truncate">
+                    <li class="card-text">1800 MHz (Reference Card: 1665 MHz)</li>
+                    <li class="card-text">4 GB Memory Size</li>
+                    <li class="card-text">GDDR6 Memory Type</li>
+                  </ul>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <button class="button-29" role="button">SEE DETAILS</button><button class="button-29"
+                    role="button">SHOP NOW</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-3 aos_container">
+          <div class="aos_content" id="box6">
+            <!-- <div class="card"  style="background-color: #101820FF!important; border: none!important;">
+            <img class="card-img-top" src="1-czone.com.pk-1540-13148-250422040702-removebg-preview (1).png" alt="Title" >
+            <div class="card-body">
+              <h4 class="card-title">ViewSonic VP3481 34" Curved Ultra-Wide Monitor</h4>
+              <ul>
+                <li class="card-text">Immersive Curved Screen Design</li>
+                <li class="card-text">HDR10 Content Support</li>
+                <li class="card-text">Loaded with Connectivity</li>
+                <li class="card-text">Amazing Color Accuracy</li>
+                <li class="card-text">WQHD+ 3440x1440 resolution</li>
+              </ul>
+              <button>SHOP NOW</button>
+            </div>
+          </div> -->
+
+            <div class="card border-0 border-radius-none" style="border-radius: none!important;">
+              <div class="d-flex justify-content-between p-3">
+                <p class="lead mb-0">Today's Combo Offer</p>
+                <div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+                  style="width: 35px; height: 28px;">
+                  <p class="text-white mb-0 small">x4</p>
+                </div>
+              </div>
+              <img src="images/services/1-czone.com.pk-1540-13148-250422040702-removebg-preview (1).png"
+                class="card-img-top" alt="laptop" />
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
+                  <p class="small text-danger"><s>$1099</s></p>
+                </div>
+
+                <div class="d-flex justify-content-between mb-3">
+                  <h5 class="mb-0">ViewSonic VP3481 34" Curved Ultra-Wide Monitor</h5>
+                  <h5 class="text-dark mb-0">$999</h5>
+                </div>
+
+                <div class="d-flex justify-content-between mb-2">
+                  <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
+                  <div class="ms-auto text-warning">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <ul class="text-truncate">
+                    <li class="card-text">Immersive Curved Screen Design</li>
+                    <li class="card-text">HDR10 Content Support</li>
+                    <li class="card-text">Loaded with Connectivity</li>
+                  </ul>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <button class="button-29" role="button">SEE DETAILS</button><button class="button-29"
+                    role="button">SHOP NOW</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-3 aos_container">
+          <div class="aos_content" id="box7">
+            <!-- <div class="card"  style="background-color: #101820FF!important; border: none!important;">
+            <img class="card-img-top" src="mz-v8p2t0bw-005-1540-11227-110321124548-removebg-preview.png" alt="Title" >
+            <div class="card-body">
+              <h4 class="card-title">Samsung 980 PRO SSD 2TB</h4>
+              <ul>
+                <li class="card-text">M.2 (2280) Form Factor</li>
+                <li class="card-text">PCIe 4.0 NVMe SSD</li>
+                <li class="card-text">Delivers 2x the data transfer rate of PCIe 3.0</li>
+                <li class="card-text">7,000MB/s Seq. reads</li>
+                <li class="card-text">5,100MB/s Seq. writes</li>
+              </ul>
+              <button>SHOP NOW</button>
+            </div>
+          </div> -->
+            <div class="card border-0 border-radius-none text-dark" style="border-radius: none!important;">
+              <div class="d-flex justify-content-between p-3">
+                <p class="lead mb-0">Today's Combo Offer</p>
+                <div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+                  style="width: 35px; height: 28px;">
+                  <p class="text-white mb-0 small">x4</p>
+                </div>
+              </div>
+              <img src="images/services/mz-v8p2t0bw-005-1540-11227-110321124548-removebg-preview.png"
+                class="card-img-top" alt="laptop" />
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
+                  <p class="small text-danger"><s>$1099</s></p>
+                </div>
+
+                <div class="d-flex justify-content-between mb-3">
+                  <h5 class="mb-0">Samsung 980 PRO SSD 2TB</h5>
+                  <h5 class="text-dark mb-0">$999</h5>
+                </div>
+
+                <div class="d-flex justify-content-between mb-2">
+                  <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
+                  <div class="ms-auto text-warning">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <ul class="text-truncate">
+                    <li class="card-text">M.2 (2280) Form Factor</li>
+                    <li class="card-text">PCIe 4.0 NVMe SSD</li>
+                    <li class="card-text">Delivers 2x the data transfer rate of PCIe 3.0</li>
+                  </ul>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <button class="button-29" role="button">SEE DETAILS</button><button class="button-29"
+                    role="button">SHOP NOW</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-3 aos_container">
+          <div class="aos_content" id="box8">
+            <!-- <div class="card"  style="background-color: #101820FF!important; border: none!important;">
+          <img class="card-img-top" src="mz-v8p2t0bw-005-1540-11227-110321124548-removebg-preview.png" alt="Title" >
+          <div class="card-body">
+            <h4 class="card-title">Samsung 980 PRO SSD 2TB</h4>
+            <ul>
+              <li class="card-text">M.2 (2280) Form Factor</li>
+              <li class="card-text">PCIe 4.0 NVMe SSD</li>
+              <li class="card-text">Delivers 2x the data transfer rate of PCIe 3.0</li>
+              <li class="card-text">7,000MB/s Seq. reads</li>
+              <li class="card-text">5,100MB/s Seq. writes</li>
+            </ul>
+            <button>SHOP NOW</button>
+          </div>
+        </div> -->
+            <div class="card border-0 border-radius-none text-dark" style="border-radius: none!important;">
+              <div class="d-flex justify-content-between p-3">
+                <p class="lead mb-0">Today's Combo Offer</p>
+                <div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+                  style="width: 35px; height: 28px;">
+                  <p class="text-white mb-0 small">x4</p>
+                </div>
+              </div>
+              <img src="images/services/head-removebg-preview.png" class="card-img-top" alt="laptop" />
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <p class="small"><a href="#!" class="text-muted">Laptops</a></p>
+                  <p class="small text-danger"><s>$1099</s></p>
+                </div>
+
+                <div class="d-flex justify-content-between mb-3">
+                  <h5 class="mb-0">Samsung 980 PRO SSD 2TB</h5>
+                  <h5 class="text-dark mb-0">$999</h5>
+                </div>
+
+
+                <div class="d-flex justify-content-between mb-2">
+                  <p class="text-muted mb-0">Available: <span class="fw-bold">6</span></p>
+                  <div class="ms-auto text-warning">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <ul class="text-truncate">
+                    <li class="card-text">M.2 (2280) Form Factor</li>
+                    <li class="card-text">PCIe 4.0 NVMe SSD</li>
+                    <li class="card-text">Delivers 2x the data transfer rate of PCIe 3.0</li>
+                  </ul>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <button class="button-29" role="button">SEE DETAILS</button><button class="button-29"
+                    role="button">SHOP NOW</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="facts" class="facts-area dark-bg">
+      <div class="container">
+        <div class="facts-wrapper">
+          <div class="row">
+            <div class="col-md-3 col-sm-6 ts-facts">
+              <div class="ts-facts-img">
+                <img loading="lazy" src="images/icon-image/fact1.png" alt="facts-img">
+              </div>
+              <div class="ts-facts-content">
+                <h2 class="ts-facts-num"><span class="counterUp" data-count="346">0</span></h2>
+                <h3 class="ts-facts-title">Deliverd Items</h3>
+              </div>
+            </div><!-- Col end -->
+
+            <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-sm-0">
+              <div class="ts-facts-img">
+                <img loading="lazy" src="images/icon-image/fact2.png" alt="facts-img">
+              </div>
+              <div class="ts-facts-content">
+                <h2 class="ts-facts-num"><span class="counterUp" data-count="60">0</span></h2>
+                <h3 class="ts-facts-title">Staff Members</h3>
+              </div>
+            </div><!-- Col end -->
+
+            <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-md-0">
+              <div class="ts-facts-img">
+                <img loading="lazy" src="images/icon-image/fact3.png" alt="facts-img">
+              </div>
+              <div class="ts-facts-content">
+                <h2 class="ts-facts-num"><span class="counterUp" data-count="5789">0</span></h2>
+                <h3 class="ts-facts-title">Hours of Work</h3>
+              </div>
+            </div><!-- Col end -->
+
+            <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-md-0">
+              <div class="ts-facts-img">
+                <img loading="lazy" src="images/icon-image/fact4.png" alt="facts-img">
+              </div>
+              <div class="ts-facts-content">
+                <h2 class="ts-facts-num"><span class="counterUp" data-count="6">0</span></h2>
+                <h3 class="ts-facts-title">Countries Experience</h3>
+              </div>
+            </div><!-- Col end -->
+
+          </div> <!-- Facts end -->
+        </div>
+        <!--/ Content row end -->
+      </div>
+      <!--/ Container end -->
+    </section><!-- Facts end -->
+
+    <section id="project-area" class="project-area solid-bg">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-lg-12">
+            <h3 class="section-sub-title">LATEST PRODUCTS</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3"></div>
+          <div class="col-6 aos_container ">
+            <div class="aos_content" id="box9">
+              <div class="card mb-3" style=" border: none!important;">
+                <img src="images/services/78509383_2749666341-removebg-preview.png" class="card-img-top" alt="...">
+                <div class="card-body text-truncate">
+                  <h4 class="card-title" style="font-size: 30px!important; text-align: center;">Samsung Odyssey G9
+                  </h4>
+                  <ul style="list-style: none!important;">
+                    <li class="card-text" style="font-size:18px;">Display: 49-inch, VA, QLED, 1000 nits, 10-bit,
+                      DisplayHDR 1000</li>
+                    <li class="card-text" style="font-size:18px;" style="background-color: black">Resolution: 5120 x
+                      1440</li>
+                    <li class="card-text" style="font-size:18px;">Aspect Ratio: 16:9</li>
+                    <li class="card-text" style="font-size:18px;">Refresh Rate: 240Hz</li>
+                    <li class="card-text" style="font-size:18px;">Response Time: 1ms response time</li>
+                    <li class="card-text" style="font-size:18px;">Tilt: -3° to 13° (±2°) forward and backward</li>
+                  </ul>
+                  <div id="timer"></div>
+                  <button class="button-29" role="button" style="">SEE DETAILS</button>
+                  <button class="button-29" role="button">BUY NOW</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-1"></div>
+          <div class=" col-4  aos_container ">
+            <div class="aos_content" id="box10">
+              <div class="card mb-3" style="border: none!important;">
+                <img src="images/services/head-removebg-preview.png" class="card-img-top img-fluid w-75" alt="...">
+                <div class="card-body  text-truncate ">
+                  <h4 class="card-title mx-5" style="text-align: center  !important;">Logitech G733 Headset</h4>
+                  <ul style="list-style: none!important;">
+                    <li class="card-text">Wireless and Lightweight Reliable LIGHTSPEED® connectivity</li>
+                    <li class="card-text">Front-facing Lighting Full-Spectrum LIGHTSYNC® RGB</li>
+                    <li class="card-text">Immersive Audio</li>
+                    <li class="card-text">Ultra Lightweight</li>
+                  </ul>
+                  <button class="button-29" role="button">SEE DETAILS</button>
+                  <button class="button-29" role="button">BUY NOW</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-2"></div>
+          <div class=" col-4  aos_container ">
+            <div class="col aos_content" id="box11">
+              <div class="card mb-3" style=" border: none!important;">
+                <img src="images/services/18-czone.com.pk-1540-12707-060122094350-removebg-preview.png"
+                  class="card-img-top img-fluid w-75" alt="...">
+                <div class="card-body  text-truncate">
+                  <h4 class="card-title" style="text-align: center !important;">Intel Core i9-12900K Processor</h4>
+                  <ul style="list-style: none!important;">
+                    <li class="card-text">16 Cores - 24 Threads</li>
+                    <li class="card-text">5.2 GHz Maximum Turbo Frequency</li>
+                    <li class="card-text">Unlocked</li>
+                    <li class="card-text">LGA 1700 Socket</li>
+                    <li class="card-text">Intel UHD 770 Graphics</li>
+                  </ul>
+                  <button class="button-29" role="button">SEE DETAILS</button>
+                  <button class="button-29" role="button">BUY NOW</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/ Container end -->
+    </section>
+    <!-- Project area end -->
+
+    <div class="container my-5">
+      <div class="brands">
+        <h1 style="text-align: center; margin-bottom: 3%;">BRANDS</h1>
+        <marquee behavior="" direction="">
+          <img src="images/clients/mar1.png" alt="" class="img-fluid"
+            style="height: 90px; padding-left: 16px;padding-right: 16px;">
+          <img src="images/clients/mar2.png" alt="" class="img-fluid"
+            style="height: 90px; padding-left: 16px;padding-right: 16px;">
+          <img src="images/clients/mar3.png" alt="" class="img-fluid"
+            style="height: 90px; padding-left: 16px;padding-right: 16px;">
+          <img src="images/clients/mar4.png" alt="" class="img-fluid"
+            style="height: 90px; padding-left: 16px;padding-right: 16px;">
+          <img src="images/clients/mar5.png" alt="" class="img-fluid"
+            style="height: 90px; padding-left: 16px;padding-right: 16px;">
+          <img src="images/clients/mar6.png" alt="" class="img-fluid"
+            style="height: 90px; padding-left: 16px;padding-right: 16px;">
+          <img src="images/clients/mar7.png" alt="" class="img-fluid"
+            style="height: 90px; padding-left: 16px;padding-right: 16px;">
+          <img src="images/clients/mar8.png" alt="" class="img-fluid"
+            style="height: 90px; padding-left: 16px;padding-right: 16px;">
+          <img src="images/clients/mar9.png" alt="" class="img-fluid"
+            style="height: 90px; padding-left: 16px;padding-right: 16px;">
+          <img src="images/clients/mar10.png" alt="" class="img-fluid"
+            style="height: 90px; padding-left: 16px;padding-right: 16px;">
+          <img src="images/clients/mar11.png" alt="" class="img-fluid"
+            style="height: 90px; padding-left: 16px;padding-right: 16px;">
+          <img src="images/clients/mar12.png" alt="" class="img-fluid"
+            style="height: 90px; padding-left: 16px;padding-right: 16px;">
+          <img src="images/clients/mar13.png" alt="" class="img-fluid"
+            style="height: 90px; padding-left: 16px;padding-right: 16px;">
+          <img src="images/clients/mar14.png" alt="" class="img-fluid"
+            style="height: 90px; padding-left: 16px;padding-right: 16px;">
+          <img src="images/clients/mar15.png" alt="" class="img-fluid"
+            style="height: 90px; padding-left: 16px;padding-right: 16px;">
+          <img src="images/clients/mar16.png" alt="" class="img-fluid"
+            style="height: 90px; padding-left: 16px;padding-right: 16px;">
+          <img src="images/clients/mar17.png" alt="" class="img-fluid"
+            style="height: 90px; padding-left: 16px;padding-right: 16px;">
+          <img src="images/clients/mar18.png" alt="" class="img-fluid"
+            style="height: 90px; padding-left: 16px;padding-right: 16px;">
+          <img src="images/clients/mar19.png" alt="" class="img-fluid"
+            style="height: 90px; padding-left: 16px;padding-right: 16px;">
+          <img src="images/clients/mar20.png" alt="" class="img-fluid"
+            style="height: 90px; padding-left: 16px;padding-right: 16px;">
+        </marquee>
+      </div>
+    </div>
+
+    <footer id="footer" class="footer bg-overlay">
+      <div class="footer-main">
+        <div class="container">
+          <div class="row justify-content-between">
+            <div class="col-lg-4 col-md-6 footer-widget footer-about">
+              <a href="index.html">
+                <img loading="lazy" width="200px" class="footer-logo" src="images/footer-logo.png"
+                  alt="TECHNOLOGY-ACCESS">
+              </a>
+              <p>Welcome to Technology Access. Online Computer Store in Pakistan.You Can Buy Computer Hardware
+                Components, Software And Gaming Console at the best prices in Pakistan.</p>
+              <div class="footer-social">
+                <ul>
+                  <li><a href="https://facebook.com" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="https://twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                  </li>
+                  <li><a href="https://instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="https://github.com" aria-label="Github"><i class="fab fa-github"></i></a>
+                  </li>
+                </ul>
+              </div><!-- Footer social end -->
+            </div><!-- Col end -->
+
+            <div class="col-lg-2 col-md-6 mt-5 mt-lg-0 footer-widget">
+              <h3 class="widget-title"> Shop Services / Info</h3>
+              <ul class="list-arrow">
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="return_policy.html">Return Policy</a></li>
+                <li><a href="claim_warienty.html">Claim Warranty</a></li>
+                <li><a href="privacy_policy.html">Privacy Policy</a></li>
+              </ul>
+            </div><!-- Col end -->
+
+            <div class="col-lg-2 col-md-6 mt-5 mt-lg-0 footer-widget">
+              <h3 class="widget-title"> Account</h3>
+              <ul class="list-arrow">
+                <li><a href="voucher.html">Vouchers</a></li>
+                <li><a href="fav.html">Wishlist</a></li>
+                <li><a href="cart.html">Shopping Cart</a></li>
+                <li><a href="term_and_condition.html">Terms & Conditions</a></li>
+              </ul>
+            </div>
+
+
+            <div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0">
+              <h3 class="widget-title">Payment With</h3>
+              <!-- <div class="working-hours">
+              We work 7 days a week, every day excluding major holidays. Contact us if you have an emergency, with our
+              Hotline and Contact form.
+              <br><br> Monday - Friday: <span class="text-right">10:00 - 16:00 </span>
+              <br> Saturday: <span class="text-right">12:00 - 15:00</span>
+              <br> Sunday and holidays: <span class="text-right">09:00 - 12:00</span>
+            </div> -->
+              <a href=""><img src="images/icon-image/gpay.png" alt="" class="w-25 pl-1"></a>
+              <a href=""><img src="images/icon-image/papal.png" alt="" style="width: 38%;" class="pl-1"></a>
+              <a href=""><img src="images/icon-image/paytm.png" alt="" class="w-25  pl-1"></a>
+
+              <h3 class="widget-title">Delivery With</h3>
+
+              <a href=""><img src="images/icon-image/dhl-logo-400x267.png" alt="" class="pl-1" style="width: 38%;"></a>
+              <a href=""><img src="images/icon-image/LCS-Main-Logo-300x128.png" alt="" class="w-25 pl-1"></a>
+              <a href=""><img src="images/icon-image/TCS-logo-F2F6F6CB0E-seeklogo.com.png" alt="" class="w-25 pl-1"></a>
+
+
+            </div><!-- Col end -->
+          </div><!-- Row end -->
+        </div><!-- Container end -->
+      </div><!-- Footer main end -->
+
+      <div class="copyright">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col">
+              <div style="text-align: center;"> All right reserved by Technology Access<br>
+                Copyright &copy; 2022
+              </div>
+            </div>
+
+
+          </div><!-- Row end -->
+
+          <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top position-fixed">
+            <button class="btn btn-primary" title="Back to Top">
+              <i class="fa fa-angle-double-up"></i>
+            </button>
+          </div>
+
+        </div><!-- Container end -->
+      </div><!-- Copyright end -->
+    </footer>
+
+    <!-- <img src="DESKTOP-COMPUTERIMAGESdell-inspiron.png" alt=""> -->
+    <!-- Javascript Files
+  ================================================== -->
+
+    <!-- initialize jQuery Library -->
+    <script src="plugins/jQuery/jquery.min.js"></script>
+    <!-- Bootstrap jQuery -->
+    <script src="plugins/bootstrap/bootstrap.min.js" defer></script>
+    <!-- Slick Carousel -->
+    <script src="plugins/slick/slick.min.js"></script>
+    <script src="plugins/slick/slick-animation.min.js"></script>
+    <!-- Color box -->
+    <script src="plugins/colorbox/jquery.colorbox.js"></script>
+    <!-- shuffle -->
+    <script src="plugins/shuffle/shuffle.min.js" defer></script>
+    <script src="js/Simple AOS Animation.js"></script>
+
+
+    <!-- Google Map API Key-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
+    <!-- Google Map Plugin-->
+    <script src="plugins/google-map/map.js" defer></script>
+
+    <!-- Template custom -->
+    <script src="js/script.js"></script>
+    <script src="js/json.js"></script>
+    <script src="js/all.js"></script>
+    <script src="js/CART.JS"></script>
+    <script src="js/FAV.JS"></script>
+
+    <script>
+      function loadDataRp(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12) {
+        var number_of_cards = 12;
+        const ids = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12];
+        // console.log(ids);
+        for (let p = 0; p < 3; p++) {
+          document.getElementById("rp-" + (p + 1)).innerHTML = "";
+          // console.log("okz1");
+          for (let i = 0; i < 4; i++) {
+            // console.log("okz1.5");
+            var id = ids[0];
+            // console.log(id);
+            var status;
+            var name;
+            for (const x in product) {
+              if (product[x] == "[object Object]") {
+                for (const y in product[x]) {
+                  if (x == id) {
+                    // console.log(x);
+                    // console.log("okz2");
+                    if (product[x].status == 1) {
+                      status = `<span id="status" style="color:#28ff28;">In Stock</span>`;
+                    } else if (product[x].status == 0) {
+                      status = `<span id="status" style="color:#f34e4e;">Out Of Stock</span>`;
+                    }
+                    if (product[x].real_price != null) {
+                      var price = `
+                        <span id="real_price" style="color:red;text-decoration: line-through;">$${product[x].real_price}</span>
+                        <span style="font-size: 15px;"><b> --------></b></span>
+                        <span id="price_now" style="color:green;">$${product[x].price}</span>
+                        `;
+                    } else {
+                      var price = `
+                        <span>$${product[x].price}</span>
+                        `;
+                    }
+                    name = ((product[x].name).slice(0, 20)) + "...";
+                    document.getElementById("rp-" + (p + 1)).innerHTML += `
+                    <div class="col-md-3 d-flex justify-content-center">
+                      <div class="card p-2 carda">
+                        <div class="text-center">
+                          <a href="${product[x].url}"><img src="${product[x].cart_image}" class="img-fluid" width="200" /></a>
+                        </div>
+                        <div class="content">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <span class="category">${(product[x].whatIs).toUpperCase()}</span>
+                          </div>
+                          <span>${name} <span class="">
+                    <img width="30px" style="position: absolute;right: 1%;top: 60%;" class="heart" src="" alt="${product[x].name}" onclick='fav(this,"${product[x].name}","${product[x].cart_image}",${product[x].price},"${product[x].url}","${product[x].status}")' title="ADD TO WISHLIST">
+                        </span></span><br><span class="price">${price}</span>
+                          <div class="buttons d-flex justify-content-center">
+                            <button class="btn btn-primary" onclick='buy_now("${product[x].name}","${product[x].cart_image}",${product[x].price},"${product[x].url}")'>BUY NOW</button>
+                            <button class="btn btn-primary" onclick='add_to_cart("${product[x].name}","${product[x].cart_image}",${product[x].price},"${product[x].url}")' title="ADD TO CART">Add to cart</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    `;
+                    break;
+                  }
+                }
+              } else {
+                // console.log(x + " is " + product[x] + "<br>");
+              }
+            }
+            ids.shift();
+            // console.log(ids);
+          }
+        }
+      }
+    </script>
+
+    <script>
+      function loadDataFp() {
+
+        var ids = [];
+        var count = 0;
+        for (const x in product) {
+          if ((product[x].real_price) != null) {
+            ids.push(x);
+            count++;
+            if (count >= 8) {
+              break;
+            }
+          }
+        }
+        // console.log(ids);
+        for (let p = 0; p < 8; p++) {
+          document.getElementById("box" + (p + 1)).innerHTML = "";
+          // console.log("okz1");
+          // console.log("okz1.5");
+          var id = ids[0];
+          // console.log(id);
+          var status;
+          var name;
+          for (const x in product) {
+            if (product[x] == "[object Object]") {
+              for (const y in product[x]) {
+                if (x == id) {
+                  // console.log(x);
+                  // console.log("okz2");
+                  if (product[x].status == 1) {
+                    status = `<span id="status" style="color:#28ff28;">In Stock</span>`;
+                  } else if (product[x].status == 0) {
+                    status = `<span id="status" style="color:#f34e4e;">Out Of Stock</span>`;
+                  }
+                  if (product[x].real_price != null) {
+                    var price = `
+                    <span id="real_price" style="color:red;text-decoration: line-through;">$${product[x].real_price}</span>
+                    <span style="font-size: 10px;"> --------></span>
+                    <span id="price_now" style="color:green;">$${product[x].price}</span>
+                    `;
+                  } else {
+                    var price = `
+                    <span>$${product[x].price}</span>
+                    `;
+                  }
+                  name = ((product[x].name).slice(0, 20)) + "...";
+                  infoTemp = product[x].information.split(".");
+                  var info = "";
+                  for (let i = 0; i < infoTemp.length - 1; i++) {
+                    info += `<li class="card-text">` + (infoTemp[i]).slice(0, 25) + `...</li>`;
+                    if (i == 2) {
+                      break;
+                    }
+                  }
+                  document.getElementById("box" + (p + 1)).innerHTML += `
+            <div class="card  border-0">
+              <div class="d-flex justify-content-between p-3">
+                <p class="lead mb-0">Today's Combo Offer <span class="">
+                    <img style="cursor: pointer;" width="25px" class="heart" src="" alt="${product[x].name}" onclick='fav(this,"${product[x].name}","${product[x].cart_image}",${product[x].price},"${product[x].url}","${product[x].status}")' title="ADD TO WISHLIST">
+                        </span></p>
+                <div class="bg-info rounded-circle d-flex align-items-center justify-content-center shadow-1-strong"
+                  style="width: 35px; height: 28px;">
+                  <p class="text-white mb-0 small">x4</p>
+                </div>
+              </div>
+              <a href="${product[x].url}"><img src="${product[x].cart_image}" class="card-img-top" alt="${product[x].name}" /></a>
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <p class="small"><a href="#!" class="text-muted">${product[x].whatIs}</a></p>
+                  <p class="small text-danger"><s>$${product[x].real_price}</s></p>
+                </div>
+
+                <div class="d-flex justify-content-between mb-3">
+                  <h5 class="mb-0">${name}</h5>
+                  <h5 class="text-dark mb-0">$${product[x].price}</h5>
+                </div>
+
+                <div class="d-flex justify-content-between mb-2">
+                  <p class="text-muted mb-0">${status}</p>
+                  <div class="ms-auto text-warning">
+                    ${product[x].rating}<i class="fa fa-star"></i>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <ul class="text-truncate">
+                    ${info}
+                  </ul>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <button class="button-29" role="button" onclick='add_to_cart("${product[x].name}","${product[x].cart_image}",${product[x].price},"${product[x].url}")' title="ADD TO CART">ADD TO CART</button>
+                  <button class="button-29" role="button" onclick='buy_now("${product[x].name}","${product[x].cart_image}",${product[x].price},"${product[x].url}")'>BUY NOW</button>
+                </div>
+                <div class="d-flex justify-content-center mb-2">
+                  <a href="${product[x].url}"><button class="button-29" role="button">SEE DETAILS</button></a>
+                </div>
+              </div>
+            </div>
+                `;
+                  break;
+                }
+              }
+            } else {
+              // console.log(x + " is " + product[x] + "<br>");
+            }
+          }
+          ids.shift();
+          // console.log(ids);
+        }
+      }
+    </script>
+
+    <script>
+      loadDataLast();
+      function loadDataLast() {
+
+        var ids = [];
+        var count = 0;
+        for (const x in product) {
+          if ((product[x].real_price) != null && (product[x].rating) >= 4.9 && (product[x].status) == 1) {
+            ids.push(x);
+            count++;
+            if (count >= 3) {
+              break;
+            }
+          }
+        }
+        console.log(ids);
+        for (let p = 8; p < 11; p++) {
+          document.getElementById("box" + (p + 1)).innerHTML = "";
+          console.log("okz1");
+          console.log("okz1.5");
+          var id = ids[0];
+          // console.log(id);
+          var status;
+          var name;
+          for (const x in product) {
+            if (product[x] == "[object Object]") {
+              for (const y in product[x]) {
+                if (x == id) {
+                  // console.log(x);
+                  console.log("okz2");
+                  if (product[x].status == 1) {
+                    status = `<span id="status" style="color:#28ff28;">In Stock</span>`;
+                  } else if (product[x].status == 0) {
+                    status = `<span id="status" style="color:#f34e4e;">Out Of Stock</span>`;
+                  }
+                  if (product[x].real_price != null) {
+                    var price = `
+                <span id="real_price" style="color:red;text-decoration: line-through;">$${product[x].real_price}</span>
+                <span style="font-size: 10px;"> --------></span>
+                <span id="price_now" style="color:green;">$${product[x].price}</span>
+                `;
+                  } else {
+                    var price = `
+                <span>$${product[x].price}</span>
+                `;
+                  }
+                  name = (((product[x].name).slice(0, 20)).toUpperCase()) + "...";
+                  infoTemp = product[x].information.split(".");
+                  var info = "";
+                  for (let i = 0; i < infoTemp.length - 1; i++) {
+                    info += `<li class="card-text">` + (infoTemp[i]).slice(0, 35) + `...</li>`;
+                    if (i == 5) {
+                      break;
+                    }
+                  }
+                  if ((p + 1) == 9) {
+                    document.getElementById("box" + (p + 1)).innerHTML += `
+              <div class="card mb-3" style=" border: none!important;">
+                  <a class="mt-3" href="${product[x].url}"><img src="${product[x].cart_image}" class="card-img-top" alt="${product[x].name}"></a>
+                  <div class="card-body text-truncate">
+                    <h4 class="card-title" style="font-size: 30px!important;">${name} <span class="">
+                    <img width="30px" style="position: absolute;right: 1%;top: 60%;" class="heart" src="" alt="${product[x].name}" onclick='fav(this,"${product[x].name}","${product[x].cart_image}",${product[x].price},"${product[x].url}","${product[x].status}")' title="ADD TO WISHLIST">
+                        </span></h4>
+                    <ul style="list-style: none!important;">
+                      ${info}
+                    </ul>
+                    <div id="timer"></div>
+                    <div class="d-flex justify-content-between mb-2">
+                  <button class="btn btn-primary text-uppercase mr-2 px-4" role="button" onclick='add_to_cart("${product[x].name}","${product[x].cart_image}",${product[x].price},"${product[x].url}")' title="ADD TO CART">ADD TO CART</button>
+                  <button class="btn btn-primary text-uppercase mr-2 px-4" role="button" onclick='buy_now("${product[x].name}","${product[x].cart_image}",${product[x].price},"${product[x].url}")'>BUY NOW</button>
+                </div>
+                <div class="d-flex justify-content-center mb-2">
+                  <a href="${product[x].url}"><button class="btn btn-primary text-uppercase mr-2 px-4" role="button">SEE DETAILS</button></a>
+                </div>
+                  </div>
+                </div>
+            `;
+                  }
+                  else if ((p + 1) == 10 || (p + 1) == 11) {
+                    document.getElementById("box" + (p + 1)).innerHTML += `
+              <div class="card mb-3" style="border: none!important;">
+                  <a href="${product[x].url}"><img src="${product[x].cart_image}" class="card-img-top" alt="${product[x].name}"></a>
+                    <div class="card-body  text-truncate">
+                      <h4 class="card-title" style="text-align: left;">${name} <span class="">
+                    <img width="40px" style="position: absolute;right: 5%;" class="heart" src="" alt="${product[x].name}" onclick='fav(this,"${product[x].name}","${product[x].cart_image}",${product[x].price},"${product[x].url}","${product[x].status}")' title="ADD TO WISHLIST">
+                        </span></h4>
+                      <ul style="list-style: none!important;">
+                        ${info}
+                      </ul>
+                      <div class="d-flex justify-content-between mb-2">
+                  <button class="btn btn-primary text-uppercase mr-2 px-4" onclick='add_to_cart("${product[x].name}","${product[x].cart_image}",${product[x].price},"${product[x].url}")' title="ADD TO CART">ADD TO CART</button>
+                  <button class="btn btn-primary text-uppercase mr-2 px-4" onclick='buy_now("${product[x].name}","${product[x].cart_image}",${product[x].price},"${product[x].url}")'>BUY NOW</button>
+                </div>
+                <div class="d-flex justify-content-center mb-2">
+                  <a href="${product[x].url}"><button class="btn btn-primary text-uppercase mr-2 px-4">SEE DETAILS</button></a>
+                </div>
+                    </div>
+                  </div>
+              `;
+                  }
+                  break;
+                }
+              }
+            } else {
+              // console.log(x + " is " + product[x] + "<br>");
+            }
+          }
+          ids.shift();
+          console.log(ids);
+        }
+      }
+    </script>
+
+    <script>
+      function chksl() {
+        console.log(sessionStorage.getItem("username"));
+        console.log(sessionStorage.getItem("showForm"));
+        if (sessionStorage.getItem("username") == null) {
+          if (sessionStorage.getItem("showForm") == null || sessionStorage.getItem("showForm") == undefined) {
+            sessionStorage.setItem("showForm", "1");
+            setTimeout(function () {
+              location.replace("form.html");
+            }, 5000);  // 2 seconds
+          }
+        }
+      }
+
+    </script>
+  </div><!-- Body inner end -->
+</body>
+
+</html>

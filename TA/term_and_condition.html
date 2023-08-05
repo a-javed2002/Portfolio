@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>terms</title>
+
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- CSS
+================================================== -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
+    <!-- Animation -->
+    <link rel="stylesheet" href="plugins/animate-css/animate.css">
+    <!-- slick Carousel -->
+    <link rel="stylesheet" href="plugins/slick/slick.css">
+    <link rel="stylesheet" href="plugins/slick/slick-theme.css">
+    <!-- Colorbox -->
+    <link rel="stylesheet" href="plugins/colorbox/colorbox.css">
+    <!-- Template styles-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/nav1.css">
+    <link rel="stylesheet" href="css/nav2.css">
+
+</head>
+<style>
+  .contact-us {
+    background-image: url("images/banner/claim-us.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    padding: 20px;
+    width: 100%;
+    height: 500px;
+
+  }
+  .entry-title{
+    color: white;
+  }
+
+  .contact-us .container2 .paragraph {
+    margin-top: 80px;
+  }
+
+  .contact-us .container2 .paragraph .entry-subtitle {
+    margin-top: 50px;
+  }
+
+  .contact_main p {
+    font-size: 25px;
+    font-family: playball, sans-serif;
+    font-weight: 700;
+    color: gray;
+    margin-bottom: 30px;
+  }
+
+  .contact_main h2 {
+    font-size: 40px;
+    color: #3cb9fc;
+    font-weight: 700;
+    font-family: playball, sans-serif;
+  }
+
+  .contact-us .container2 .paragraph h4 {
+    color: white;
+  }
+
+
+  .contact-us .container2 .paragraph h1 {
+
+  }
+
+
+
+  #maincontainer-company-paragraph {
+    margin-top: 70px;
+    /* margin-left: 20px; */
+    color: white;
+  }
+h3{
+    color: #3cb9fc;
+}
+b{
+    font-weight: bolder;
+    font-size: 20px;
+}
+  /* navbar css */
+</style>
+
+<body onload="chkLogIn(),innerPages()">
+
+    <div id="top-bar" class="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8">
+                    <ul class="top-info text-center text-md-left">
+                        <li><i class="fas fa-map-marker-alt"></i>
+                            <p class="info-text pt-2">World Wide Completely Free Returns and Shipping</p>
+                        </li>
+                    </ul>
+                </div>
+                <!--/ Top info end -->
+
+                <div class="col-lg-4 col-md-4 top-social text-center text-md-right">
+                    <ul class="list-unstyled">
+                        <li>
+                            <a title="Facebook" href="https://facebbok.com" target="_blank">
+                                <span class="social-icon"><i class="fab fa-facebook-f"></i></span>
+                            </a>
+                            <a title="Twitter" href="https://twitter.com" target="_blank">
+                                <span class="social-icon"><i class="fab fa-twitter"></i></span>
+                            </a>
+                            <a title="Instagram" href="https://instagram.com" target="_blank">
+                                <span class="social-icon"><i class="fab fa-instagram"></i></span>
+                            </a>
+                            <a title="Linkdin" href="https://github.com" target="_blank">
+                                <span class="social-icon"><i class="fab fa-github"></i></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--/ Top social end -->
+            </div>
+            <!--/ Content row end -->
+        </div>
+        <!--/ Container end -->
+    </div>
+
+    <header id="header" class="header-one">
+        <div class="bg-white">
+            <div class="container">
+                <div class="logo-area">
+                    <div class="row align-items-center">
+                        <div
+                            class="logo col-sm-12 col-md-12 col-lg-3 col-xl-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
+                            <a class="d-block" href="index.html">
+                                <img loading="lazy" src="images/logo.png" alt="Constra">
+                            </a>
+                        </div><!-- logo end -->
+                        <div class="col-sm-8 col-md-8 col-lg-7 col-xl-7 align-self-center"
+                            style="display: flex;justify-content: center;">
+                            <input class="form-control w-75  border-radius-3" list="datalistOptions" id="data-list"
+                                placeholder="Type to search..." style="border-top-left-radius: 8px;
+          border-bottom-left-radius: 8px;"> <button onclick="redirect2()" class="btn btn-outline-secondary"
+                                type="button" id="button-addon2" style="border-radius: 0px!important;"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                    class="bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                </svg></button>
+                            <datalist id="datalistOptions">
+                            </datalist>
+                        </div>
+                        <div class="col-sm-4 col-md-4 col-lg-2 col-xl-2 align-self-center mt-2"
+                            style="display: flex;justify-content:space-around;">
+                            <div id="sign-up">
+                                <a href="form.html">Login/SignUp</a>
+                            </div>
+                            <div class="dropdown" id="log-in" style="display: none;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                                    class="bi bi-person-circle ico" viewBox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                    <path fill-rule="evenodd"
+                                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                </svg>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"
+                                    style="background-color: #23282d;">
+                                    <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                                    <li><a class="dropdown-item" href="cart.html">Cart</a></li>
+                                    <li><a class="dropdown-item" href="myorders.html">MY Orders</a></li>
+                                    <li><a class="dropdown-item" href="voucher.html">Vouchers</a></li>
+                                    <li><a class="dropdown-item" href="fav.html">Wishlist</a></li>
+                                    <li><a class="dropdown-item" href="return_policy.html">Return Policy</a></li>
+                                    <li><a class="dropdown-item" href="claim_warienty.html">Claim Warranty</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="privacy_policy.html">Privacy Policy</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="term_and_condition.html" style="color: #3cb9fc !important;">Terms &
+                                            Conditions</a></li>
+                                    <li><a class="dropdown-item" style="cursor: pointer;" onclick="SignOut()">Sign
+                                            Out</a></li>
+                                </ul>
+                            </div>
+
+                            <a href="cart.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                                    class="bi bi-cart-plus-fill ico" viewBox="0 0 16 16">
+                                    <path
+                                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 1 0z" />
+                                </svg>
+                                <sup id="counter"></sup>
+                            </a>
+
+                            <a href="fav.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                                    class="bi bi-suit-heart-fill ico" viewBox="0 0 16 16">
+                                    <path
+                                        d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z" />
+                                </svg>
+                                <sup id="counter2"></sup>
+                            </a>
+                        </div>
+                        <span style="position: absolute;right: 8%;" id="usernameSaved"></span>
+                    </div><!-- logo area end -->
+
+                </div><!-- Row end -->
+            </div><!-- Container end -->
+        </div>
+
+        <div class="site-navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg navbar-dark p-0">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div id="navbar-collapse" class="collapse navbar-collapse">
+                                <ul class="nav navbar-nav m-auto">
+                                    <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+
+                                    <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+
+                                    <li class="nav-item dropdown dropdown-mega position-static  fade-in">
+                                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                                            data-bs-auto-close="outside">Products <i
+                                                class="fa fa-angle-down"></i></a>
+                                        <div class="dropdown-menu shadow"
+                                            style="width: 75%!important;background-color: #23282d;">
+                                            <div class="mega-content px-4">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-3 py-3">
+                                                            <div class="list-group">
+                                                                <a class="list-group-item border-0"
+                                                                    style="cursor: pointer;"
+                                                                    onclick="navProductLoad(this)">Laptop</a>
+                                                                <a class="list-group-item border-0"
+                                                                    style="cursor: pointer;"
+                                                                    onclick="navProductLoad(this)">Desktop-Computer</a>
+                                                                <a class="list-group-item border-0"
+                                                                    style="cursor: pointer;"
+                                                                    onclick="navProductLoad(this)">Graphic Card</a>
+                                                                <a class="list-group-item border-0"
+                                                                    style="cursor: pointer;"
+                                                                    onclick="navProductLoad(this)">Graphic
+                                                                    Tablets</a>
+                                                                <a class="list-group-item border-0"
+                                                                    style="cursor: pointer;"
+                                                                    onclick="navProductLoad(this)">LCD / LED
+                                                                    Monitors</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-3 py-4">
+                                                            <div class="list-group">
+                                                                <a class="list-group-item border-0"
+                                                                    style="cursor: pointer;"
+                                                                    onclick="navProductLoad(this)">Processor</a>
+                                                                <a class="list-group-item border-0"
+                                                                    style="cursor: pointer;"
+                                                                    onclick="navProductLoad(this)">Motherboard</a>
+                                                                <a class="list-group-item border-0"
+                                                                    style="cursor: pointer;"
+                                                                    onclick="navProductLoad(this)">PC Casing</a>
+                                                                <a class="list-group-item border-0"
+                                                                    style="cursor: pointer;"
+                                                                    onclick="navProductLoad(this)">Keyboard</a>
+                                                                <a class="list-group-item border-0"
+                                                                    style="cursor: pointer;"
+                                                                    onclick="navProductLoad(this)">Mouse</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-3 py-4">
+                                                            <div class="list-group">
+                                                                <a class="list-group-item border-0"
+                                                                    style="cursor: pointer;"
+                                                                    onclick="navProductLoad(this)">RAM</a>
+                                                                <a class="list-group-item border-0"
+                                                                    style="cursor: pointer;"
+                                                                    onclick="navProductLoad(this)">SSD</a>
+                                                                <a class="list-group-item border-0"
+                                                                    style="cursor: pointer;"
+                                                                    onclick="navProductLoad(this)">Hard Drives</a>
+                                                                <a class="list-group-item border-0"
+                                                                    style="cursor: pointer;"
+                                                                    onclick="navProductLoad(this)">Power Supply</a>
+                                                                <a class="list-group-item border-0"
+                                                                    style="cursor: pointer;"
+                                                                    onclick="navProductLoad(this)">Cooling Fans</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-3 py-4">
+                                                            <div class="list-group">
+                                                                <a class="list-group-item border-0"
+                                                                    style="cursor: pointer;"
+                                                                    onclick="navProductLoad(this)">Printer</a>
+                                                                <a class="list-group-item border-0"
+                                                                    style="cursor: pointer;"
+                                                                    onclick="navProductLoad(this)">Camera</a>
+                                                                <a class="list-group-item border-0"
+                                                                    style="cursor: pointer;"
+                                                                    onclick="navProductLoad(this)">Speaker</a>
+                                                                <a class="list-group-item border-0"
+                                                                    style="cursor: pointer;"
+                                                                    onclick="navProductLoad(this)">Mic</a>
+                                                                <a class="list-group-item border-0"
+                                                                    style="cursor: pointer;"
+                                                                    onclick="navProductLoad(this)">USB Flash
+                                                                    Drive</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-mega position-static  fade-in text-dark">
+                                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                                            data-bs-auto-close="outside">Console <i
+                                                class="fa fa-angle-down"></i></a>
+                                        <div class="dropdown-menu shadow" style="background-color: #23282d;">
+                                            <div class="mega-content px-4">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-3 py-3">
+                                                            <div class="list-group">
+                                                                <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                                                        src="images/services/nin_lite.png"
+                                                                        alt="" height="100px"
+                                                                        class="w-auto">
+                                                                        Nintendo Switch lite</a>
+                                                                <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                                                        src="images/services/nintendo1.png" alt=""
+                                                                        height="100px" class="w-auto">
+                                                                        Nintendo Switch oled</a>
+                                                                <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                                                        src="images/services/nintendo.png" alt=""
+                                                                        height="100px" class="w-auto">
+                                                                        Nintendo Switch</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-3 py-4">
+                                                            <div class="list-group">
+                                                                <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                                                    src="images/services/ps4-pro.png" alt=""
+                                                                    height="100px" class="w-auto">
+                                                                    Play Station 4 Pro</a>
+                                                                <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                                                    src="images/services/ps4 slim.png" alt=""
+                                                                    height="100px" class="w-auto">
+                                                                    PS4 Slim</a>
+                                                                <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                                                    src="images/services/xbox one.png" alt=""
+                                                                    height="100px" class="w-auto">
+                                                                    XBOX one s</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-3 py-4">
+                                                            <div class="list-group">
+                                                                <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                                                    src="images/services/xbox-series-s.png" alt=""
+                                                                    height="100px" class="w-auto">
+                                                                    XBOX series s</a>
+                                                                <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                                                    src="images/services/xbox-series-x.png" alt=""
+                                                                    height="100px" class="w-auto">
+                                                                    XBOX series x</a>
+                                                                <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                                                    src="images/services/dreamcast.png" alt=""
+                                                                    height="100px" class="w-auto">
+                                                                    sega dreamcast</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-3 py-4">
+                                                            <div class="list-group">
+                                                                <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                                                    src="images/services/genesis.png" alt=""
+                                                                    height="100px" class="w-auto">
+                                                                    sega genesis</a>
+                                                                <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                                                    src="images/services/saturn.webp" alt=""
+                                                                    height="100px" class="w-auto">
+                                                                    sega saturn</a>
+                                                                <a onclick="navConsole(this)" class="list-group-item border-0 d-flex flex-column"><img
+                                                                    src="images/services/ps5-photo.png" alt=""
+                                                                    height="100px" class="w-auto">
+                                                                    Play Station 5</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-mega position-static  fade-in text-dark">
+                                        <a class="nav-link dropdown-toggle " href="#" data-bs-toggle="dropdown"
+                                            data-bs-auto-close="outside">Software <i
+                                                class="fa fa-angle-down"></i></a>
+                                        <div class="dropdown-menu shadow" style="background-color: #23282d;">
+                                            <div class="mega-content px-4">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-4 col-md-3 py-3">
+                                                            <div class="card border-0" style="background-color: transparent;">
+                                                                <img src="images/softImg-1.jpg" class="img-fluid "
+                                                                    alt="image"
+                                                                    style="height: 100%; width: 100%;">
+                                                                <div class="card-body">
+                                                                    <h5>ClickUp</h5>
+                                                                    <p class="card-text">
+                                                                        ADOBE SENSEI AI TECHNOLOGY: Automated options do the heavy lifting so you can instantly...
+                                                                        <br><a href="SOFTWARE/software1.html">See More...</a></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-4 col-md-3 py-4">
+                                                            <div class="card border-0" style="background-color: transparent;">
+                                                                <img src="images/softImg-2.jpg" class="img-fluid "
+                                                                    alt="image"
+                                                                    style="height: 100%; width: 100%;">
+                                                                <div class="card-body">
+                                                                    <h5>MLead</h5>
+                                                                    <p class="card-text">
+                                                                        Subscription-free photo editing and design software PLUS the ultimate creative...
+                                                                        <br><a href="SOFTWARE/software2.html">See More...</a></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-4 col-md-3 py-4">
+                                                            <div class="card border-0" style="background-color: transparent;">
+                                                                <img src="images/softImg-3.jpg" class="img-fluid "
+                                                                    alt="image"
+                                                                    style="height: 100%; width: 100%;">
+                                                                <div class="card-body">
+                                                                    <h5>Salesflare</h5>
+                                                                    <p class="card-text">
+                                                                        Powerful fully functional 3d content creation software suite...
+                                                                        <br><a href="SOFTWARE/software3.html">See More...</a></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-4 col-md-3 py-4">
+                                                            <div class="card border-0" style="background-color: transparent;">
+                                                                <img src="images/softImg-4.jpg" class="img-fluid "
+                                                                    alt="image"
+                                                                    style="height: 100%; width: 100%;">
+                                                                <div class="card-body">
+                                                                    <h5>Pipedrive</h5>
+                                                                    <p class="card-text">
+                                                                        Powerful fully functional 3d content creation software suite...
+                                                                        <a href="SOFTWARE/software4.html">See More...</a></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="nav-item"><a class="nav-link" href="compare.html">COMPARE </a>
+                                    </li>
+
+                                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                    <!--/ Col end -->
+                </div>
+                <!--/ Row end -->
+
+                <div class="search-block" style="display: none;">
+                    <label for="search-field" class="w-100 mb-0">
+                        <input type="text" class="form-control" id="search-field"
+                            placeholder="Type what you want and enter">
+                    </label>
+                    <span class="search-close">&times;</span>
+                </div><!-- Site search end -->
+            </div>
+            <!--/ Container end -->
+
+        </div>
+        <!--/ Navigation end -->
+    </header>
+
+  <section class="about-us contact-us">
+    <div class="container2">
+      <div class="row text-center">
+        <div class="col-lg-12 col-sm-12 paragraph">
+
+          <center>
+            <h1 class="entry-title">Term & Condition
+          </center>
+
+          <h4 class="entry-subtitle">
+
+          </h4>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section >
+
+ <div class="container mt-5">
+  
+        <p>
+          Welcome to <b> www.technology access.com </b>! If you continue to browse and use this website, you are agreeing to
+          comply with and be bound by the following terms and conditions of use which, together with our privacy policy,
+          govern HomeShopping's relationship with you in relation to this website. If you do not agree with any part of the
+          website, please do not access this site.
+    
+          The term ' <b>TECHNALOGY ACCESS</b>' or 'us' or 'we' refers to the owner of the website whose registered office is
+          at Suite # 1003, Al Najeebi Towers, Aga Khan III Road, Saddar, Karachi. The term 'you' refers to the user or
+          viewer of our website.</p>
+     
+    
+      By registering on our website you agree to the following:
+    <ul >
+        <li>
+          You will provide true, accurate, current and complete information about yourself as prompted by HomeShopping's
+          registration form (the "Registration Data")
+        </li>
+        <li>
+          Your store name shall not include the word " <b> TECHNALOGY ACCESS</b>"
+    
+         may (in its sole discretion and at any time), make any inquiries it considers necessary
+          (whether directly or through a third party), and request that you provide it with further information or
+          documentation, including without limitation to verify your identity and/or ownership of your financial
+          instruments. Without limiting the foregoing, if you are a business entity or registered on behalf of a business
+          entity such information or documentation may include your trade license, other incorporation documents and/or
+          documentation showing any person's authority to act on your behalf. You agree to provide any information and/or
+          documentation to HomeShopping upon such requests. You acknowledge and agree that if you do not, HomeShopping
+          without liability may limit, suspend or withdraw your access to the Site and/or your membership of the Site. We
+          also reserve the right to cancel unconfirmed / unverified accounts or accounts that have been inactive for a long
+          time.
+        </li>
+        The use of this website is subject to the following terms of use:
+        <li>
+          The content of the pages of this website is for solely for the purpose of providing product information. It is
+          subject to change without notice.
+        </li>
+        <li>
+          <h3>
+            Trademarks: </h3>All trademarks reproduced in this website which are not the property of, or licensed to, the
+          operator are acknowledged on the website. " <b>TECHNALOGY ACCESS</b>" and related logos, and other words and logos
+          on the site are either unregistered trademarks or registered trademarks of HomeShopping and are protected by
+          international trademark and other intellectual property rights and laws. HomeShopping's trademarks may not be used
+          in connection with any product or service that is not <b>TECHNALOGY ACCESS</b>s nor in any manner that disparages
+          or discredits. All other trademarks not owned by HomeShopping that appear on the Site are the property of their
+          respective owners, who may or may not be affiliated with, connected to, or sponsored by HomeShopping.
+        </li>
+    
+        <li>
+          <h3>
+            Copyright: </h3>All content included on the Site, including but not limited to text, graphics, logos, button
+          icons, images, audio clips, digital downloads, data compilations and software, is the property and copyright work
+          of either, its users, its content suppliers or its licensors and is protected by copyright, trademarks, patents or
+          other intellectual property rights and laws. The compilation of the content on the Site is the exclusive property
+          and copyright of <b>TECHNALOGY ACCESS</b> and is protected by copyright, trademarks, patents or other intellectual
+          property rights and laws.
+        </li>
+    
+    
+        Unauthorized use of this website may give rise to a claim for damages and/or be a criminal offence.
+        </li>
+        <li>
+          <h3> Our website:</h3> Your use of this website and any dispute arising out of such use of the website is subject
+          to the laws of Pakistan. Your use of any information or materials on this website is entirely at your own risk,
+          for which we shall not be liable. It shall be your own responsibility to ensure that any products, services or
+          information available through this website meet your specific requirements.
+        </li>
+        <li>
+          <h3> Privacy:</h3> All the information provided the buyers and sellers are strictly confidential in accordance
+          with the applicable laws and regulations of Pakistan.
+        </li>
+        <li>
+          <h3> Your Information: </h3> You grant <b>TECHNALOGY ACCESS</b> a non-exclusive, worldwide, perpetual, irrevocable,
+          royalty-free, sub-licensable (through multiple tiers) right to use any information or material, personal or
+          otherwise, that you provide to us or other users of the Site and/or post on the Site in the registration, bidding,
+          buying, listing or selling process, in the feedback area or through any e-mail or by way of any other feature or
+          use of the Site (the "Information") for the purposes of operating and promoting the Site in accordance with this
+          User Agreement and the Privacy Policy . You are solely responsible for the Information, and we act as a passive
+          conduit for your online distribution and publication of the Information.
+        </li>
+        <li>
+          <h3>
+            Taxes:</h3> You shall be responsible for payment of all fees/costs/charges associated with the purchase of
+          products from the site and you agree to bear any and all applicable taxes as per prevailing law.
+        </li>
+        <li>
+          <h3>
+            Warranty & Return:</h3> Check our policy at <b>TECHNALOGY ACCESS</b> Warranty-Returns.html
+        </li>
+        <li>
+          <h3>Refund policy:</h3> In case there are no options for replacement, your money will be refunded within 10 days
+          if deposited by bank, and within 5 days for Easypaisa, or credit/debit cards transactions.
+        </li>
+    
+        <li>
+          <h3>Pricing: </h3>All prices are listed in Pakistani Rupees and are inclusive of GST, and are listed on the site
+          by the seller that is selling the product or service. Items in your Shopping Cart will always reflect the most
+          recent price displayed on the item's product detail page. In the event that an item is mispriced, we may, at our
+          own discretion, either contact you for instructions or cancel your order and notify you of such cancellation.
+    
+    
+    
+        <li>
+          <h3>Licensing: </h3>Content provided on this site is solely for informational purposes. This site or any portion
+          of it (including but not limited to any copyrighted material, trademarks, or other proprietary information) may
+          not be reproduced, duplicated, copied, sold, resold, visited, distributed or otherwise exploited for any
+          commercial purpose without express written consent by us as may be applicable. You may not frame or use framing
+          techniques to enclose any trademark, logo, or other proprietary information (including images, text, page layout,
+          or form) without our express written consent.
+        </li>
+      
+        <h3> Transfer of Rights and Obligations</h3>
+    
+        You hereby grant Homeshopping the right to, and irrevocably acknowledge and agree that Homeshopping may at any time,
+        transfer all or any part of its rights, benefits, obligations or liabilities (whether express or assumed) under this
+        User Agreement to any of its affiliates without requiring your further specific agreement. Homeshopping agrees to
+        use all reasonable endeavours to provide notice to you of any transfer by way of a posting on the Site. You may not
+        at any time, without the prior written consent of Homeshopping, transfer all or any part of your rights, benefits,
+        obligations or liabilities (whether express or assumed) under this User Agreement without the prior written consent
+        of Homeshopping.
+    
+        <h3>General</h3>
+    
+        If any clause of this User Agreement shall be deemed invalid, void or for any reason unenforceable, such clause
+        shall be deemed severable and shall not affect the validity and enforceability of the remaining clauses of this User
+        Agreement. This User Agreement (as amended from time to time in accordance with the terms of this User Agreement)
+        sets forth the entire understanding and agreement between you and Homeshopping with respect to the subject matter
+        hereof.
+    
+        No person who is not a party to this User Agreement shall have any right to enforce any term of this User Agreement.
+        If this User Agreement is translated into any language other than English, whether on the Site or otherwise, the
+        English text shall prevail.
+    
+        <h3>Governing Law</h3>
+    
+        This User Agreement is governed by, and construed in accordance with, UAE law. This clause will survive any expiry
+        or cancellation of this User Agreement for any reason.
+    
+ </div>
+ 
+    <footer id="footer" class="footer bg-overlay">
+        <div class="footer-main">
+          <div class="container">
+            <div class="row justify-content-between">
+              <div class="col-lg-4 col-md-6 footer-widget footer-about">
+                <a href="index.html">
+                <img loading="lazy" width="200px" class="footer-logo" src="images/footer-logo.png" alt="TECHNOLOGY-ACCESS">
+                </a>
+                <p>Welcome to technology accessssssssssssss. Online Computer Store in Pakistan.You Can Buy Computer Hardware
+                  Components, Software And Gaming Console at the best prices in Pakistan.</p>
+                <div class="footer-social">
+                  <ul>
+                    <li><a href="https://facebook.com" aria-label="Facebook"><i
+                          class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li><a href="https://instagram.com" aria-label="Instagram"><i
+                          class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://github.com" aria-label="Github"><i class="fab fa-github"></i></a>
+                    </li>
+                  </ul>
+                </div><!-- Footer social end -->
+              </div><!-- Col end -->
+  
+              <div class="col-lg-2 col-md-6 mt-5 mt-lg-0 footer-widget">
+                <h3 class="widget-title"> Shop Services / Info</h3>
+                <ul class="list-arrow">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="return_policy.html">Return Policy</a></li>
+                    <li><a href="claim_warienty.html">Claim Warranty</a></li>
+                    <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                </ul>
+            </div><!-- Col end -->
+  
+            <div class="col-lg-2 col-md-6 mt-5 mt-lg-0 footer-widget">
+                <h3 class="widget-title"> Account</h3>
+                <ul class="list-arrow">
+                    <li><a href="voucher.html">Vouchers</a></li>
+                    <li><a href="fav.html">Wishlist</a></li>
+                    <li><a href="cart.html">Shopping Cart</a></li>
+                    <li><a href="term_and_condition.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+  
+  
+              <div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0">
+                <h3 class="widget-title">Payment With</h3>
+                <!-- <div class="working-hours">
+                We work 7 days a week, every day excluding major holidays. Contact us if you have an emergency, with our
+                Hotline and Contact form.
+                <br><br> Monday - Friday: <span class="text-right">10:00 - 16:00 </span>
+                <br> Saturday: <span class="text-right">12:00 - 15:00</span>
+                <br> Sunday and holidays: <span class="text-right">09:00 - 12:00</span>
+              </div> -->
+                <a href=""><img src="images/icon-image/gpay.png" alt="" class="w-25 pl-1"></a>
+                <a href=""><img src="images/icon-image/papal.png" alt="" style="width: 38%;" class="pl-1"></a>
+                <a href=""><img src="images/icon-image/paytm.png" alt="" class="w-25  pl-1"></a>
+  
+                <h3 class="widget-title">Delivery With</h3>
+  
+                <a href=""><img src="images/icon-image/dhl-logo-400x267.png" alt="" class="pl-1" style="width: 38%;"></a>
+                <a href=""><img src="images/icon-image/LCS-Main-Logo-300x128.png" alt="" class="w-25 pl-1"></a>
+                <a href=""><img src="images/icon-image/TCS-logo-F2F6F6CB0E-seeklogo.com.png" alt="" class="w-25 pl-1"></a>
+  
+  
+              </div><!-- Col end -->
+            </div><!-- Row end -->
+          </div><!-- Container end -->
+        </div><!-- Footer main end -->
+  
+        <div class="copyright">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col">
+                <div style="text-align: center;"> All right reserved by technology accessssssssssssss<br>
+                  Copyright &copy; 2022
+                </div>
+              </div>
+  
+  
+            </div><!-- Row end -->
+  
+            <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top position-fixed">
+              <button class="btn btn-primary" title="Back to Top">
+                <i class="fa fa-angle-double-up"></i>
+              </button>
+            </div>
+  
+          </div><!-- Container end -->
+        </div><!-- Copyright end -->
+      </footer>
+
+
+  <!-- Javascript Files
+================================================== -->
+
+  <!-- initialize jQuery Library -->
+  <script src="plugins/jQuery/jquery.min.js"></script>
+  <!-- Bootstrap jQuery -->
+  <script src="plugins/bootstrap/bootstrap.min.js" defer></script>
+  <!-- Slick Carousel -->
+  <script src="plugins/slick/slick.min.js"></script>
+  <script src="plugins/slick/slick-animation.min.js"></script>
+  <!-- Color box -->
+  <script src="plugins/colorbox/jquery.colorbox.js"></script>
+  <!-- shuffle -->
+  <script src="plugins/shuffle/shuffle.min.js" defer></script>
+
+
+  <!-- Google Map API Key-->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU"
+      defer></script>
+  <!-- Google Map Plugin-->
+  <script src="plugins/google-map/map.js" defer></script>
+
+  <!-- Template custom -->
+  <script src="js/script.js"></script>
+  <script src="js/json.js"></script>
+  <script src="js/CART.JS"></script>
+  <script src="js/FAV.JS"></script>
+  <script src="js/all.js"></script>
+
+</body>
+
+</html>

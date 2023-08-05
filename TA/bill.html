@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>BUY NOW</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav1.css">
+    <link rel="stylesheet" href="css/nav2.css">
+
+</head>
+
+<style>
+    #nameitemdiv {
+        display: none;
+    }
+
+    form {
+        padding: 50px;
+        /* background-color: white; */
+
+    }
+
+    /* label{
+        color: #3cb9fc;
+    } */
+
+    .form-control {
+        border: none !important;
+        box-shadow: none !important;
+        border-bottom: 4px solid #3498db !important;
+        transition: 0.2s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="number"]:focus {
+        border-bottom: 2px solid #3498db;
+        border-bottom-right-radius: 20px;
+        /* color: #3498db; */
+        transition: 0.2s ease;
+        /* background: black; */
+        /* border-top: none; */
+    }
+
+    form input.form-floating {
+
+        border: none;
+        /* no */
+    }
+
+    label {
+        margin-left: 10px;
+    }
+
+    #mainformdiv {}
+
+    .last_btn {
+        width: 100%;
+        margin-top: 10px;
+
+    }
+
+    .radio_color {
+        color: black;
+    }
+
+    #banner-area {
+        background-image: url("images/banner/buynow.webp");
+        height: 500px;
+    }
+
+    input {
+        margin-top: 10px !important;
+        padding-top: 10px !important;
+    }
+    #one{
+        margin-bottom: 25px !important;
+       
+    }
+    body {
+        /* background-image: conic-gradient(#ff0000, #ffff00, #008000, #5eff00, #f2ff40); */
+        /* background-image: radial-gradient(circle, #4c4c8a, #212170, #000038); */
+        background-image: radial-gradient(circle, #0dcaf0, #078faa, #07667a);
+    }
+    label{
+        color: black;
+    }
+
+</style>
+
+<body onload="runChkOut()" class="container-fluid">
+
+
+    <div id="mainformdiv" class="row  ">
+        <div class="col-lg-2 "></div>
+        <div class="col-lg-8">
+            <form>
+                <div style="width: 200px;height: 200px;display: none;" id="buying-img-div">
+                    <a href="" id="pic-link"><img src="" alt="" width="100%" id="buying-img"></a>
+                </div>
+
+                <div class="form-floating" id="nameitemdiv">
+                    <textarea class="form-control" id="nameitem" required placeholder="name" disabled></textarea>
+                    <!-- <label id="one" for="floatingTextarea">BUYING</label> -->
+                </div>
+                <br>
+                <div class="row">
+                    <div class="form-floating col mb-3">
+                        <input type="text" class="form-control" id="name" placeholder="name" required>
+                        <label for="floatingInput" minlength="10"> NAME</label>
+                    </div>
+
+                    <div class="form-floating col mb-3">
+                        <input type="text" class="form-control" id="total" placeholder="TOTAL BILLS" required
+                            disabled>
+                        <label for="floatingInput"> TOTAL BILLS</label>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="form-floating col mb-3" id="ta">
+                        <input type="number" class="form-control" id="items" placeholder="TOTAL ITEMS" required
+                            disabled>
+                        <label for="floatingInput">TOTAL ITEMS</label>
+                    </div>
+
+                    <div class="form-floating col mb-3">
+                        <input type="text" class="form-control" id="gst" placeholder="    GST/TAX" required disabled>
+                        <label for="floatingInput"> GST/TAX</label>
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+                <div class="row">
+                    <!-- <div>
+            VOUCHER: <input type="text" name="" id="voucherCode" required onchange="voucher()">
+        </div> -->
+
+                    <div class="form-floating col mb-3">
+                        <input type="text" class="form-control" id="voucherCode" placeholder="    VOUCHER" required
+                            onchange="voucher()">
+                        <label for="floatingInput"> VOUCHER</label>
+                    </div>
+
+                    <!-- <div>
+            TOTAL DISCOUNT: <input type="text" name="" id="discount" required disabled>
+        </div> -->
+
+                    <div class="form-floating col mb-3">
+                        <input type="text" class="form-control" id="discount" placeholder="  TOTAL DISCOUNT" required
+                            disabled>
+                        <label for="floatingInput"> TOTAL DISCOUNT</label>
+                    </div>
+                </div>
+
+                <div class="form-floating  mb-3">
+                    <input type="text" class="form-control" style="  padding-bottom: 15px !important;" id="address"
+                        placeholder="ADDRESS" required minlength="20">
+                    <label for="floatingInput"> ADDRESS</label>
+                </div>
+
+                <div>
+                    <!-- CASH ON DEILVERY <input type="radio" name="payment" id="payment-1" required>
+            <br>
+            CREDIT/DEBIT CARD <input type="radio" name="payment" id="" disabled><br>
+            INSTALLMENT <input type="radio" name="payment" id="" disabled>
+        </div> -->
+
+                    <div class="radio_color">
+                        <div class="form-check form-check-inline ">
+                            <input class="form-check-input" type="radio" name="payment" id="payment-1" value="option1"
+                                required>
+                            <label class="form-check-label" for="inlineRadio1">CASH ON DEILVERY</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="payment" id="" value="option2" disabled>
+                            <label class="form-check-label" for="inlineRadio2"> CREDIT/DEBIT CARD </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="payment" id="" value="option3" disabled>
+                            <label class="form-check-label" for="inlineRadio3"> INSTALLMENT</label>
+                        </div>
+
+                        <br>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <input class="btn btn-info last_btn" type="submit"
+                                style="color: white;font-weight: bolder;text-decoration: none;" onclick="chkOut()">
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-info last_btn" id="go-back">
+                                <a href="cart.html"
+                                    style="color: white;font-weight: bolder;text-decoration: none;">CANCEL</a>
+                                </a>
+                            </button>
+                            </siv>
+                        </div>
+            </form>
+        </div>
+        <div class="col-lg-2 ">
+
+        </div>
+    </div>
+    <script>
+        console.log(sessionStorage.getItem("buyNow"));
+        // sessionStorage.setItem("username", "abd");
+        // sessionStorage.setItem("address", "A 543");
+        // sessionStorage.setItem("buyNow","1");
+        function runChkOut() {
+            if (sessionStorage.getItem("buyNow") == 0) {
+                var name = sessionStorage.getItem("name");
+                var items = sessionStorage.getItem("items");
+                var total = sessionStorage.getItem("totalBill");
+                var address = sessionStorage.getItem("address");
+                if (name != null && name != "---null---") {
+                    document.getElementById("name").value = `${name}`;
+                }
+                if (items != null) {
+                    document.getElementById("items").value = `${items}`;
+                }
+                if (total != null) {
+                    document.getElementById("total").value = `${total}`;
+                }
+                if (address != null && name != "---null---") {
+                    document.getElementById("address").value = `${address}`;
+                }
+                document.getElementById("payment-1").checked = true;
+            }
+            else {
+                document.getElementById("nameitemdiv").style.display = "block"
+                document.getElementById("buying-img-div").style.display = "block"
+                var nameOfItem = sessionStorage.getItem("itemName");
+                var link1 = sessionStorage.getItem("buylink1");
+                var name = sessionStorage.getItem("name");
+                var total = sessionStorage.getItem("totalBill");
+                var address = sessionStorage.getItem("address");
+                var pic = sessionStorage.getItem("buypic");
+                if (nameOfItem != null) {
+                    document.getElementById("nameitem").value = `${nameOfItem}`;
+                }
+                if (link1 != null) {
+                    document.getElementById("pic-link").href = `${link1}`;
+                    document.getElementById("buying-img").src = `${pic}`;
+                    document.getElementById("buying-img").alt = `${nameOfItem}`;
+                }
+                if (name != null) {
+                    document.getElementById("name").value = `${name}`;
+                }
+                if (total != null) {
+                    document.getElementById("total").value = `${total}`;
+                }
+                if (address != null) {
+                    document.getElementById("address").value = `${address}`;
+                }
+                document.getElementById("ta").innerHTML = `
+                TOTAL ITEMS: <input type="number" min="1" max="5" value="1" name="" id="items" required onchange="changeTotals()">
+                `;
+                document.getElementById("payment-1").checked = true;
+                document.getElementById("go-back").innerHTML = `
+                <a href="index.html" style="color: white;font-weight: bolder;text-decoration: none;">CANCEL</a>
+                `;
+                sessionStorage.setItem("buyNow", 0);
+            }
+            gst();
+        }
+
+        function changeTotals() {
+            var items = document.getElementById("items").value;
+            var price = sessionStorage.getItem("totalBill");
+            document.getElementById("total").value = (parseInt(items) * parseFloat(price)).toFixed(2);
+            gst();
+        }
+
+        function gst() {
+            var bill = document.getElementById("total").value;
+            document.getElementById("gst").value = (0.17 * (parseFloat(bill))).toFixed(2);
+        }
+
+        function chkOut() {
+            event.preventDefault();
+            var name = document.getElementById("name").value;
+            var items = document.getElementById("items").value;
+            var total = document.getElementById("total").value;
+            var address = document.getElementById("address").value;
+            var payment = document.getElementById("payment-1").checked;
+            var testing_reg_name = /^[a-zA-Z\s]{3,}$/;
+            var testing_reg_address = /^[a-zA-Z\s\d]{10,}$/;
+            if (name != "" && items != "" && total != "" && address != "" && payment == true) {
+            if (testing_reg_name.test(name) == true && testing_reg_address.test(address) == true) {
+                if (confirm("Are You Sure...!!!")) {
+                    setTimeout(function () {
+                        location.replace("order.html");
+                    }, 500);  // 0.5 seconds
+                    console.log(localStorage.getItem("itemJson"));
+                    console.log("*****");
+                    if (document.getElementById("buying-img-div").style.display == "none") {
+                        if (localStorage.getItem("itemJson3") == null) {
+                            itemJsonArray = [];
+                            itemJsonArray.push(localStorage.getItem("itemJson"));
+                            localStorage.setItem("itemJson3", JSON.stringify(itemJsonArray));
+                        } else {
+                            itemJsonArrayStr = localStorage.getItem("itemJson3");
+                            itemJsonArray = JSON.parse(itemJsonArrayStr);
+                            itemJsonArray.push(localStorage.getItem("itemJson"));
+                            localStorage.setItem("itemJson3", JSON.stringify(itemJsonArray));
+                        }
+                        localStorage.removeItem("itemJson");
+                    }
+                    else if (document.getElementById("buying-img-div").style.display == "block") {
+                        var link1 = sessionStorage.getItem("buylink1");
+                        var pic = sessionStorage.getItem("buypic");
+                        if (localStorage.getItem("itemJson4") == null) {
+                            itemJsonArray = [];
+                            itemJsonArray.push([name, items, total,pic, link1]);
+                            localStorage.setItem("itemJson4", JSON.stringify(itemJsonArray));
+                        } else {
+                            itemJsonArrayStr = localStorage.getItem("itemJson4");
+                            itemJsonArray = JSON.parse(itemJsonArrayStr);
+                            itemJsonArray.push([name, items, total,pic, link1]);
+                            localStorage.setItem("itemJson4", JSON.stringify(itemJsonArray));
+                        }
+                        if (localStorage.getItem("itemJson3") == null) {
+                            itemJsonArray = [];
+                            itemJsonArray.push(localStorage.getItem("itemJson4"));
+                            localStorage.setItem("itemJson3", JSON.stringify(itemJsonArray));
+                        } else {
+                            itemJsonArrayStr = localStorage.getItem("itemJson3");
+                            itemJsonArray = JSON.parse(itemJsonArrayStr);
+                            itemJsonArray.push(localStorage.getItem("itemJson4"));
+                            localStorage.setItem("itemJson3", JSON.stringify(itemJsonArray));
+                        }
+                        localStorage.removeItem("itemJson4");
+                    }
+                }
+                }
+                else{
+                    alert("ENTER PROPER NAME AND ADDRESS\nFor Name:Minimum 3 alphabets\nFor Address:Minimum 10 Characters");
+                }
+            }
+            else {
+                alert("NAME AND ADDRESS REQUIRED");
+            }
+        }
+
+        function voucher() {
+            var code = document.getElementById("voucherCode").value;
+            if (code == "STEALDEAL20") {
+                var total = document.getElementById("total").value;
+                document.getElementById("total").value = parseFloat(total) * 0.8;
+                document.getElementById("discount").value = parseFloat(total) * 0.2;
+            }
+            else {
+                document.getElementById("voucherCode").value = "";
+                if (sessionStorage.getItem("buyNow") == 0) {
+                    document.getElementById("items").value = 1;
+                    document.getElementById("total").value = sessionStorage.getItem("totalBill");
+                    document.getElementById("discount").value = "";
+                }
+                else {
+                    changeTotals();
+                }
+            }
+        }
+    </script>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>CART</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/product.css">
+    <!-- <script src="JS/MAIN.JS"></script> -->
+    <script src="js/json.js"></script>
+    <script src="js/CART.JS"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav1.css">
+    <link rel="stylesheet" href="css/nav2.css">
+</head>
+<style>
+    body {
+        background-color: white !important;
+    }
+
+    table,
+    tr,
+    td {
+        color: black;
+
+        border: 1px solid black !important;
+        /* background-color:#eee !important; */
+    }
+
+    #count {
+        color: white;
+
+    }
+
+
+    #counter {
+        /* background-color: white; */
+        /* color: purple; */
+        font-size: 42px;
+        color: white;
+    }
+
+    table tr,
+    td,
+    th {
+        background-color: #18253c;
+        color: black;
+
+    }
+
+    #buy_now_bill {
+        background-color: black;
+        color: black;
+        width: 1235px;
+        height: 1000px;
+        font-size: 30px;
+        position: absolute;
+        top: 0px;
+        display: none;
+        z-index: 40;
+        /* margin: 0px 0px 0px 0px; */
+        text-decoration: none;
+        margin-top: 10px;
+
+    }
+
+    #buy_now_bill::after {
+        /* opacity: 1; */
+        z-index: 40;
+    }
+
+    #pro-name {
+        text-align: center;
+        text-decoration: underline;
+        font-size: 60px;
+    }
+
+    #bill-img img {
+        border: 8px solid #00dd53;
+        border-radius: 20px;
+    }
+
+    .detail {
+        position: relative;
+        top: -300px;
+        left: 400px;
+        text-decoration: none !important;
+
+        margin-top: 150px;
+    }
+
+    @media only screen and (max-width:700px) {
+        .detail {
+            display: block;
+            position: static;
+        }
+
+
+    }
+
+    .detail>div {
+        padding-bottom: 35px;
+    }
+
+    .detail span {
+        text-decoration: none;
+    }
+
+    #quantity {
+        /* width: 200px; */
+        text-align: center;
+    }
+
+    form input {
+        width: 350px;
+        border-radius: 10px;
+        margin: 15px 0px;
+    }
+
+    #cart-empty-msg {
+        display: none;
+    }
+
+    tr {
+        border: 1px solid black !important;
+
+        background-color: white !important;
+    }
+
+    .one {
+        background-color: whit !important;
+        border: 1px solid black !important;
+        padding: 10px !important;
+
+    }
+
+    .main_total {
+        background-color: #3cb9fc !important;
+        color: white !important;
+        border: none !important;
+    }
+
+    .main_total th {
+        color: white !important;
+    }
+
+    .main_total td {
+        color: white !important;
+    }
+
+    #banner-area {
+        background-image: url("images/banner/buynow.webp");
+        height: 500px;
+    }
+</style>
+
+<body style="background-color: #0e1523;" onload="chkCartEmpty()">
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+        </script>
+
+    <div class="row" id="cart">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8 table-responsive  text-center">
+                <table class="table table-bordered bg-light mb-5 mt-5">
+                    <tr>
+                        <th class="one">S.No</th>
+                        <th class="one">ITEM</th>
+                        <th class="one">QUANTITY</th>
+                        <th class="one">PRICE OF ITEM(S)/$</th>
+                        <th class="one"></th>
+                    </tr>
+                    <tbody id="tableBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8 text-center">
+                <table class="table table-responsive t table-striped bg-light mb-5 mt-5">
+                    <tr class="main_total">
+                        <th>TOTAL</th>
+                        <td id="total-cart-bill"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row mb-5">
+
+            <center>
+                <div class="col"> <button id="clear_all" style="padding: 10.5px !important;" type="button"
+                        class="btn btn-danger" onclick="clearStorage()">CLEAR
+                        ALL</button>
+
+
+                    <button id="clear_all" type="button" class="btn btn-success"><a href="INDEX.HTML"
+                            style="color: white;text-decoration: none;">CONTINUE SHOPPING</a></button>
+
+                    <button id="check-out" type="button" style="padding: 16px !important;" class="btn btn-primary"
+                        onclick="checkOut()"><b>CHECK OUT</b></button>
+                </div>
+            </center>
+            <!-- <a href="#buy_now_bill">
+                    <button id="check-out" style="float: right;margin-right: 15px;" type="button" class="btn btn-primary"
+                        onclick="checkOut2()">CHECK OUT</button>
+                </a> -->
+        </div>
+    </div>
+
+    <div class="row text-center">
+        <div style="font-size: 40px;display: none;" id="count">COUNT:<span id="counter"></span></div>
+    </div>
+
+    <div class="row" id="cart-empty-msg">
+        <p class="text-center" style="font-size: 30px;">CART IS EMPTY...ADD SOMETHING</p>
+        <div class="text-center">
+            <a href="index.html" style="text-decoration: none;">
+                <button class="btn btn-primary" class="text-center">LET'S GO</button>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        update();
+        // countCheck();
+
+        generateTotal();
+
+        function itemPrice(priceId, quantityId, price, name) {
+            quantity = document.getElementById(quantityId).value;
+            cPrice = document.getElementById(price).innerHTML;
+            generateTotal();
+            var priceofOne;
+            itemJsonArrayStr = localStorage.getItem("itemJson");
+            itemJsonArray = JSON.parse(itemJsonArrayStr);
+            console.log(itemJsonArray.length);
+            itemJsonArray.every((element) => {
+                console.log("-----------");
+                if ((element[0]).toLowerCase() == (name).toLowerCase()) {
+                    priceofOne = element[2] / element[1];
+                    element[1] = quantity;
+                    element[2] = (quantity * priceofOne).toFixed(2);
+                    console.log(element);
+                    console.log(element[0]);
+                    document.getElementById(priceId).innerHTML = element[2];
+                    return false;
+                }
+                else {
+                    return true;
+                }
+            });
+            localStorage.setItem("itemJson", JSON.stringify(itemJsonArray));
+        }
+
+        function checkOut() {
+            if (sessionStorage.getItem("username") != null && sessionStorage.getItem("username") != undefined) {
+                sessionStorage.setItem("buyNow", 0);
+                var totalItems = document.getElementById("counter").innerHTML;
+                var bill = document.getElementById("total-cart-bill").innerHTML;
+                sessionStorage.setItem("items", totalItems);
+                sessionStorage.setItem("totalBill", bill);
+                console.log("working");
+                setTimeout(function () {
+                    location.replace("bill.html")
+                }, 1000);
+            }
+            else {
+                var url = window.location.href.split("TA/");
+                url = url[1].split("/");
+                url = url[0].toLowerCase();
+                console.log(url);
+                for (const x in product) {
+                    if (product[x].whatIs.toLowerCase() == url) {
+                        var go = "../form.html";
+                        break;
+                    } else {
+                        var go = "form.html";
+                    }
+                }
+                console.log(go);
+                setTimeout(function () {
+                    location.replace(go);
+                }, 500);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>FAVOURITE</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/product.css">
+    <!-- <script src="JS/MAIN.JS"></script> -->
+    <script src="js/json.js"></script>
+    <script src="js/FAV.JS"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav1.css">
+        <link rel="stylesheet" href="css/nav2.css">
+</head>
+<style>
+
+body{
+        background-color: #eee !important;
+    }
+    table,
+    tr,
+    td {
+        color: black;
+      
+    border: 1px solid black!important;
+        /* background-color:#eee !important; */
+    }
+
+#count{
+    color: white; 
+
+}
+
+
+    #counter {
+        /* background-color: white; */
+        /* color: purple; */
+        font-size:42px;
+        color:  white;
+    }
+
+    table tr,
+    td,
+    th {
+        background-color: #18253c;
+        color: black;
+   
+    }
+
+    #buy_now_bill {
+        background-color: black;
+        color: black;
+        width: 1235px;
+        height: 1000px;
+        font-size: 30px;
+        position: absolute;
+        top: 0px;
+        display: none;
+        z-index: 40;
+        /* margin: 0px 0px 0px 0px; */
+        text-decoration: none;
+        margin-top: 10px;
+        
+    }
+
+    #buy_now_bill::after {
+        /* opacity: 1; */
+        z-index: 40;
+    }
+
+    #pro-name {
+        text-align: center;
+        text-decoration: underline;
+        font-size: 60px;
+    }
+
+    #bill-img img {
+        border: 8px solid #00dd53;
+        border-radius: 20px;
+    }
+
+    .detail {
+        position: relative;
+        top: -300px;
+        left: 400px;
+        text-decoration: none !important;
+
+        margin-top: 150px;
+    }
+
+    @media only screen and (max-width:700px) {
+        .detail {
+            display: block;
+            position: static;
+        }
+
+
+    }
+
+    .detail>div {
+        padding-bottom: 35px;
+    }
+
+    .detail span {
+        text-decoration: none;
+    }
+
+    #quantity {
+        /* width: 200px; */
+        text-align: center;
+    }
+
+    form input {
+        width: 350px;
+        border-radius: 10px;
+        margin: 15px 0px;
+    }
+
+    #cart-empty-msg {
+        display: none;
+    }
+
+tr{
+    border: 1px solid black!important;
+
+    background-color: white !important ; 
+}
+#banner-area{
+        background-image:url("images/banner/buynow.webp");
+        height: 500px;
+    }
+</style>
+
+<body style="background-color: #0e1523;" onload="favUpdate(),chkFavEmpty()" class="container-fluid">
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+        </script>
+        
+
+    <div class="row" id="fav">
+        <div class="row">
+      <div class="col-2"></div>
+            <div class="col-8 table-responsive text-center " >
+                <table class="table  table-responsive table-bordered  bg-light mb-5 mt-5"id="f">
+                    <tr style="background-color: #18253c;color: white;">
+                        <th>S.No</th>
+                        <th>ITEM</th>
+                        <th>PRICE</th>
+                        <th>STATUS</th>
+                        <th></th>
+                    </tr>
+                    <tbody id="tableBody2">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <div class="row mb-5">
+
+            <center>
+                <div class="col-lg-8">
+                <button id="clear_all"  type="button" style="padding: 11px;" class="btn btn-danger"
+                    onclick="clearFavAll()">CLEAR
+                    ALL</button>
+                <button id="clear_all"  type="button" class="btn btn-success"><a
+                        href="INDEX.HTML" style="color: white;text-decoration: none;">CONTINUE SHOPPING</a></button>
+            </div>
+        </center>
+        
+        </div>
+    </div>
+
+    <div class="row text-center">
+        <div style="font-size: 40px;display: none;" id="count">COUNT : <span id="counter2"></span></div>
+    </div>
+
+    <div class="row" id="fav-empty-msg">
+        <p class="text-center" style="font-size: 30px;">FAV IS EMPTY...ADD SOMETHING</p>
+        <a href="index.html" class="text-center" style="text-decoration: none;">
+            <button class="btn btn-primary" class="text-center">LET'S GO</button>
+        </a>
+    </div>
+</body>
+
+</html>
